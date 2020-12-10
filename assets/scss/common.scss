@@ -1,0 +1,125 @@
+body{
+  overflow-x: hidden;
+}
+.centered{
+  margin:auto;
+}
+
+.ul-none{
+  list-style: none;
+}
+
+.section-mojo {
+  @extend .pt-6;
+  @extend .pb-6;
+  & .section-mojo-title{
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    letter-spacing: -0.01rem;
+  }
+  & .section-mojo-subtitle{
+    max-width: 600px;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-mojo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.fixed-top {
+  // set to 30px with Metadotbar
+  margin-top: 0px !important;
+}
+
+.font-weight-bolder {
+  font-weight: bolder !important;
+}
+///////////////////////////////////////////SPACER///////////////////////////////////////
+///////////////////////////////////////////SPACER///////////////////////////////////////
+///////////////////////////////////////////SPACER///////////////////////////////////////
+///////////////////////////////////////////SPACER///////////////////////////////////////
+///////////////////////////////////////////SPACER///////////////////////////////////////
+///////////////////////////////////////////SPACER///////////////////////////////////////
+
+.mt-6 {
+  margin-top: ($spacer * 6) !important;
+}
+
+.mb-6 {
+  margin-bottom: ($spacer * 6) !important;
+}
+
+// Extension of bootstrap spacings
+.pt-6 {
+  padding-top: ($spacer * 6) !important;
+}
+
+.pb-6 {
+  padding-bottom: ($spacer * 6) !important;
+}
+
+.pt-7 {
+  padding-top: ($spacer * 12) !important;
+}
+
+.py-6 {
+  padding-top: ($spacer * 6) !important;
+  padding-bottom: ($spacer * 6) !important;
+}
+
+.my-6 {
+  margin-top: ($spacer * 6) !important;
+  margin-bottom: ($spacer * 6) !important;
+}
+
+.mb-5rem{
+  margin-bottom: 5rem;
+}
+
+.mb-3rem{
+  margin-bottom: 3rem;
+}
+
+::selection {
+  background-color:darken($color: $primary-color, $amount: 10);
+  color: $white;
+}
+
+body::-webkit-scrollbar {
+  width: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  outline: 2px solid #fff;
+}
+
+ol,
+ul {
+  margin: 0px;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+
+a,
+button,
+select {
+  cursor: pointer;
+  transition: .2s ease;
+
+  &:focus {
+    outline: 0;
+  }
+}

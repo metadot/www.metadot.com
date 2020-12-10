@@ -1,0 +1,62 @@
+{{ $colorScheme := default "light" .Site.Params.footer.colorScheme }}
+
+<footer>
+  <nav class="navbar navbar-expand navbar-{{ $colorScheme }}
+  bg-{{$colorScheme }} principal-nav" >
+    <div class="col-sm-8 col-12 my-3">
+      <ul class="navbar-nav justify-content-center pr-md-5">
+        <li>
+          <a class="nav-link mr-2 font-weight-bold"
+          href="https://fqda628gryg.montastic.io/" aria-label="Go to
+          montastic metadot status" rel="noopener noreferrer"
+          target="_blank" >
+            <img src="https://mojohelpdesk.montastic.io/badge"
+            alt="Mojo Helpdesk Status page" class="mr-2" />
+            <span class="d-none d-lg-inline">Status</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link mr-2 font-weight-bold" href="/contact">
+            Contact&nbsp;Us
+          </a>
+        </li>
+        <li>
+          <a class="nav-link mr-2 font-weight-bold" href="/about-us">
+          About Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <br class="d-xs-block d-sm-none" />
+    <br class="d-xs-block d-sm-none" />
+    <br class="d-xs-block d-sm-none" />
+
+    <div class="col-sm-4 col-12">
+      <ul class="navbar-nav float-sm-right justify-content-center">
+        <li>
+          <a aria-label="github link" class="nav-link"
+          href="https://github.com/metadot" rel="noopener noreferrer"
+          target="_blank" >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </li>
+        <li>
+          <a aria-label="linkedin link"  
+            class="nav-link"
+            href="https://www.linkedin.com/company/metadot-corporation/"
+            rel="noopener noreferrer" target="_blank" >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="text-center bg-{{ $colorScheme }} py-3 copyright">
+    © Copyright 2020, product of
+    <a href="http://metadot.com" class="btn-link"
+    style="color:#1034ea"> Metadot</a>. All rights reserved. Made with
+    ♥ in Austin, Texas.
+  </div>
+</footer>
+
+{{ partial "js-includes" .}}

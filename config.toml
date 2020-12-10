@@ -1,0 +1,127 @@
+######################## default configuration ####################
+title = "Metadot"
+languageName = "En"
+languageCode = "en-us"
+
+# base URL
+baseURL = "https://staging-metadot.netlify.app/"
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+#bootstrap is now imported in the scss file _variable.scss not statically(see node modules)
+#[[params.plugins.css]]
+#link = "/plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "/plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "/plugins/swiper/swiper.min.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "/plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "/plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "/plugins/swiper/swiper.min.js"
+[[params.plugins.js]]
+link = "/plugins/slick/slick.min.js"
+
+############################## navigation ###############################
+
+# main menu
+ [[menu.main]]
+ name = "Blog"
+ URL = "/blog"
+ identifier = "blog"
+ weight = 0
+
+[[menu.main]]
+name = "About Us"
+URL = "/about-us"
+identifier = "about"
+weight = 2
+
+[[menu.main]]
+name = "Contact"
+URL = "/contact"
+identifier = "contact"
+weight = 3
+
+[[menu.main]]
+name = "Products"
+URL = "#"
+identifier = "service"
+weight = 3
+hasChildren = true
+
+[[menu.main]]
+name = "Bamzooka"
+URL = "http://bamzooka.com"
+identifier = "/images/brand/bamzooka.webp"
+parent = "service"
+
+[[menu.main]]
+name = "Mojo&nbsp;HelpDesk"
+URL = "http://mojohelpdesk.com"
+identifier = "/images/brand/mojo-star.svg"
+parent = "service"
+
+[[menu.main]]
+name = "Montastic"
+URL = "http://montastic.com"
+identifier = "/images/brand/montastic.webp"
+parent = "service"
+
+[[menu.main]]
+name = "Das&nbsp;Keyboard"
+URL = "http://daskeyboard.com"
+identifier = "/images/brand/dkbrand.webp"
+parent = "service"
+
+# company 
+[[menu.sections]]
+name = "Blog"
+URL = "/blog"
+
+[[menu.sections]]
+name = "Contact us"
+URL = "/contact"
+
+[[menu.sections]]
+name = "About Us"
+URL = "/about-us"
+
+#################### default parameters ################################
+[params]
+logo = "/images/logo_metadot.webp"
+logo_width = "230"
+author="Metadot Corporation"
+
+########### footer content ##########
+footer_content = "© Metadot Corporation. All Rights Reserved. "
+
+########### number of post in summary ###########################
+[params.homepage.posts]
+number = 2
+
+###################################### Mounts ######################################
+[module]
+
+  [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free/js"
+    target = "static/fortawesome"    
+
+  [[module.mounts]]
+    source = "node_modules/bootstrap/fontawesome-free/js"
+    target = "static/fortawesome"
+
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+
+

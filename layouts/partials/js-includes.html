@@ -1,0 +1,17 @@
+
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range site.Params.plugins.js}}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/main.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+{{if .HasShortcode "a-title-2-times-2-card-hover-links"}}
+{{$file := resources.Get "js/a-title-2-times-2-card-hover-links.js"}}
+<script defer src="{{($file).RelPermalink}}"></script>
+{{end}}
+<script defer src="/fortawesome/all.min.js"></script>
+

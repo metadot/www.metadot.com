@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>{{.Get "title"}}</h1>
+</div>
+
+{{ if not (.Page.Scratch.Get "myDownloadRedirectorLoaded") }}
+{{ .Page.Scratch.Set "myDownloadRedirectorLoaded" true }}
+{{$file := resources.Get "js/shortcodes/my-download-redirector.js"}}
+{{ if not .Site.IsServer }}
+<!-- Minify on production -->
+{{$file := $file | resources.Minify}}
+{{end}}
+<script defer
+  src="{{($file).RelPermalink}}"></script>
+{{ end }}

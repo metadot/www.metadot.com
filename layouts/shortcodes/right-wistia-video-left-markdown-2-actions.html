@@ -1,0 +1,59 @@
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+{{ with .Get "image_url" }}
+{{ else }}
+{{ errorf "missing value for param 'image_url': %s" .Position }}
+{{ end }}
+
+{{ with .Get "image_alt" }}
+{{ else }}
+{{ errorf "missing value for param 'image_alt': %s" .Position }}
+{{ end }}
+
+{{ with .Get "title" }}
+{{ else }}
+{{ errorf "missing value for param 'title': %s" .Position }}
+{{ end }}
+
+
+{{ $image_url := .Get "image_url" }}
+{{ $original := .Page.Resources.GetMatch (printf "*%s*" ($image_url)) }}
+{{ .Scratch.Set "image" ($original.Resize "900x") }}
+{{ $image := .Scratch.Get "image" }}
+
+
+
+
+<div class="text-center d-flex flex-column mb-5">
+<span class="tagline small-text">{{.Get "tagline"}}</span>
+{{ if (isset .Params "bigtitle") }}
+<h1>{{.Get "bigtitle"}}</h1>
+{{ end }}
+
+{{ if (isset .Params "title") }}
+<h2>{{.Get "title"}}</h2>
+{{ end }}
+
+</div>
+<div
+class="right-wistia-video-left-markdown-2-actions d-flex align-items-start justify-content-between flex-column flex-md-row">
+<div class="left-container">
+<div>
+{{.Inner}}
+</div>
+<div class="d-flex flex-column actions">
+<a class="btn btn-lg btn-danger action-button small-text"
+href="{{.Get "url_action_1"}}">{{.Get "label_action_1"}}</a>
+{{$label_action_2 := .Get "label_action_2"}}{{ with .Get "url_action_2"}}<a class="btn small-text btn-lg btn-outline-primary mt-2 action-button"
+href="{{.}}">{{$label_action_2}}</a>{{end}}</div>
+</div>
+<div class="pt-4 pt-md-0 image-container wistia_embed wistia_async_{{.Get "video_id"}} popover=true popoverContent=link">
+<i class="fab fa-youtube fa-5x video-btn"
+style="color: #d02738;"></i>
+<img src="{{ $image.RelPermalink }}"
+class="rounded img-fluid"
+alt='{{.Get "image_alt"}}'>
+</div>
+</div>

@@ -1,0 +1,44 @@
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+{{ with .Get "image_url" }}
+{{ else }}
+{{ errorf "missing value for param 'image_url': %s" .Position }}
+{{ end }}
+
+{{ with .Get "image_alt" }}
+{{ else }}
+{{ errorf "missing value for param 'image_alt': %s" .Position }}
+{{ end }}
+
+{{ with .Get "description" }}
+{{ else }}
+{{ errorf "missing value for param 'description': %s" .Position }}
+{{ end }}
+
+{{ $image_url := .Get "image_url" }}
+{{ $original := .Page.Resources.GetMatch (printf "*%s*" ($image_url)) }}
+{{ .Scratch.Set "image" ($original.Resize "600x") }}
+{{ $image := .Scratch.Get "image" }}
+<div class="sc-right-img-left-text-with-actions row align-items-center">
+    <div class="col-md-6">
+        <div class="tagline text-muted">{{.Get "tagline"}}</div>
+        {{ if (isset .Params "bigtitle") }}
+        <h1 class="text-capitalize">{{.Get "bigtitle"}}</h1>
+        {{ end }}
+        {{ if (isset .Params "title") }}
+        <h2 class="text-capitalize">{{.Get "title"}}</h2>
+        {{ end }}
+        <p style="margin: 135px 0 25px 0; width: 125px; border-bottom: gray solid 1px">&nbsp;</p>
+
+        <p class="mb-4">{{.Get "description"}}</p>
+        {{ .Inner }}
+    </div>
+
+    <div class="col-md-6">
+        <img data-src="{{ $image.RelPermalink }}"
+            class="lazy rounded {{with .Get "no_shadow"}}{{else}}shadow{{end}} img-fluid" width="{{ $image.Width }}"
+            height="{{ $image.Height }}" alt='{{.Get "image_alt"}}'>
+    </div>
+</div>

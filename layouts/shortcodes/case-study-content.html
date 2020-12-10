@@ -1,0 +1,85 @@
+<section class="section-mojo austin-community-college-case-study-container">
+  <div class="section-mojo-container">
+    <div class="mojo-card px-lg-5">
+      <div class="px-lg-5 mb-5">
+        <div class="d-flex ">
+          <div>
+            <img class="{{ .Get "margin"}}"
+              style="max-width: 350px; width: {{ .Get "width"}}; height: {{ .Get "height"}};" src="{{ .Get "img_src"}}"
+              alt="{{ .Get "img_alt"}}">
+          </div>
+          <div class="ml-auto d-flex flex-column mt-5">
+            <h5>{{ .Get "case_study_title"}}</h5>
+            <p class="extra-small-text">
+              {{ .Get "author_name"}},<br>
+              {{.Get "job_name"}}
+            </p>
+          </div>
+        </div>
+        <h3 class="mb-4">{{ .Get "big_title"}}</h3>
+        <ul style="xpadding: 60px 0 0 40px;">
+          <li>
+            <strong>Key data:</strong> {{.Get "key_data"}}
+          </li>
+          <li>
+            <strong>Challenge:</strong> {{.Get "challenge"}}
+          </li>
+          <li>
+            <strong>Solution:</strong> {{.Get "solution"}}
+          </li>
+          <li>
+            <strong>Results:</strong> {{.Get "results"}}
+          </li>
+        </ul>
+
+        <div class="case-study-subsection">
+          <h4>
+            Challenge: {{.Get "challenge_title"}}
+          </h4>
+          <p>
+            {{ .Get "challenge_content_paragraph1"}}
+          </p>
+          <p>
+            {{ .Get "challenge_content_paragraph2"}}
+          </p>
+          <p>
+            {{ .Get "challenge_content_paragraph3"}}
+          </p>
+          <p>
+            {{ .Get "challenge_content_paragraph4"}}
+          </p>
+        </div>
+        {{ if .Get "quote"}}
+        <div class="feedback feedback-case mt-5 mb-4">
+          <div class="d-flex align-items-start">
+            <i class="fa fa-user fa-4x text-muted"></i>
+            <div class="speech ml-3 background-gray-200">
+              "{{ .Get "quote"}}"
+              <div class="small pt-3">{{.Get "quote_author"}}</div>
+            </div>
+          </div>
+        </div>
+        {{end}}
+
+        <div class="case-study-subsection">
+          <h4>
+            {{.Get "solution_title"}}
+          </h4>
+          <p>
+            {{ .Get "solution_content_paragraph1"}}
+          </p>
+          <p>
+            {{ .Get "solution_content_paragraph2"}}
+          </p>
+          <p>
+            {{ .Get "solution_content_paragraph3"}}
+          </p>
+          <p>
+            {{ .Get "solution_content_paragraph4"}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br /><br />

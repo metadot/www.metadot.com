@@ -1,0 +1,114 @@
+{{with .Get "no_border"}}
+{{else}}
+{{.Scratch.Set "imageBorderClass" (print "border")}}
+{{end}}
+
+<div class="sc-right-img-left-text-with-get-started">
+
+  <!--        d-flex xalign-items-center xjustify-content-between xflex-column xflex-md-row">-->
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      {{ if (isset .Params "bigtitle") }}
+      <h1 class="text-capitalize">{{.Get "bigtitle"}}</h1>
+      {{ end }}
+
+      {{ if (isset .Params "title") }}
+      <h2 class="text-capitalize">{{.Get "title"}}</h2>
+      {{ end }}
+
+      {{ if (isset .Params "description") }}
+      <p>{{.Get "description"}}</p>
+      {{ end }}
+
+      {{ if (isset .Params "usecases_title") }}
+      <div class="mt-4">
+        <span class="usecases-title">{{.Get "usecases_title"}}</span><br /><br />
+        <!-- usecases -->
+        <!-- usecases -->
+        <!-- usecases -->
+        <div class="row">
+          <div class="col-md p-0">
+            <ul class="usecase checkbullet">
+              <li>
+                {{ if (isset .Params "usecase1_url") }}
+                <a href="{{ .Get "usecase1_url"}}">
+                  {{ end }}
+                  {{.Get "usecase1"}}
+                  {{ if (isset .Params "usecase1_url") }}
+                </a>
+                {{ end }}
+              </li>
+              <li>
+                {{ if (isset .Params "usecase2_url") }}
+                <a href="{{ .Get "usecase2_url"}}">
+                  {{ end }}
+                  {{.Get "usecase2"}}
+                  {{ if (isset .Params "usecase2_url") }}
+                </a>
+                {{ end }}
+              </li>
+            </ul>
+          </div>
+          <div class="col-md p-0">
+            <ul class="usecase checkbullet">
+              <li>
+                {{ if (isset .Params "usecase3_url") }}
+                <a href="{{ .Get "usecase3_url"}}">
+                  {{ end }}
+                  {{.Get "usecase3"}}
+                  {{ if (isset .Params "usecase3_url") }}
+                </a>
+                {{ end }}
+              </li>
+              <li>
+                {{ if (isset .Params "usecase4_url") }}
+                <a href="{{ .Get "usecase4_url"}}">
+                  {{ end }}
+                  {{.Get "usecase4"}}
+                  {{ if (isset .Params "usecase4_url") }}
+                  {{ end }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      <div class="d-flex flex-column flex-md-row actions pb-3`">
+        <a class="btn btn-lg btn-danger mr-0 mr-md-2 small-text text-uppercase"
+          href="https://signup.mojohelpdesk.com/signup/register/90?referer=website">
+          start a trial
+        </a>
+        <a class="btn btn-lg btn-outline-primary mt-2 mt-md-0 small-text text-uppercase" href="/calendar-demo/">
+          Book a demo
+        </a>
+
+        <!-- <form class="mt-4" method="POST" action="#">
+          <div class="form-row align-items-center">
+            <div class="col-12 col-sm-8">
+              <input type="email"
+                     required name="email" class="form-control mb-2"
+                     placeholder="{{.Get "email_input_placeholder"}}">
+            </div>
+            <div class="col-12 col-sm-4">
+              <button type="submit" class="btn btn-primary mb-2 btn-block px-0">
+                {{.Get "submit_button_text"}}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div> -->
+      </div>
+    </div>
+    <!-- image -->
+    <!-- image -->
+    <!-- image -->
+    <div class="col-md-6">
+      {{ if (isset .Params "image_url") }}
+      <img class="lazy rounded {{ .Scratch.Get "imageBorderClass" }}" data-src='{{.Get "image_url"}}'
+        alt='{{.Get "image_alt"}}'>
+      {{ end }}
+    </div>
+  </div>
+</div>
+</div>

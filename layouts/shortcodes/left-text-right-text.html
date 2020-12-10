@@ -1,0 +1,70 @@
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<style>h5 {margin: 10px 0;}</style>
+<div class="row">
+  <div class="col-lg-4">
+    <h5>HOST</h5>
+    <div>
+      <img class="border"
+           style="border-radius:80px;width:50px; height:50px;"
+           src="{{ .Get "img_src"}}">
+      <div class="text-uppercase mt-3"><b>{{ .Get "name"}}</b></div>
+      <p>{{ .Get "job_title"}}</p>
+    </div>
+
+    <h5>{{ .Get "when"}}</h5>
+    <p>{{ .Get "date_time"}}</p>
+    <h5>DURATION</h5>
+    <p>{{ .Get "duration"}}</p>
+  </div>
+  <div class="col-lg-8">
+    <p style="font-size:xx-large">{{ .Get "title_right"}}</p>
+    <p class="mt-3">{{ .Get "paragraph1"}}</p>
+    <p>{{ .Get "paragraph2"}}</p>
+    <p>{{ .Get "paragraph3"}}</p>
+    <ul>
+      <li>
+        {{ .Get "li1"}}
+      </li>
+      <li>
+        {{ .Get "li2"}}
+      </li>
+      {{ if (isset .Params "li3") }}
+      <li>
+        {{ .Get "li3"}}
+      </li>
+      {{ end }}
+      {{ if (isset .Params "li4") }}
+      <li>
+        {{ .Get "li4"}}
+      </li>
+      {{ end }}
+      {{ if (isset .Params "li5") }}
+      <li>
+        {{ .Get "li5"}}
+      </li>
+      {{ end }}
+
+    </ul>
+    <p>{{ .Get "paragraph4"}}</p>
+    {{ if (isset .Params "action_label") }}
+    <button style="display:{{ .Get "displayscroll"}};" class="btn btn-danger py-2 px-4 mt-2" onclick="scrolltopfunction()">
+     {{ .Get "action_label"}}&nbsp;<i class="fas fa-arrow-right ml-1"></i>
+    </button>
+    <a style="display:{{ .Get "displaybutton"}};" class="btn btn-danger py-2 px-4 mt-2" href="{{ .Get "link"}}">
+     {{ .Get "action_label"}}&nbsp;<i class="fas fa-arrow-right ml-1"></i>
+    </a>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+  //Get the button
+  // When the user clicks on the button, scroll to the top of the document
+function scrolltopfunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>

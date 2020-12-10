@@ -1,0 +1,74 @@
+{{ $image_url := .Get "image_url"}}
+{{ $original := .Page.Resources.GetMatch (printf "*%s*" ($image_url)) }}
+
+{{ if .Get "width"}}
+{{ .Scratch.Set "width" (.Get "width") }}
+{{else}}
+{{ .Scratch.Set "width" "900" }}
+{{end}}
+
+{{ if .Get "height"}}
+{{ .Scratch.Set "height" (.Get "height") }}
+{{else}}
+{{ .Scratch.Set "height" "800" }}
+{{end}}
+
+{{$image_params := print (.Scratch.Get "width") "x" (.Scratch.Get "height")}}
+{{ .Scratch.Set "image" ($original.Fit $image_params) }}
+{{ $image := .Scratch.Get "image" }}
+<div>
+  <div class="d-flex flex-column align-items-center justify-content-center sc-1-title-1-desc-1-wistia-all-centered">
+    {{ if (isset .Params "bigtitle") }}
+    <h1 class="text-capitalize">{{.Get "bigtitle"}}</h1>
+    {{ end }}
+    {{ if (isset .Params "title") }}
+    <h2 class="text-capitalize font-3-5">{{.Get "title"}}</h2>
+    {{ end }}
+    {{ if (isset .Params "titlesub") }}
+    <h2 class="text-muted">{{.Get "titlesub"}}</h2>
+    {{ end }}
+
+    <p>{{.Get "description"}}</p>
+    <style>
+      .fishes {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      .fish {
+        transform: rotate(-15deg);
+        max-width: 250px;
+        position: absolute;
+        top: -100px;
+        left: -170px;
+      }
+    </style>
+    <div style="margin-top: 20px; " class="rounded image-container wistia_embed wistia_async_{{.Get "video_id"}}
+        popover=true popoverContent=link">
+      <i class="fab fa-youtube fa-5x video-btn"></i>
+      <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="img-fluid"
+        alt='{{.Get "image_alt"}}'>
+      <img src="/_home-images/watch_arrow.png" class="fish d-sm-none d-none d-md-none d-lg-block" />
+
+    </div>
+    <div>
+      <a class="action-button animated" href="{{.Get "url_action_1"}}">{{.Get "label_action_1"}} &nbsp;<i
+          class="fas fa-arrow-right"></i></a>
+      {{$label_action_2 := .Get "label_action_2"}}
+      {{$label_action_3 := .Get "label_action_3"}}
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      {{ with .Get "url_action_2"}}
+      <a class="action-button animated" href="{{.}}">{{$label_action_2}} &nbsp;<i
+          class="fas fa-arrow-right"></i></a>{{end}}
+      &nbsp;
+      &nbsp;&nbsp;
+      {{ with .Get "url_action_3"}}
+      <a class="action-button animated" href="{{.}}">{{ $label_action_3 }} &nbsp;<i
+          class="fas fa-arrow-right"></i></a>{{end}}
+
+    </div>
+
+  </div>

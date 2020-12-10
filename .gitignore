@@ -1,0 +1,5 @@
+node_modules/
+#build of website
+public/
+#scss content compiled during the build
+resources/

@@ -1,0 +1,38 @@
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+{{ with .Get "icon_name" }}
+{{ else }}
+{{ errorf "missing value for param 'icon_name': %s" .Position }}
+{{ end }}
+
+{{ with .Get "title" }}
+{{ else }}
+{{ errorf "missing value for param 'title': %s" .Position }}
+{{ end }}
+
+
+<div
+  class="sc-right-icon-left-text-with-link d-flex align-items-center justify-content-between flex-column flex-md-row">
+  <div class="left-side-container">
+{{ if (isset .Params "bigtitle") }}
+<h1>{{.Get "bigtitle"}}</h1>
+{{ end }}
+{{ if (isset .Params "title") }}
+<h2>{{.Get "title"}}</h2>
+{{ end }}
+
+<div>
+  {{.Inner}}
+</div>
+{{$url_content := .Get "url_content"}}
+{{ with .Get "url_link" }}
+<a class="link-color-before" href="{{.}}">{{ $url_content }}&nbsp;<i class="fas fa-arrow-right"></i>
+</a>
+{{ end }}
+</div>
+  <div class="pt-4 pt-md-0 image-container">
+    <i class="icon fas fa-{{ .Get "icon_name" }}"></i>
+  </div>
+</div>

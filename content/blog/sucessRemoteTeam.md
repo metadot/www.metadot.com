@@ -1,0 +1,332 @@
+---
+title: "R.E.M.O.T.E Leadership - How To Guide a Remote Team To Sucess"
+date: 2020-04-18T10:07:21+06:00
+url: /blog/remote-leadership
+## post image
+featured_image: "/images/blog/remoteleader.svg"
+# alt image
+alt: "Busy girl behind her pc while calling someone"
+## post type (regular/featured)
+type: "blog"
+## meta description
+description: "What is the secret of a sucessfull remote team? 
+Read this post to know the answer!"
+# post author
+author: "Catherine Muller"
+#summary Tilte
+summaryTitle: "How To Guide A Remote Team To Success"
+#tags
+categories:
+    - "remote working"
+## post draft
+draft: false
+---
+
+With the onset of the Covid-19 pandemic and the global shift to
+working remotely, many companies have struggled with the inorganic
+transition from a collocated work environment to independent home
+offices. At Metadot, we have established an acronym that takes into
+account the vital responsibilities of those in management during this
+transition: R.E.M.O.T.E. Leaders are often skeptical about the true
+potential of an entirely virtual environment. However, many
+organizations have successfully made the transition, ultimately
+morphing to a more productive, flexible and happier workplace. A study
+from the company Airtasker showed that at-home employees work more
+hours each month than those in a collocated work environment,
+resulting in up to the equivalent of two extra work weeks per year.
+Not only is this beneficial from the perspective of an employee
+shifting to remote, but also in the hiring process. From a business
+perspective, removing the ‘physicality’ of a candidate increases the
+opportunity for companies to expand globally, and have the option to
+pick from top-notch pools of candidates who may have previously been
+out of reach.
+
+Positives aside, the transition has come with challenges for some
+employees, especially those with families, and also for more
+integrated work groups such as sales and customer service.  For the
+management team, the remote workplace has added the additional
+challenge of keeping a team motivated when there’s less socialization.
+As well as managing teams that may now be spread across multiple time
+zones, and maintaining the workplace culture.  There are many factors
+that contribute to a healthy, sustainable workplace, and these may
+shift as your company navigates the world of remote working. In any
+successful company, the leadership during times of transition is most
+essential and can make or break a business.
+
+## R - Rewards.
+
+In addition to the social impact of the transition to remote
+workplaces, some employees may also be adjusting physically to their
+new work environment (or sudden lack thereof) and face anxiety about
+the sustainability of their roles. This is where it is essential for a
+strong leader to come forward and be clear with expectations and
+benefits. As a leader, this includes ensuring that each member of your
+team is able to perform to the best of their abilities. Many may not
+have the luxury of a dedicated home office or a comfortable, quiet,
+area to complete their work. With the company relieved of the burden
+of physical infrastructure, management is now in a position to support
+employees with acquisition of tools to improve their remote work
+environments.  This could include something as simple as a computer,
+desk, chair or other supplies that will help ease the stress of the
+remote transition. For some, working from home may not be an option.
+You can reward these team members with coworking office spaces. These
+spaces allow the individuals to complete their tasks without the added
+stressors of working from their home. Not only will the employee value
+your effort to alleviate the challenge, but these coworking offices
+are a very cost effective solution.  
+Rewards and benefits don’t have to be tangible! Celebrating even the
+smallest of successes can have a huge impact on the wellbeing of your
+team. In your channels of communication and video meetings, give
+praise when a team member is progressing or does something well - this
+builds morale. People want to feel that they are making a positive
+contribution, and to be recognized by a leader in front of the company
+builds the confidence to ensure continued quality work in the future.
+
+## E - Evaluation.
+
+Evaluation is a necessary process in the collocated work environment,
+but is even more vital to a remote company. If an organization is not
+able to reflect on what strategies are successful or detrimental,
+there will not be much growth and progress. As a leader, invest time
+into reflecting on your values, the team values, and goals of the
+company. Ask yourself constructive questions: What is our long term
+goal? What are our short term goals? What strategies have I
+implemented to help us reach these ambitions? Are the roles of my team
+(and company) able to be successfully done remotely with the tools we
+have in place? What resources will they need to complete their tasks?
+Thinking with a realistic, yet adaptable mindset can be helpful as
+your company separates from the traditional workplace.
+
+A common roadblock on the transition to remote is the elimination of
+access to many perks of the collocated environment. Stopping by a
+manager’s desk, taking breaks with coworkers and being able to
+interpret the energy of the team - the socialization benefits of a
+collocated work environment are no longer available. This is where it
+is important for leadership to invest into small strategies, to
+achieve big results.
+
+An effective way to read the energy of your team is to give surveys.
+The first survey should be within week one of working remotely, and
+include basic questions about how the process has been for the
+individual. Followed with an opportunity to list remaining questions,
+comments and concerns. This will provide you with substantial
+information into the state of your company’s wellbeing. The feedback
+will give insight about uneasiness your team may be experiencing, and
+give you the opportunity to strategize and implement helpful changes.
+To improve the validity of your data sample, allow these surveys to be
+completed anonymously. The anonymity will encourage people to be more
+honest when completing their assessment. Implementing changes will be
+an extensive process and the changes will be gradual. Consult with
+other leaders for feedback and suggestions to ensure you are utilizing
+your resources effectively.
+
+After a month of applying new ideas, present your team with a similar
+survey. See how effective the changes have been, areas where there has
+been difficulty and an open opportunity to suggest ways of improving
+the system. Maintaining evaluations is crucial. Investing in feedback
+will be a clear indicator of issues that may not be noticeable through
+a virtual setting. Staff will appreciate the opportunity to be heard,
+and feel empowered by the collective initiative introduced by
+management.
+
+## M - Mindset.
+
+If a leader is not whole-heartedly committed to the ambitions of the
+company, it is detrimental to the well-being of the entire
+organization. Working remotely requires an “all in” commitment.
+Employees are receptive to the way in which a leader presents their
+dedication, especially through times of change. This is where adopting
+an adaptable, optimistic and passionate mindset is a necessity for a
+leader guiding a remote team. With any form of change, there will be
+unforeseen conflicts that arise and need addressing. Your team may
+begin to have doubts when working through a process remotely for the
+first time, and it is your responsibility to lead by example and
+maintain professionalism.
+
+The structure of the remote environment will hold less of a focus on
+rigid monitoring, and be more based on trust and progress. In a
+collocated workplace, it is easy to track and monitor the progress of
+your employees. You have direct access to tangible work, opportunities
+to observe tasks and the ability to track the attendance of your team.
+Although this structure may have benefited your team in a collocated
+environment, it is your duty as a leader to adjust your mindset to
+that of a successful remote environment. Over-managing your employees
+will do more harm than good. Heavily monitoring tasks can take away
+from the productivity of the team, and gives the employee less
+opportunity to take initiative over their duties. If the productivity
+of the team begins to struggle, this will increase stress within the
+company, and ultimately deteriorate the culture and trust of your
+organization.
+
+Here at Metadot, we are focused on results and outcomes over
+micromanaging and monitoring. In other words, we are more driven by
+progress. We utilize a spreadsheet we refer to as a “Sprint” which is
+an easily accessible document where employees can list their goals for
+the week. We begin each week with a meeting where we discuss our goals
+and our methods to achieve them. This includes our color-coded system
+where we can indicate our progress. Green means our task is on-time,
+and close to completion. Yellow means we have faced a challenge with
+our task and need support, or are waiting for the assistance from
+another team member. Red means that the task will not be completed,
+but will be prioritized in the future. There is no rigid structure,
+just a simple spreadsheet for reference as we navigate through our
+week. Each team member knows they are responsible for their project,
+and have the independence to work freely. When a team member has a
+task in red, our CEO Daniel Guermeur has a prominent responsibility.
+He consistently demonstrates positive leadership by taking time to
+understand the difficulties that have impacted completion of the task,
+then offers his support, and ensures they have the necessary resources
+to accomplish the task. Maintaining his mindset of adaptability,
+optimism and passion towards the goals of the company - he drives the
+success of his company culture. He is perceived as approachable, which
+makes addressing conflict smoother - further increasing the
+productivity of the company. His management style builds confidence
+within the individual to be more successful in their role, and to
+enjoy the content of the work.
+
+## O - Organization.
+
+Documentation is vital, especially when your team is remote.
+Developing a “Handbook” is an easy and effective way to track the ways
+in which the company grows. This handbook includes company policies,
+core values, growth goals and other important information. Having an
+updated, public handbook allows employees in different time zones to
+have access to information regardless of their working hours. It also
+supports the onboarding process, and provides a clear set of
+expectations for new employees. The blueprint for a successful remote
+company is in the accuracy and specificity of the handbook. 
+
+Another effective strategy is to develop a “Buddy System” when
+onboarding new employees. Each new team member is paired with a
+veteran team member who has strong knowledge of the company. The
+veteran team member is a resource for asking questions, helping locate
+information and for ensuring that the onboarding process is
+successful. This includes holding one on one meetings each day for the
+first three weeks, and introducing the new employee to the team. The
+buddy system is a documented process, with its own guidelines listed
+clearly in the company handbook. During my first week at Metadot I was
+assigned a “Buddy.” Being the new member to the team is never easy,
+but knowing I had an immediate support system relieved much of the
+stress of the onboarding process. My connection to the team gave me so
+much insight to the culture of the company, and it smoothed the
+transition of my collocated work experience to my remote environment.
+When leading a team, establishing a Buddy System is not only effective
+for the new employee. The system keeps veteran employees grounded in
+the foundation of the company and helps keep their view fresh. A new
+team member is seeing what we are comfortable with and through a new
+set of eyes, keeps us from becoming complacent. Once the company
+polishes this process, it simplifies our ability to replicate the
+process as we experience future growth.
+
+For communication purposes, your organizational strategies should be
+top priority. This begins with confirming that each department has
+access to necessary software, and verifying the safety of this
+software. Your team will be significantly increasing virtual activity
+and cyber security needs to be a primary focus. It will also be
+beneficial to select a software that possesses cross-functional
+collaboration, so multiple departments have access to relevant
+information. Next, it is your responsibility to establish a secure and
+easy platform for communication. This platform should have features
+that allow video conferencing, private discussion rooms, newsboards to
+post information and streaming capabilities. There are many affordable
+programs available, at Metadot we use “Discord.” Discord allows us to
+connect via video conferencing, stream or screenshare, as well as have
+private and public chats. An effective addition to Discord is its
+“Channel” feature, which allows our team to mimic the conference room
+environment of a traditional workplace by communicating over video
+conference calls. Not only has this increased productivity, but also
+limited the feeling of isolation that is common in a remote
+environment. 
+
+## T - Transparency.
+
+Communication is vital. Working in a workplace where information is
+hard to access, the intentions of management are unclear or the
+communication is minor -  is not a sustainable, nor healthy
+environment. When a leader is transparent, this boosts the confidence
+of the team. Transparency is not to be confused with revealing all
+company secrets. Transparency is a leader’s ability to respect each
+member of his or her team by giving access to changes in the company
+and context to clear goals and guidelines. You want to not only talk
+about your company values, but exemplify them through your actions.
+For example, if you are pushing for your team to invest in their
+mental wellbeing, it would be a strong suggestion to encourage them to
+take time off. To be transparent, be clear and open about times you
+are deciding to take a break from work to indulge in a vacation. You
+are giving the green light to more reserved employees that it is
+acceptable and recommended to take time away from work. This also
+means demonstrating humility in times of error. If your employees are
+exposed to a leader who can admit mistakes without anger, they will
+know that the workplace is a safe environment to come forward with
+their faults. Transparency should also be utilized from a business
+perspective. If you have important information that needs to be shared
+with the company, call a company wide meeting. Prepare a presentation
+and review your notes thoroughly, as well as be ready to answer
+questions and address any uneasiness that may arise. Even with tough
+information, the team will be respectful of your transparency and
+openness, and to receive the information directly from the source. 
+
+## E - Empathy.
+
+One of the greatest threats to the success of your company will be
+facing “burnout” in your employees. Burnout is when someone begins to
+exhibit behaviors of exhaustion, irritability and frustration - often
+from being overworked and a lack of socialization. Not only could the
+signs be seen emotionally, but within their quality of work. When
+employees are experiencing burnout, you may see a pattern of
+incomplete tasks, or work quality that does not reflect their previous
+habits. Unfortunately, this is a prominent issue for remote companies.
+Many people prefer the familiarity of an office and specified
+schedule, and are easily overwhelmed with the lack of structure in
+remote work. As a leader, you will need to face these problems head
+on, and establish an appropriate relationship with your team. This
+means investing and understanding their personal and professional
+goals. This can begin by holding 1 on 1 meetings each week with a
+different member of the team. Learn more about their ambitions, what
+they are looking for, what motivates them and the steps they have
+taken to reach the goals. Take notes. Know whether they live alone or
+with a partner - or a pet!  Know about their children.  Understand
+their work environment.  Once you have a better understanding of who
+they are, offer your support and see how you can be of assistance.
+Help them understand the work/life balance.  For a team member living
+alone, this will be different from a team member juggling work and a
+family.  This could be as simple as sharing informative articles,
+shifting portions of their work more towards their aspirations or even
+checking in with them to make sure they are being held accountable.
+Repeating these meetings every few weeks will demonstrate your
+leadership and empathy skills, and will hold a positive impact as you
+invest in their wellbeing.
+
+Another investment would be to develop a package with your finance and
+HR team that puts funds towards the mental and physical health of your
+workers. For those expressing interest in counseling, you could offer
+benefits to cover some the expenses of a therapist. For those who want
+to improve physical health, covering the costs of a fitness membership
+could help reduce the chance of burnout. As a leader, you are
+responsible for not only openly communicating about the importance of
+mental health, but also ensuring you are leading by example. Having
+these conversations can bring awareness to the issue and encourage
+individuals to avoid overworking and isolation. Arrange remote team
+building events! At Metadot, Daniel encourages the team to establish a
+healthy balance of work and play. Each week, the team comes together
+for a virtual stretch class, or fitness class. Every Friday, the team
+meets in a virtual room on Discord to have a “Happy Hour” and share
+non-work related conversations. These efforts demonstrate his
+investment into our mental wellbeing, as well as ensuring we are
+taking care of our physical health as well. Empathy should be a
+prioritized attribute when being a leader. Although your relationship
+with your team is in a professional setting, understand that your
+workers are human and face challenges outside of the workplace. When
+someone isn’t performing, avoid criticism - empathize first. When you
+invest in the mental and physical health of your team,  you invest in
+the company.
+
+Strong leadership is one of the keys to success for a corporation and
+individuals alike, and at times is a practice of trial and error for
+even the most experienced.  This new culture of leading remotely is
+changing the face of leadership across the workplace and we are
+constantly learning how to perfect the task.  Possess the self
+awareness to learn from your mistakes, be confident in your abilities
+to lead.  Commit to embodying the foundation of being a R.E.M.O.T.E
+leader and your team and organization will be well on the way to
+success.

@@ -1,0 +1,26 @@
+.sc-3-col-1-str-1-icon-each {
+   .item {
+    padding: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  @media screen and (min-width: 48rem) {
+     .item {
+      padding: 3rem 1.5rem;
+    }
+  }
+  
+   .item figure {
+    height: 48px;
+    width: 48px;
+  }
+  
+   h4 {
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 1.125rem;
+  }
+}
+

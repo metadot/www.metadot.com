@@ -1,0 +1,59 @@
+// Color Variables
+$primary-color:#2b70a9;
+$text-color: #777;
+$text-color-dark: #222;
+$body-color: #000;
+$border-color: #ECECEC;
+$black: #000;
+$white: #fff;
+$light: #EDF6F5;
+
+$icon-font: 'themify';
+
+/**
+ * BOOTSTRAP VARIABLES
+ */
+
+// $primary: #124a7c;
+$success: #c9e265;
+// $secondary: #fd7a2a;
+$primary: #2b70a9;
+
+$danger: #dc3545;
+// Font
+$primary-font: Roboto, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+// $font-family-sans-serif: Montserrat, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+// $font-family-sans-serif: Quicksand;
+$font-size-base: 1.2rem;
+$small-font-size: 85%;
+$h1-font-size: 2.9rem;
+$h2-font-size: 2rem;
+// $h3-font-size: 1.5rem;
+$headings-margin-bottom: 1.1rem;
+$small-font-size: 85%;
+$extra-small-font-size: 70%;
+
+$btn-font-size-lg: $small-font-size;
+// Header
+$navbar-brand-font-size: 1.4rem;
+$navbar-light-color: #202020;
+$navbar-light-hover-color: #1264a3;
+
+// Dropdown
+$dropdown-font-size: 1rem;
+$dropdown-item-padding-y: 0.4rem;
+$dropdown-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+$dropdown-link-color: $navbar-light-color;
+$dropdown-link-hover-color: $navbar-light-hover-color;
+$dropdown-link-hover-bg: none;
+$dropdown-link-active-bg: none;
+$dropdown-link-active-color: $body-color;
+
+// Inputs
+$input-btn-padding-y-lg: 20px;
+$input-btn-padding-x-lg: 40px;
+$input-group-addon-bg: #f8f9fa;
+$spacer: 1.1rem;
+
+// Required
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

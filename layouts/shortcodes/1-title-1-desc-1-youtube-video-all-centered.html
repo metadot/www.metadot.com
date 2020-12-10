@@ -1,0 +1,23 @@
+<div class="sc-1-title-1-desc-1-youtube-video-all-centered d-flex flex-column align-items-center">
+  {{$base := "https://www.youtube.com/embed/"}}
+  {{$id := $.Get "youtube_video_id"}}
+  {{$url := print $base $id}}
+
+  {{ if (isset .Params "bigtitle") }}
+  <h1>{{.Get "bigtitle"}}</h1>
+  {{ end }}
+
+  {{ if (isset .Params "title") }}
+  <h2>{{.Get "title"}}</h2>
+  {{ end }}
+
+  <p>{{.Get "description"}}</p>
+  <div class="embeded-video mt-4">
+    <iframe width="560"
+      height="500"
+      src="{{$url}}"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>

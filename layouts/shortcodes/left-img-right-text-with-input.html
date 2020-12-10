@@ -1,0 +1,119 @@
+<div class="sc-lead-magnet">
+    <div id="downloadable">
+        <div class="row align-items-center" id="sc-lead-magnet-bg-row">
+            <div class="col-md-12 col-lg-6 col-12" id="sc-lead-magnet-image">
+                <img class="img-fluid rounded " imagxid="sc-lead-magnet-img"
+                     src="{{.Get "image"}}">
+            </div>
+            <div class="col-md-12 col-lg-6 col-12 pt-3">
+              <div class="doctype text-uppercase text-muted font-weight-bold sm">free guide</div>
+                <h2>{{.Get "title_copy"}}</h2>
+                <p>{{.Get "desc"}}</p>
+                <p>
+                {{ if (isset .Params "prompt") }}
+                    <strong>{{.Get "prompt"}}</strong>
+                {{ else }}
+                    <strong>Fill out this form to get access to this FREE guide:</strong>
+                {{ end }}
+                </p>
+                <div class="border rounded p-3 bg-light">
+                <form name="myForm"
+                      class="h-100 rounded"
+                      id="submit_request_form"
+                      enctype="multipart/form-data"
+                      onsubmit="return submitClick();">
+                    <div class="form-group">
+                        <input type='hidden' name='ticket_form_id' value='52434'>
+                        <input type='hidden' name='ticket_queue_id' value='147720'>
+                        <input type='hidden' name='title' value='{{.Get "title_ticket"}}'>
+                        <input type='hidden' id='description' name='description' value='default'>
+                        <label for="id_name">First and last name:</label>
+                        <input type="text" autofocus
+                               class="form-control" id="id_name" name="user_name"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_email">Email address:</label>
+                        <input type="email" id="id_email" name="user_email" class="form-control" required>
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                        <button type="submit" class="btn btn-danger">&nbsp;Get&nbsp;access&nbsp;</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">One last step</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            An email is on its way with a link to download this file.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="/" class="btn btn-success active"
+                                        role="button" aria-pressed="true">I can't wait</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+// function showModal() {
+//     document.getElementById('exampleModal').modal('show');
+// }
+function submitClick() {
+    if (formValidation() == true) {
+        event.preventDefault();
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://app.mojohelpdesk.com/api/v2/tickets/lead_magnet');
+        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+        xhr.onload = function() {
+            if (xhr.status != 201) {
+            alert('Request failed.  Returned status of ' + xhr.status);
+            }
+        };
+        var name = document.getElementById('id_name').value;
+        var email = document.getElementById('id_email').value;
+        xhr.send(encodeURI('ticket_form_id=52434&ticket_queue_id=147720&title={{.Get "title_ticket"}}&description=' + name + '\n' + email + '\n' + '-----------' + '\n' + name + ', the Mojo {{.Get "title_ticket_document"}} you requested \n {{.Get "link_requested"}} \n {{.Get "button_label"}} \n -------- \n Dear ' + name + ',\n \n We are glad you visited Mojo Helpdesk to request the {{.Get "title_ticket_document"}}. We think you will find this document valuable.'));
+        $('#exampleModal').modal('show');
+        return true;
+    } else {
+        return false;
+    }
+}
+function formValidation() {
+
+    if (document.myForm.user_name.value == "") {
+    alert("Please fill in your Name!");
+    return false;
+    }
+
+    // Validate length of the Name LastName
+    else if ((document.myForm.user_name.value.length) > 50) {
+    alert("The name is too long!");
+    return false;
+    }
+
+    // Validate emails
+    else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(myForm.user_email.value)) //Regular expressions to validate email
+    {
+    alert("Enter Valid Email Address!");
+    return false;
+    }
+
+    return true;
+}
+</script>

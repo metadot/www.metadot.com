@@ -1,0 +1,203 @@
+{{ define "main" }}
+
+<!-- SECTION1 -->
+<!-- BANNER -->
+{{ with site.Data.homepage.banner }}
+<section class="section-mojo border-bottom" id="banner">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="mb-3 banner-title">
+        {{ .title | markdownify }}</h1>
+      <h2 class="mb-4 banner-subtitle">{{ .content | markdownify }}</h2>
+      <div>
+        {{ range .buttons }}
+        <a href="{{ .link | safeURL }}" class="btn banner-button">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- END BANNER -->
+
+<!-- SECTION2 -->
+<!-- SOFTWARE PRODUCTS LIST -->
+{{ if site.Data.homepage.software_list.enable }}
+{{ with site.Data.homepage.software_list}}
+<section class="section-mojo border-bottom" id="software">
+  <div class="container">
+    <h2 class="section-mojo-title text-center mb-5">
+      <i class="icon-works">
+        <img src="/images/brand/icon-works.webp" alt="separator">
+      </i>
+      {{ .title | markdownify }}
+    </h2>
+    <div class="row">
+      <!-- Range the software product in data homepage in row of 3 colones-->
+      {{ range $index, $element:= .items }}
+      <div class="col-md-4 mb-5">
+        <img src="{{.url_img}}" alt="{{.alt_img}}" style="height: 47px;width:auto">
+        <h2>{{ .name | safeHTML }}</h2>
+        <p>{{ .content | markdownify }}</p>
+        <p>
+          <a class="btn btn-primary" href="{{ $element.link }}"
+          aria-label="{{ $element.label }}">
+            Visit the site »
+          </a>
+        </p>
+      </div>
+      {{ end }}
+      <!-- end of range -->
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!--END SOFTWARE PRODUCTS LIST-->
+
+<!-- SECTION3 -->
+<!-- HARDWARE PRODUCTS LIST -->
+{{ if site.Data.homepage.hardware_list.enable }}
+{{ with site.Data.homepage.hardware_list }}
+<section class="section-mojo border-bottom" id="hardware">
+  <div class="container">
+    <h2 class="section-mojo-title text-center mb-5">
+      <i class="icon-works">
+        <img src="/images/brand/icon-works.webp" alt="separator">
+      </i>{{ .title | markdownify }}
+    </h2>
+    <div class="hardware-products">
+      <!-- Range the software product in data homepage in row of 3 colones-->
+      {{ range .item }}
+      <div class="hardware-product text-center">
+        <img class="hardware-image mb-1 img-fluid" src="{{ .url_img }}" alt="Product image">
+        <img class="hardware-brand-image mb-5" src="{{ .brandicon }}" alt="Brand image">
+        <p class="text-center hardware-description">
+          <strong>{{ .name | safeHTML }}&nbsp;</strong>{{ .content | markdownify }}
+        </p>
+        {{ if .button.enable }}
+        {{ with .button }}
+        <div>
+          <a href="{{ .link | absURL }}" class="btn-link">
+            <i class="ti-arrow-right"></i>
+            {{ .label }}
+            <i class="ti-arrow-left"></i>
+          </a>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!--END SOFTWARE PRODUCTS LIST-->
+
+<!-- SECTION4 -->
+<!-- TYPRX SECTION -->
+{{ if site.Data.homepage.typrx.enable }}
+{{ with site.Data.homepage.typrx }}
+{{ range $i,$p := .items }}
+{{if modBool $i 2}}
+<section class="section-mojo border-bottom" id="typrx">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-mojo-title">{{ .title | markdownify }}</h2>
+        <div class="pt-3">
+          <p>{{ .content | markdownify }}</p>
+          <div style="display: inline-block;">
+            {{ range .button }}
+            <a href="{{ .link | absURL }}" class="btn-link mr-4">
+              {{ .label }}
+              <i class="ti-arrow-right"></i>
+            </a>
+            {{ end }}
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div {{if gt (len .images) 1}}class="slider" {{end}}>
+          {{ range .images }}
+          <img src="{{ . | absURL }}" alt="typrx race image"
+          class="img-fluid rounded pt-3">
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ else }}
+<section class="section-mojo border-bottom" id="UTC">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div {{if gt (len .images) 1}}class="slider" {{end}}>
+          {{ range .images }}
+          <img src="{{ . | absURL }}" alt="ultimate typing
+          championship logo" class="img-fluid rounded pb-3">
+          {{ end }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="section-mojo-title">{{ .title | markdownify }}</h2>
+        <p>{{ .content | markdownify }}</p>
+        <div class="row flex-wrap ml-0">
+          {{ range .button }}
+          <a href="{{ .link | absURL }}" class="mr-3 btn-link">
+            {{ .label }}
+            <i class="ti-arrow-right"></i>
+          </a>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+<!-- END OF TYPRX SECTION -->
+
+
+<!-- LAST 3 POSTS SECTION-->
+{{ if site.Data.homepage.posts.enable}}
+{{- $recent_post := where .Site.RegularPages "Section" "in" (.Site.Data.homepage.posts.section | default (slice "blog")) }}
+{{- $recent_num := (.Site.Params.homepage.posts.number | default 3) }}
+{{ with site.Data.homepage.posts}}
+<section class="section-mojo" id="last-3-posts">
+  {{- if $recent_post }}
+  <div class="container">
+    <div style="padding:0 10px 40px;text-align: center;">
+      <h2 class="section-title" style="font-size: 2.75rem;font-weight: 600;">
+        {{ .title | markdownify }}
+      </h2>
+    </div>
+  </div>
+
+  <div class="container-lg">
+    <div class="row justify-content-center">
+      {{- range first $recent_num $recent_post }}
+      <div class="col-md-6">
+        {{ .Render "summary" }}
+      </div>
+      {{- end }}
+    </div>
+  </div>
+
+</section>
+{{- end }}
+{{- end -}}
+{{- end -}}
+<!-- END OF POST SECTION-->
+
+
+{{ end }}
