@@ -8,19 +8,19 @@ alt: "Girl in front of her pc with plants next to her"
 # post type (regular/featured)
 type: "blog"
 # meta description
-description: "Read this testimony of a new remote team member about her first week at Metadot!"
+description: "Read how Metadot uses a four step process to run virtual meetings"
 # post author
-author: "Catherine Muller"
+author: "Catherine Mulder"
 #summary title
-summaryTitle: "My first week in remote Tech Company"
+summaryTitle: "A four step process to run remote meetings"
 #tags
 categories: 
-    - "remote working"
+    - "remote meetings"
 # post draft
 draft: false
 ---
 
-# MEETINGS - A FOUR STEP PROCESS TO ALLEVIATE THE STRESS OF REMOTE MEETINGS 
+# Meetings - A Four Stop Process to Alleviate the Stress of Remote Meetings 
 
 We have all been there. The work day meetings that seem to last hours, and content that leaves you more confused than when you started. It is common for employees to have these feelings towards meetings, and they uphold this reputation in a variety of workplaces. Based on a study from The Business Journals, employees reported that 63% of meetings were not useful, and could have been handled through an email.  Metadot has created a 4 step process that combats these characteristics and allows employers to evaluate their meeting structure and improve this system. This means eliminating over half the scheduled meetings on average - increasing productivity time for your team significantly. As well as strategic methods to condense meeting time, without condensing the quality of the material. Follow these four easy steps to recreate the structure of your organization, and create a happier work environment for all. 
 
