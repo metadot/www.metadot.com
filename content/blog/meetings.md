@@ -1,7 +1,7 @@
 ---
 title: "Meetings: A For Step Process to Alleviate the Stress of Remote Meetings"
 date: 2020-04-18T10:07:21+06:00
-url: /blog/onboarding-to-onboarded
+url: /blog/meetings
 featured_image: "/images/blog/firstweek.svg"
 #alt image
 alt: "Girl in front of her pc with plants next to her"
@@ -20,4 +20,4 @@ categories:
 draft: false
 ---
 
-Ahmed says hi 
+# MEETINGS - A FOUR STEP PROCESS TO ALLEVIATE THE STRESS OF REMOTE MEETINGS 
