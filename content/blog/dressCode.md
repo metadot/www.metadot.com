@@ -2,9 +2,9 @@
 title: "Dress Code: How Metadot Tackles the Traditional Workplace Attire"
 date: 2020-04-18T10:07:21+06:00
 url: /blog/dresscode
-featured_image: "/images/blog/meetings.svg"
+featured_image: "/images/blog/dresscode.svg"
 #alt image
-alt: "two people working on computers with graphs"
+alt: "woman looking at a variety of clothing options"
 # post type (regular/featured)
 type: "blog"
 # meta description
@@ -12,7 +12,7 @@ description: "Read about Metadot's structures its dress code"
 # post author
 author: "Catherine Mulder"
 #summary title
-summaryTitle: "A four step process to run remote meetings"
+summaryTitle: "How Metadot does dress code"
 #tags
 categories: 
     - "dress code"
