@@ -17,7 +17,7 @@ summaryTitle: "A four step process to run remote meetings"
 categories: 
     - "remote meetings"
 # post draft
-draft: false
+draft: true
 ---
 
 # Meetings - A Four Stop Process to Alleviate the Stress of Remote Meetings 
