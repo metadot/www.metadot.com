@@ -1,3 +1,26 @@
+---
+title: "How Virtual Coffee Dates Impacted our Organization"
+date: 2020-04-18T10:07:21+06:00
+url: /blog/remote-leadership
+## post image
+featured_image: "/images/blog/remoteleader.svg"
+# alt image
+alt: "Busy girl behind her pc while calling someone"
+## post type (regular/featured)
+type: "blog"
+## meta description
+description: "Learn more about how implementing virtual coffee dates shaped our team"
+# post author
+author: "Catherine Mulder"
+#summary Tilte
+summaryTitle: "Coffee Dates"
+#tags
+categories:
+    - "coffee dates"
+## post draft
+draft: true
+---
+
 # HOW VIRTUAL COFFEE DATES IMPACTED OUR ORGANIZATION
 
 As we entered another lock-down cycle amidst the Covid-19 pandemic, we knew that 
