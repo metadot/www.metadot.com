@@ -1,11 +1,11 @@
 ---
 title: "How Virtual Coffee Dates Impacted our Organization"
 date: 2020-04-18T10:07:21+06:00
-url: /blog/remote-leadership
+url: /blog/coffeedates
 ## post image
-featured_image: "/images/blog/remoteleader.svg"
+featured_image: "/images/blog/coffeedates.svg"
 # alt image
-alt: "Busy girl behind her pc while calling someone"
+alt: "Man sitting next to large coffee cup"
 ## post type (regular/featured)
 type: "blog"
 ## meta description
