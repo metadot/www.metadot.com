@@ -18,3 +18,11 @@ serve: clean
 update:
 	git pull
 	yarn
+
+#launch the deployement process, after updating and building the project
+deploy: update build
+		cp ./misc/.htaccess ./public
+		../www.deploy/website_handler_chewbacca.sh -d ./public
+		@echo
+		@echo "Remember to git push..."
+		@echo

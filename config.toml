@@ -4,7 +4,7 @@ languageName = "En"
 languageCode = "en-us"
 
 # base URL
-baseURL = "https://staging-metadot.netlify.app/"
+baseURL = "https://metadot.com/"
 # unsafe html
 [markup.goldmark.renderer]
 unsafe = true
