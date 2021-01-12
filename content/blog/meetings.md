@@ -1,6 +1,6 @@
 ---
-title: "Meetings: A For Step Process to Alleviate the Stress of Remote Meetings"
-date: 2020-04-18T10:07:21+06:00
+title: "Meetings: A Four Step Process to Alleviate the Stress of Remote Meetings"
+date: 2021-01-6T10:07:21+06:00
 url: /blog/meetings
 featured_image: "/images/blog/meetings.svg"
 #alt image
