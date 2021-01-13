@@ -167,13 +167,12 @@
 
 <!-- END OF TYPRX SECTION -->
 
-
-<!-- LAST 3 POSTS SECTION-->
+<!-- LAST 2 POSTS SECTION-->
 {{ if site.Data.homepage.posts.enable}}
 {{- $recent_post := where .Site.RegularPages "Section" "in" (.Site.Data.homepage.posts.section | default (slice "blog")) }}
-{{- $recent_num := (.Site.Params.homepage.posts.number | default 3) }}
+{{- $recent_num := (.Site.Params.homepage.posts.number | default 2) }}
 {{ with site.Data.homepage.posts}}
-<section class="section-mojo" id="last-3-posts">
+<section class="section-mojo">
   {{- if $recent_post }}
   <div class="container">
     <div style="padding:0 10px 40px;text-align: center;">
@@ -198,6 +197,5 @@
 {{- end -}}
 {{- end -}}
 <!-- END OF POST SECTION-->
-
 
 {{ end }}

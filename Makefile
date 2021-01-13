@@ -12,7 +12,7 @@ build: clean
 
 #create a web server with the web site with the Drafted files
 serve: clean
-	hugo -D serve
+	hugo -D -F serve
 
 #import the changes from remote and install the dependencies
 update:

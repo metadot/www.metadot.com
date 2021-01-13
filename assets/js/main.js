@@ -17,7 +17,7 @@
     }
   });
 
-  //we select the dropdown button of aboutus section labelled with "clickable"
+  //we select the dropdown button of about-us section labelled with "clickable"
   var dropdown = $(".clickable");
   //Hide the matched elements with a sliding motion.
   $(".content").slideUp("normal");
