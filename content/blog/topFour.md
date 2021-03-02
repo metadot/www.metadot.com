@@ -1,4 +1,26 @@
-# Four Attributes that Drive Successful Companies and Individuals
+---
+title: "Four Attributes that Drive Successful Companies & Individuals"
+date: 2021-03-03T10:07:21+06:00
+url: /blog/topfour
+## post image
+featured_image: "/images/blog/topfour.svg"
+# alt image
+alt: "Man looking at a pie chart"
+## post type (regular/featured)
+type: "blog"
+## meta description
+description: "Learn the four attributes that drive success"
+# post author
+author: "Catherine Mulder"
+# summary Tilte
+summaryTitle: "Four Attributes"
+# tags
+categories:
+    - "four attributes"
+## post draft
+draft: false
+---
+# Four Attributes that Drive Successful Companies & Individuals
 
 Success is a major goal that each individual and organization strives to achieve. It has many different layers, and interpretations - from an individual level to company wide. Based on studies from the Empirical Software Engineer team, as well as the methodology behind Deep Work, there have been four identifiable attributes that embrace the well-rounded skill sets of effective workers. 
 
