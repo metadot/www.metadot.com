@@ -1,7 +1,7 @@
 ---
 title: "Four Attributes that Drive Successful Companies & Individuals"
 date: 2021-03-03T10:07:21+06:00
-url: /blog/topfour
+url: /blog/fourattributes
 ## post image
 featured_image: "/images/blog/topfour.svg"
 # alt image
