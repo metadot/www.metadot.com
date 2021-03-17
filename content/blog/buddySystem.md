@@ -1,3 +1,26 @@
+---
+title: "The Buddy System: Remote Onboarding made Simple"
+date: 2021-17-03T10:07:21+06:00
+url: /blog/thebuddysystem
+## post image
+featured_image: "/images/blog/buddysystem.svg"
+# alt image
+alt: "Two coworkers working together on a project"
+## post type (regular/featured)
+type: "blog"
+## meta description
+description: "Learn more about how we made remote onboarding simple"
+# post author
+author: "Catherine Mulder"
+# summary Tilte
+summaryTitle: "The Buddy System"
+# tags
+categories:
+    - "buddy system"
+## post draft
+draft: false
+---
+
 As professionals, everyone can relate to the new job nerves and excitement that comes with the start of a new opportunity.
 There are so many colleagues to meet, procedures to learn, and paperwork to complete. In a physical environment, this process 
 can be difficult enough. Accomplishing a successful onboarding in a remote environment, can take this challenge to the next 
