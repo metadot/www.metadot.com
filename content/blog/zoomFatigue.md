@@ -21,40 +21,18 @@ categories:
 draft: false
 ---
 
-Zoom calls are something everyone has become familiar with especially during the pandemic. Whether its a virtual birthday
-party, long-distance family game night or just the classic 9 am work meeting - Zoom has become a more consistent part of
-our daily lives. It has allowed companies to keep operating, families to stay connected, and the world to shift the way we
-once viewed work structures. Amidst all the positives, Zoom and other virtual communication platforms have their negatives.
-Professor Jeremy Bailenson with the Stanford University Virtual Human Interaction Lab conducted a study analyzing the ways 
-in which these meetings may be burning us out. He has reduced these feelings of exhaustion into four identifiable categories
-and ways to help ease the effects, coining the term: Zoom Fatigue.
+Zoom calls are something everyone has become familiar with especially during the pandemic. Whether its a virtual birthday party, long-distance family game night or just the classic 9 am work meeting - Zoom has become a more consistent part of our daily lives. It has allowed companies to keep operating, families to stay connected, and the world to shift the way we once viewed work structures. Amidst all the positives, Zoom and other virtual communication platforms have their negatives. Professor Jeremy Bailenson with the Stanford University Virtual Human Interaction Lab conducted a study analyzing the ways in which these meetings may be burning us out. He has reduced these feelings of exhaustion into four identifiable categories and ways to help ease the effects, coining the term: Zoom Fatigue.
 
 ## Social Distance from the Screen
 
-When the majority of “face to face” human contact starts occurring through screens, we are experiencing some subconscious effects.
-The normal meeting dynamic of the presenter holding the attention is shifted as everyone now has direct eye contact with all of 
-the participants of the meeting. While this not only shifts the dynamics of the meeting, Bailenson includes the rise in emotional
-turmoil for those who experience social anxieties. “Social anxiety of public speaking is one of the biggest phobias that exists in
-our population,” and when individuals are put in an environment where “everybody’s staring at you, that’s a stressful experience.” 
-This could go as far as to affect one’s performance, and definitely add a level of stress that would otherwise be avoided in the 
-traditional workplace meeting. Bailenson refers to this as a “hyper-aroused state” as you are also experiencing other individuals'
-faces at a size that the brain acknowledges as an intense situation. The intensity for long periods of time can contribute to Zoom
-Fatigue, which Stanford recommends combatting with:
+When the majority of “face to face” human contact starts occurring through screens, we are experiencing some subconscious effects. The normal meeting dynamic of the presenter holding the attention is shifted as everyone now has direct eye contact with all of the participants of the meeting. While this not only shifts the dynamics of the meeting, Bailenson includes the rise in emotional turmoil for those who experience social anxieties. “Social anxiety of public speaking is one of the biggest phobias that exists in our population,” and when individuals are put in an environment where “everybody’s staring at you, that’s a stressful experience.” This could go as far as to affect one’s performance, and definitely add a level of stress that would otherwise be avoided in the traditional workplace meeting. Bailenson refers to this as a “hyper-aroused state” as you are also experiencing other individuals' faces at a size that the brain acknowledges as an intense situation. The intensity for long periods of time can contribute to Zoom Fatigue, which Stanford recommends combatting with:
 
 - Taking Zoom and other virtual communication platforms out of full-screen when in use. This can help control the image and reduce the intensity.
-- Try using an external keyboard to help create excess space between you and the screen, in comparison to using the keyboard that is attached to the laptop.
+- Try using an [external keyboard](https://daskeyboard.com/) to help create excess space between you and the screen, in comparison to using the keyboard that is attached to the laptop.
 
 ## Face-time leads to Fatigue
 
-While the amount of face time with others can cause fatigue, we are also experiencing an increased amount of time looking at 
-our own faces. In our ordinary lives, we rarely ever spend hours a day looking at a reflection of ourselves, analyzing our body 
-language and mannerisms - that is not a normal human experience. Humans can be relatively critical, especially of themselves, and
-viewing yourself through a Zoom screen is like living under a constant microscope. This can be quite draining, and add a level of 
-emotional stress - lowering one’s confidence. These effects can begin to develop an association between anxiety and meetings, which 
-potentially creates a less positive performance from the lack of confidence. While the most ideal solution would be to have the platforms
-change the way in which they display the meeting room, users can take initiative and manually hide their own self from view. This 
-detracts from the attention and criticism they put on themselves and opens the opportunity for a company to have more productive meetings
-where the attention is directed in a healthier, more appropriate way.
+While the amount of face time with others can cause fatigue, we are also experiencing an increased amount of time looking at our own faces. In our ordinary lives, we rarely ever spend hours a day looking at a reflection of ourselves, analyzing our body language and mannerisms - that is not a normal human experience. Humans can be relatively critical, especially of themselves, and viewing yourself through a Zoom screen is like living under a constant microscope. This can be quite draining, and add a level of emotional stress - lowering one’s confidence. These effects can begin to develop an association between anxiety and meetings, which potentially creates a less positive performance from the lack of confidence. While the most ideal solution would be to have the platforms change the way in which they display the meeting room, users can take initiative and manually hide their own self from view. This detracts from the attention and criticism they put on themselves and opens the opportunity for a company to have more productive meetings where the attention is directed in a healthier, more appropriate way.
 
 ## The New 6 Feet of Space
 
