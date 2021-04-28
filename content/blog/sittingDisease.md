@@ -52,7 +52,7 @@ As the workforce continues to move forward, it is important that companies start
 
 Medina-Inojosa, Jose R, et al. “Differences of Energy Expenditure While Sitting versus Standing: A Systematic Review and Meta-Analysis -  .” SAGE Journals, European Journal of Preventitive Cardiology, 31 Jan. 2018, https://journals.sagepub.com/doi/abs/10.1177/2047487317752186
 
-Muller, Jon. “12 Sedentary Lifestyle Statistics in 2021 That Will Get You off Your Chair.” Ergonomic Trends, 28 Mar. 2021, ergonomictrends.com/sedentary-lifestyle-sitting-statistics/?mc_cid=3cf820ff19&amp;mc_eid=UNIQID. 
+Muller, Jon. “12 Sedentary Lifestyle Statistics in 2021 That Will Get You off Your Chair.” Ergonomic Trends, 28 Mar. 2021, https://ergonomictrends.com/sedentary-lifestyle-sitting-statistics/
 
 Sharifi, Ava. “Get Up, Stand Up: Combatting.” The Whole U, The University of Washington, 15 July 2019, https://thewholeu.uw.edu/2019/07/15/sitting-disease/ 
 
