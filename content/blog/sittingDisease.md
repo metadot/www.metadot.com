@@ -48,13 +48,13 @@ When I first discovered “The Sitting Disease” I was intrigued by the dangers
 
 As the workforce continues to move forward, it is important that companies start to educate themselves on the risks, and prioritize evolving into a healthier work environment. The culture of the working world must shift to be more accommodating, and begin to normalize taking routine breaks for health. An investment into the mental and physical health of your team, is ultimately an investment into the success of your company.
 
-“Ergotron JustStand Survey & Index Report.” JustStand.org, Ergotron, 15 July 2013,  [resource](https://www.juststand.org/wp-content/uploads/2017/05/SurveyIndexReport.pdf).
+“Ergotron JustStand Survey &amp; Index Report.” JustStand.org, Ergotron, 15 July 2013, www.juststand.org/wp-content/uploads/2017/05/SurveyIndexReport.pdf. 
 
-Medina-Inojosa, Jose R, et al. “Differences of Energy Expenditure While Sitting versus Standing: A Systematic Review and Meta-Analysis - .” SAGE Journals, European Journal of Preventitive Cardiology, 31 Jan. 2018, [resource](https://journals.sagepub.com/doi/10.1177/2047487317752186).
+Medina-Inojosa, Jose R, et al. “Differences of Energy Expenditure While Sitting versus Standing: A Systematic Review and Meta-Analysis -  .” SAGE Journals, European Journal of Preventitive Cardiology, 31 Jan. 2018, journals.sagepub.com/doi/10.1177/2047487317752186. 
 
-Muller, Jon. “12 Sedentary Lifestyle Statistics in 2021 That Will Get You off Your Chair.” Ergonomic Trends, 28 Mar. 2021, [resource](https://www.ergonomictrends.com/sedentary-lifestyle-sitting-statistics/?mc_cid=3cf820ff19&mc_eid=UNIQID).
+Muller, Jon. “12 Sedentary Lifestyle Statistics in 2021 That Will Get You off Your Chair.” Ergonomic Trends, 28 Mar. 2021, ergonomictrends.com/sedentary-lifestyle-sitting-statistics/?mc_cid=3cf820ff19&amp;mc_eid=UNIQID. 
 
-Sharifi, Ava. “Get Up, Stand Up: Combatting.” The Whole U, The University of Washington, 15 July 2019, [resource](https://www.thewholeu.uw.edu/2019/07/15/sitting-disease/#:~:text=Including%20exercise%20and%20physical%20activity,associated%20with%20adverse%20health%20effects).
+Sharifi, Ava. “Get Up, Stand Up: Combatting.” The Whole U, The University of Washington, 15 July 2019, https://thewholeu.uw.edu/2019/07/15/sitting-disease/ 
 
 Check out our 5 Meta Hacks from last Week:
 
