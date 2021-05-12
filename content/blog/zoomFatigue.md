@@ -55,4 +55,4 @@ when not presenting, and stepping away from the camera for a few minutes to give
 
 While we all consistently experience the positives of technology, we are also simultaneously experiencing the negatives. As we move forward as a virtual community, it is important to combat these challenges and be intentional in solutions. The Covid-19 pandemic has proven the shift to remote working to be the new normal, and the prioritization of combatting Zoom fatigue should become essential in creating a healthy work environment.
 
-University, Stanford. “Four Causes for 'Zoom Fatigue' and Their Solutions.” Stanford News, 1 Mar. 2021, <https://news.stanford.edu/2021/02/23/four-causes-zoom-fatigue-solutions/>.
+For more information about this topic, check out this resource from Stanford University. <https://news.stanford.edu/2021/02/23/four-causes-zoom-fatigue-solutions/>.
