@@ -5,7 +5,7 @@ url: /blog/remote-leadership
 ## post image
 image: "/images/blog/remoteleader.png"
 images:
- - "/images/blog/remoteleader.png"
+ - /images/blog/remoteleader.png
 # alt image
 alt: "Busy girl behind her pc while calling someone"
 ## post type (regular/featured)
