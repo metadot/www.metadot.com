@@ -26,7 +26,7 @@
                 <div class="blog-card-image">
                     {{ $firstChild := index .Pages 0 }}
                     <a href="{{ .Page.Permalink }}">
-                        {{ with $firstChild.Params.featured_image }}
+                        {{ with $firstChild.Params.image }}
                         <img src="{{ . }}" class="img-fluid rounded" alt="" />
                     </a>
                     {{ end }}

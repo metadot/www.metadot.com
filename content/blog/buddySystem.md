@@ -3,7 +3,7 @@ title: "The Buddy System: Remote Onboarding made Simple"
 date: 2021-03-17T10:07:21+06:00
 url: /blog/thebuddysystem
 ## post image
-featured_image: "/images/blog/buddysystem.svg"
+image: "/images/blog/buddysystem.svg"
 # alt image
 alt: "Two coworkers working together on a project"
 ## post type (regular/featured)

@@ -3,7 +3,7 @@ title: "How Virtual Coffee Dates Impacted our Organization"
 date: 2021-02-03T10:07:21+06:00
 url: /blog/coffeedates
 ## post image
-featured_image: "/images/blog/coffeedates.svg"
+image: "/images/blog/coffeedates.svg"
 # alt image
 alt: "Man sitting next to large coffee cup"
 ## post type (regular/featured)

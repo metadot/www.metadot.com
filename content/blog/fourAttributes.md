@@ -3,7 +3,7 @@ title: "Four Attributes that Drive Successful Companies & Individuals"
 date: 2021-03-03T10:07:21+06:00
 url: /blog/fourattributes
 ## post image
-featured_image: "/images/blog/topfour.svg"
+image: "/images/blog/topfour.svg"
 # alt image
 alt: "Man looking at a pie chart"
 ## post type (regular/featured)

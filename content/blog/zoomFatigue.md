@@ -3,7 +3,7 @@ title: "Zoom Fatigue: How to Beat the Burnout of Remote Work Meetings"
 date: 2021-04-14T10:07:21+06:00
 url: /blog/zoomfatigue
 ## post image
-featured_image: "/images/blog/zoom.svg"
+image: "/images/blog/zoom.svg"
 # alt image
 alt: "Man looking at computer screens on a meeting"
 ## post type (regular/featured)

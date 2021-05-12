@@ -2,7 +2,7 @@
 title: "Dress Code: How Metadot Tackles the Traditional Workplace Attire"
 date: 2021-01-20T10:07:21+06:00
 url: /blog/dresscode
-featured_image: "/images/blog/dresscode.svg"
+image: "/images/blog/dresscode.svg"
 # alt image
 alt: "woman looking at a variety of clothing options"
 # post type (regular/featured)

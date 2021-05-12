@@ -3,7 +3,7 @@ title: "Deep Work: Minutes of Focus for a Lifetime of Results"
 date: 2021-02-17T10:07:21+06:00
 url: /blog/deepwork
 ## post image
-featured_image: "/images/blog/deepwork.svg"
+image: "/images/blog/deepwork.svg"
 # alt image
 alt: "Woman sitting at table completing work"
 ## post type (regular/featured)

@@ -2,7 +2,7 @@
 title: "Meetings: A Four Step Process to Alleviate the Stress of Remote Meetings"
 date: 2021-01-06T10:07:21+06:00
 url: /blog/meetings
-featured_image: "/images/blog/meetings.svg"
+image: "/images/blog/meetings.svg"
 # alt image
 alt: "two people working on computers with graphs"
 # post type (regular/featured)

@@ -3,7 +3,7 @@ title: "Evolving Evaluations in the Workplace"
 date: 2021-03-31T10:07:21+06:00
 url: /blog/360reviews
 ## post image
-featured_image: "/images/blog/360reviews.svg"
+image: "/images/blog/360reviews.svg"
 # alt image
 alt: "Woman sitting on top of a computer looking at reviews"
 ## post type (regular/featured)

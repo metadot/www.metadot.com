@@ -2,7 +2,7 @@
 title: "Onboarding To Onboarded - How My First Week Went at a Remote Global Tech Company"
 date: 2020-10-25T10:07:21+06:00
 url: /blog/onboarding-to-onboarded
-featured_image: "/images/blog/firstweek.svg"
+image: "/images/blog/firstweek.svg"
 # alt image
 alt: "Girl in front of her pc with plants next to her"
 # post type (regular/featured)

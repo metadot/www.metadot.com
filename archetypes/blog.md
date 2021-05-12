@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 # post image
-featured_image: "images/(TODO)"
+image: "images/(TODO)"
 # alt image
 alt: "alt for the blog post img(TODO)"
 # post type (regular/featured)

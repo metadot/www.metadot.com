@@ -3,7 +3,7 @@ title: "The Sitting Disease: How your Workweek Habits are Damaging your Health"
 date: 2021-04-28T10:07:21+06:00
 url: /blog/thesittingdisease
 ## post image
-featured_image: "/images/blog/sitting.svg"
+image: "/images/blog/sitting.svg"
 # alt image
 alt: "Woman lounging on a couch using her phone"
 ## post type (regular/featured)

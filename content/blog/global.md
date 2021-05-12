@@ -2,7 +2,7 @@
 title: "Connecting the Continents: How We Operate a Global Team"
 date: 2021-05-05T10:07:21+06:00
 url: /blog/globalteam
-featured_image: "/images/blog/global.svg"
+image: "/images/blog/global.svg"
 # alt image
 alt: "a woman staring at the globe with marked locations"
 # post type (regular/featured)
