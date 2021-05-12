@@ -9,8 +9,7 @@ alt: "Busy girl behind her pc while calling someone"
 ## post type (regular/featured)
 type: "blog"
 ## meta description
-description: "What is the secret of a sucessfull remote team? 
-Read this post to know the answer!"
+description: "Learn more about how to improve leadership skills and build a strong remote team"
 # post author
 author: "Catherine Mulder"
 # summary Tilte
