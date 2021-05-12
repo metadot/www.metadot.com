@@ -4,6 +4,8 @@ date: 2020-11-18T10:07:21+06:00
 url: /blog/remote-leadership
 ## post image
 image: "/images/blog/remoteleader.png"
+images:
+ - "/images/blog/remoteleader.png"
 # alt image
 alt: "Busy girl behind her pc while calling someone"
 ## post type (regular/featured)
