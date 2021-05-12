@@ -47,36 +47,3 @@ This means we are spending roughly 21 hours of our day being sedentary. We trans
 When I first discovered “The Sitting Disease” I was intrigued by the dangers of something so simple. Although I spent 5 days a week sitting at my home office, I thought my daily hour workouts would cancel out the risks. While it certainly lowers the risk, it does not make me immune to the negative effects of a sedentary lifestyle. After doing some more research, I learned through a [study from the European Journal of Preventive Cardiology](https://journals.sagepub.com/doi/10.1177/2047487317752186) that standing burned .15 more calories a minute in comparison to sitting. Not only did it burn more calories but slowly improved posture and muscle strength in comparison to someone who sat instead. Now, I make it a goal to spend at least half the day standing, and hold myself accountable to utilize my breaks.
 
 As the workforce continues to move forward, it is important that companies start to educate themselves on the risks, and prioritize evolving into a healthier work environment. The culture of the working world must shift to be more accommodating, and begin to normalize taking routine breaks for health. An investment into the mental and physical health of your team, is ultimately an investment into the success of your company.
-
-“Ergotron JustStand Survey &amp; Index Report.” JustStand.org, Ergotron, 15 July 2013, www.juststand.org/wp-content/uploads/2017/05/SurveyIndexReport.pdf. 
-
-Medina-Inojosa, Jose R, et al. “Differences of Energy Expenditure While Sitting versus Standing: A Systematic Review and Meta-Analysis -  .” SAGE Journals, European Journal of Preventitive Cardiology, 31 Jan. 2018, https://journals.sagepub.com/doi/abs/10.1177/2047487317752186
-
-Muller, Jon. “12 Sedentary Lifestyle Statistics in 2021 That Will Get You off Your Chair.” Ergonomic Trends, 28 Mar. 2021, https://ergonomictrends.com/sedentary-lifestyle-sitting-statistics/
-
-Sharifi, Ava. “Get Up, Stand Up: Combatting.” The Whole U, The University of Washington, 15 July 2019, https://thewholeu.uw.edu/2019/07/15/sitting-disease/ 
-
-Check out our 5 Meta Hacks from last Week:
-
-- The “Sitting Disease”
-
-A study from Mayo Clinic Dr. James Levine claims that “Sitting is more dangerous than smoking, kills more people than HIV and is more treacherous
-than parachuting. We are sitting ourselves to death.” Pretty scary isn’t it?
-
-- Historically Heavy Hard Drives: A transformation from 1 ton to 1.6 pounds
-
-The hard drives we know today are vastly different from the [original model](https://thinkcomputers.org/the-history-of-the-hard-drive/?mc_cid=3cf820ff19&mc_eid=UNIQID) sold by IBM in the 1950’s. Weighing in at about a ton, and standing at the height of two refrigerators - these hard drives held 5MB of data, costing nearly $10,000 a megabyte.
-
-- Beware of Zoom Fatigue - Learn how to beat the burnout of remote work
-
-With an increase in virtual meetings, these changes are affecting our productivity and confidence in the workplace. Stanford professor Jeremy Bailenson recommends creating space between you and screen time to help avoid burnout. [Here are additional resources](https://metadot.com/blog/zoomfatigue/?mc_cid=3cf820ff19&mc_eid=UNIQID) to help keep you productive.
-
-- Why did the US Air Force buy 1,760 PlayStation 3’s?
-
-Spoiler Alert: it wasn’t for gaming. Learn more about how the Air Force used this popular gaming console to build the [ultimate supercomputer](https://phys.org/news/2010-12-air-playstation-3s-supercomputer.html?mc_cid=3cf820ff19&mc_eid=UNIQID#:~:text=US%20Air%20Force%20connects%201%2C760%20PlayStation%203's%20to%20build%20supercomputer,-by%20Lisa%20Zyga&text=The%20Condor%20Cluster%20consists%20of,of%20Defense's%20fastest%20interactive%20computer).
-
-- Protect your PC: Statistics on the evolution of hacking in 2021
-
-More than 6,000 computer viruses are created and released each month. [Learn the statistics](https://www.comparitech.com/antivirus/malware-statistics-facts/?mc_cid=3cf820ff19&mc_eid=UNIQID) and new hacker tactics to protect your information.
-
-Interested in learning more? [Subscribe to our weekly Meta Hacks.](https://www.daskeyboard.com/5-meta-hacks/) Enjoy! 
