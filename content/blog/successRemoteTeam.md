@@ -1,5 +1,5 @@
 ---
-title: "R.E.M.O.T.E Leadership - How To Guide a Remote Team To Sucess"
+title: "R.E.M.O.T.E Leadership - How To Guide a Remote Team To Success"
 date: 2020-11-18T10:07:21+06:00
 url: /blog/remote-leadership
 ## post image
@@ -12,7 +12,7 @@ type: "blog"
 description: "What is the secret of a sucessfull remote team? 
 Read this post to know the answer!"
 # post author
-author: "Catherine Muller"
+author: "Catherine Mulder"
 # summary Tilte
 summaryTitle: "How To Guide A Remote Team To Success"
 # tags
