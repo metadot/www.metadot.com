@@ -1,0 +1,3 @@
+[submodule "metadot-404-page"]
+	path = metadot-404-page
+	url = git@github.com:metadot/metadot-404-page.git
