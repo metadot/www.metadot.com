@@ -1,10 +1,17 @@
 # README
 
-This repo contains the [Metadot](www.metadot.com) website files.
+This repo contains the [Metadot](www.metadot.com) website files. 
+This repo contains git submodules.
 
 ## Setup environment
 
+Clone this project then clone the submodules like this:
+
+    git submodule init
+    git submodule update
+
 1. Install `hugo` at the moment [v0.68.1](https://gohugo.io/getting-started/installing/#debian-and-ubuntu)
+
 2. Run `yarn` or `make update`
 
 ## Start development server
@@ -18,6 +25,10 @@ Open browser point to URL indicated in the console.
     make build
 
 This will compile the site to the `public` directory.
+
+## Deploy
+
+    make deploy
 
 ## Icons generator
 
