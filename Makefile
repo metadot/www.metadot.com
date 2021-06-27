@@ -22,10 +22,10 @@ update:
 #launch the deployement process, after updating and building the project
 deploy: update build
 		cp ./misc/.htaccess ./public
-		cp -r ./metadot-404-page ./public/
-		rm -r ./public/metadot-404-page/.git
+		mkdir ./public/images-404
+		cp ./metadot-404-page/images-404/* ./public/images-404/
+		cp ./metadot-404-page/404.html ./public/
 		../www.deploy/website_handler_chewbacca.sh -d ./public
-		
 		@echo
 		@echo "Remember to git push..."
 		@echo
