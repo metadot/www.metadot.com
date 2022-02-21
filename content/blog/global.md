@@ -47,7 +47,7 @@ While we prioritize emotional and mental well-being as a team, we also prioritiz
 
 - Push-ups. Started by our CEO Daniel, we take a break once each hour of the work day to do push-ups. Different from stretching, we do this in our personal time. However, we do have a reminder set to notify those who participate that it's time to take a break, and complete your push-ups. While this is not everyone's favorite activity, those who do participate feel stronger and more ready to tackle their next tasks.
 
-Quick fact: [A study from Dr. James Levine](ergonomictrends.com/sedentary-lifestyle-sitting-statistics/), the director of Mayo Clinic, concluded that “people who spent more than 6 hours per day sitting with low levels of physical activity have a 71% increase in mortality rate.” (Muller). Statistics like this drive us to be even more creative in how we encourage one another to keep moving, while balancing work and life.
+Quick fact: [A study from Dr. James Levine](https://ergonomictrends.com/sedentary-lifestyle-sitting-statistics/), the director of Mayo Clinic, concluded that “people who spent more than 6 hours per day sitting with low levels of physical activity have a 71% increase in mortality rate.” (Muller). Statistics like this drive us to be even more creative in how we encourage one another to keep moving, while balancing work and life.
 
 ## Learning through the Language “Barrier”
 

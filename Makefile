@@ -25,7 +25,7 @@ deploy: update build
 		mkdir ./public/images-404
 		cp ./metadot-404-page/images-404/* ./public/images-404/
 		cp ./metadot-404-page/404.html ./public/
-		../www.deploy/website_handler_chewbacca.sh -d ./public
+		./www.deploy/website_handler_chewbacca.sh -d ./public
 		@echo
 		@echo "Remember to git push..."
 		@echo

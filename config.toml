@@ -78,7 +78,7 @@ parent = "service"
 
 [[menu.main]]
 name = "Das&nbsp;Keyboard"
-URL = "http://daskeyboard.com"
+URL = "https://daskeyboard.com"
 identifier = "/images/brand/dkbrand.webp"
 parent = "service"
 
