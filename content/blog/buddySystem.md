@@ -31,7 +31,7 @@ simultaneously diminishing those new-job nerves.
 
 ## How do we do it?
 
-The Buddy is chosen prior to the new-hire’s start date, and is given an onboarding checklist template from our software, “Bamzooka”. Bamzooka is our software that helps document processes, organize work and improves the quality of our output through checklists. Our HR manager reviews the specific onboarding checklist and assigns tasks to the Buddy and the new-hire for completion throughout the first week. Starting with the Buddy introducing themself through an email or chat message, and scheduling a meeting with the new-hire
+The Buddy is chosen prior to the new-hire’s start date, and is given an onboarding checklist template from our software, “Bamzooka”. [Bamzooka](www.bamzooka.com) is our software that helps document processes, organize work and improves the quality of our output through checklists. Our HR manager reviews the specific onboarding checklist and assigns tasks to the Buddy and the new-hire for completion throughout the first week. Starting with the Buddy introducing themself through an email or chat message, and scheduling a meeting with the new-hire
 the morning of their first day. We use this as an opportunity to give a warm welcome, and help answer any initial questions.
 
 The morning of day one, the Buddy and new-hire meet via video chat before our team joins in a virtual huddle to kick off the week. This is where we establish expectations about what is to be learned, as well as build a direct connection for support. The meeting can include icebreaker questions, or be used as an opportunity to review the checklists and ensure the new-hire is comfortable with navigating the software.
