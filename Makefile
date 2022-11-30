@@ -1,6 +1,6 @@
 #display every possibilities for this Makefile
 usage:
-	echo "usage: make [update|clean|build|serve]"
+	echo "usage: make [update|clean|build|serve|deploy]"
 
 #clean up the project previous build on the project
 clean:

@@ -3,3 +3,4 @@ node_modules/
 public/
 #scss content compiled during the build
 resources/
+.hugo_build.lock
