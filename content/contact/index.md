@@ -1,16 +1,14 @@
 ---
-title: "Contact Us"
+title: "Contact Metadot"
 subtitle: ""
 # meta description
-description: "This is meta description"
 draft: false
 ---
 
 <section class="section-mojo" style="background-color:#2b70a9">
 <div class="container">
-<div class="pb-1 pt-1">
     <div class="text-white">
-        {{< header bigtitle="Contact us" subsubtitle="Select a specific contact service according to your question." >}}
+        {{< header bigtitle="Questions? We are here to help?" >}}
     </div>
     <div class="container-lg mt-5 px-5">
         {{<
@@ -40,7 +38,6 @@ draft: false
         >}}
     </div>
 </div>
-</div>
 </section>
 
 <section class="section-mojo">
@@ -60,7 +57,7 @@ draft: false
                 Austin, Texas 78738-6528<br/>
                 USA<br/><br/>
                 Tel: <a href="tel:+15126379983 ">+1 512-637-9983 </a><br/>
-                Fax: <a href="tel:+15122335335">+1 512-233-5335</a>
+                Fax: +1 512-233-5335
             </small>
         </div>
         <div class="col-md-6">
