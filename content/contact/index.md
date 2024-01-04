@@ -53,7 +53,7 @@ draft: false
             </strong><br/>
             <small>
                 Metadot Corporation<br/>
-                14400 Piper Glen Drive<br/>
+                14400 Piper Glen Dr<br/>
                 Austin, Texas 78738-6528<br/>
                 USA<br/><br/>
                 Tel: <a href="tel:+15126379983 ">+1 512-637-9983 </a><br/>
