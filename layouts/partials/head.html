@@ -27,24 +27,24 @@
 
   {{ "<!-- plugins -->" | safeHTML }} {{ range site.Params.plugins.css }}
   <link rel="stylesheet" href="{{ .link | absURL }}" />
-  {{ end }} 
-  {{ "<!-- Main Stylesheet -->" | safeHTML }} 
+  {{ end }}
+  {{ "<!-- Main Stylesheet -->" | safeHTML }}
   {{ $style := resources.Get "scss/style.scss" | toCSS "css/style.css" | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" media="screen" />
 
   {{ "<!-- shorcode -->" | safeHTML }}
   {{ if not .Site.IsServer}}
   {{.Scratch.Set "allStylesArray" slice}}
-  {{end}} 
+  {{end}}
 
-  {{if .Site.IsServer }} 
+  {{if .Site.IsServer }}
   {{ $style := resources.Get "scss/shortcodes/a-title-2-times-2-card-hover-links.scss" | toCSS (dict "targetPath" "css/a-title-2-times-2-card-hover-links.css") }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}" />
-  {{ else }} 
-  {{ $style := resources.Get "scss/shortcodes/a-title-2-times-2-card-hover-links.scss" | toCSS (dict "targetPath" "css/a-title-2-times-2-card-hover-links.css" "enableSourceMap" false) | resources.Minify }} 
+  {{ else }}
+  {{ $style := resources.Get "scss/shortcodes/a-title-2-times-2-card-hover-links.scss" | toCSS (dict "targetPath" "css/a-title-2-times-2-card-hover-links.css" "enableSourceMap" false) | resources.Minify }}
   {{$styleArray := .Scratch.Get "allStylesArray"}}
   {{$styleArray := $styleArray | append (slice $style) }} {{.Scratch.Set "allStylesArray" $styleArray }}
-  {{ end }} 
+  {{ end }}
 
   {{ if not .Site.IsServer}}
   {{$allStyle := .Scratch.Get "allStylesArray" | resources.Concat "css/all.min.css"}}
@@ -54,7 +54,7 @@
     integrity="{{ $allStyle.Data.Integrity }}"
     href="{{ $allStyle.RelPermalink }}"
   />
-  {{end}} 
+  {{end}}
 
 
   {{"<!--Font import-->" | safeHTML }}
@@ -68,9 +68,8 @@
   {{ with .Params.Image }}
   <meta property="og:image" content="{{ . | absURL }}" />
   {{ end }}
-  {{ template "_internal/opengraph.html" . }} 
-  {{ template "_internal/google_analytics.html" . }} 
-  {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
 
   {{ if .RelPermalink }}
