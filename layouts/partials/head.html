@@ -33,11 +33,11 @@
   <link href="{{ $style.Permalink }}" rel="stylesheet" media="screen" />
 
   {{ "<!-- shorcode -->" | safeHTML }}
-  {{ if not .Site.IsServer}}
+  {{ if not hugo.IsServer}}
   {{.Scratch.Set "allStylesArray" slice}}
   {{end}}
 
-  {{if .Site.IsServer }}
+  {{if hugo.IsServer }}
   {{ $style := resources.Get "scss/shortcodes/a-title-2-times-2-card-hover-links.scss" | toCSS (dict "targetPath" "css/a-title-2-times-2-card-hover-links.css") }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}" />
   {{ else }}
@@ -46,7 +46,7 @@
   {{$styleArray := $styleArray | append (slice $style) }} {{.Scratch.Set "allStylesArray" $styleArray }}
   {{ end }}
 
-  {{ if not .Site.IsServer}}
+  {{ if not hugo.IsServer}}
   {{$allStyle := .Scratch.Get "allStylesArray" | resources.Concat "css/all.min.css"}}
   {{$allStyle := $allStyle | fingerprint}}
   <link
