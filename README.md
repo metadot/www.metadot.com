@@ -1,41 +1,36 @@
-# README
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This repo contains the [Metadot](www.metadot.com) website files. 
-This repo contains git submodules.
+## Getting Started
 
-## Setup environment
+First, run the development server:
 
-Clone this project then clone the submodules like this:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-    git submodule init
-    git submodule update
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Install `hugo` at the moment [v0.68.1](https://gohugo.io/getting-started/installing/#debian-and-ubuntu)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-2. Run `yarn` or `make update`
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Start development server
+## Learn More
 
-    make serve
+To learn more about Next.js, take a look at the following resources:
 
-Open browser point to URL indicated in the console.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Build
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-    make build
+## Deploy on Vercel
 
-This will compile the site to the `public` directory.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Deploy
-
-    make deploy
-
-## Icons generator
-
-This website created the several height images and the manifest.json
-using this [site](https://realfavicongenerator.net/).
-
-## Image compression
-
-Every images must be compress to the webp compression format.
-You can use this [website](https://ezgif.com/png-to-webp).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
