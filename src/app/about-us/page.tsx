@@ -1,3 +1,4 @@
+import Timeline from "@/components/Timeline";
 import {
   Accordion,
   AccordionContent,
@@ -416,6 +417,40 @@ export default function AboutUs() {
                   </AccordionItem>
                 </Accordion>
               </div>
+
+              <div id="work-section" className="mb-[5rem]">
+                <div className="mb-[3rem]">
+                  <h2 className="section-title mb-[1.1rem]">How Do We Work</h2>
+                  <div className="flex justify-center my-[1.65rem]">
+                    <Image
+                      src="/about-us/map.svg"
+                      alt="Map"
+                      width={1177}
+                      height={874}
+                      className="max-w-4/5"
+                    />
+                  </div>
+                  <p className="mb-[1rem]">
+                    We are a team of individuals, spread out across the world.
+                    Our diversity is our greatest strength. Despite the miles
+                    between us, we come together in one remote environment to
+                    create top-tier products and a new approach to an entirely
+                    virtual organization. We do this through the use of our own
+                    softwares Bamzooka and Mojo Helpdesk.
+                  </p>
+                </div>
+              </div>
+
+              {/* <div className="mb-[5rem]" id="history-section">
+                <div className="mb-[3rem]">
+                  <h2 className="section-title mb-[1.1rem]">Our History</h2>
+                  <p className="section-subtitle mb-[1.1rem]">
+                    Here are some of our key moments and milestones throughout
+                    the history of Metadot...
+                  </p>
+                </div>
+              </div> */}
+              <Timeline />
             </main>
           </div>
         </div>
