@@ -1,3 +1,4 @@
+import BlogCard from "@/components/BlogCard";
 import Image from "next/image";
 
 export default function Home() {
@@ -200,6 +201,11 @@ export default function Home() {
         </div>
       </section>
       <section className="section-mojo border-b" id="UTC">
+        {/* UTC Section */ }
+        {/* UTC Section */ }
+        {/* UTC Section */ }
+        {/* UTC Section */ }
+        {/* UTC Section */ }
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center text-left">
             <div className="flex flex-col items-left w-[570px] px-[15px]">
@@ -255,84 +261,27 @@ export default function Home() {
         <div className="container-lg mx-auto">
           <div className="flex flex-wrap justify-center text-left">
             <div className="flex flex-col items-left w-[570px] px-[15px]">
-              <div className="blog-card container rounded mb-[3.3rem]">
-                <div className="blog-card-image">
-                  <a href="/blog/globalteam/">
-                    <Image
-                      src="/blog/global.svg"
-                      alt="Woman lounging on a couch using her phone"
-                      width={906}
-                      height={511}
-                    />
-                  </a>
-                </div>
-                <div className="blog-card-title mt-[1.1rem]">
-                  <h3>
-                    <a href="/blog/globalteam/">
-                      Connecting the Continents: How We Operate a Global Team
-                    </a>
-                  </h3>
-                </div>
-                <div className="blog-card-excerpt">
-                  <p>
-                    The United States, Canada, France, and Germany - the Metadot
-                    team is spread all throughout the world. While we live in
-                    these countries, we represent many different cultures and
-                    diverse backgrounds - all connected through our
-                    organization, Metadot. Our diversity is something we
-                    celebrate, and we c...
-                  </p>
-                </div>
-                <div className="container row items-center">
-                  <a
-                    href="/blog/thesittingdisease/"
-                    className="rounded blog-card-button"
-                  >
-                    Continue{" "}
-                  </a>
-                </div>
-              </div>
+              <BlogCard
+                title="Connecting the Continents: How We Operate a Global Team"
+                excerpt="The United States, Canada, France, and Germany - the Metadot team is spread all throughout the world. While we live in these countries, we represent many different cultures and diverse backgrounds - all connected through our organization, Metadot. Our diversity is something we celebrate, and we c..."
+                imageSrc="/blog/global.svg"
+                imageAlt="Woman staring at a globe with marked locations"
+                width={808}
+                height={582}
+                href="/blog/globalteam/"
+              />
             </div>
             <div className="flex flex-col items-left w-[570px] px-[15px]">
-              <div className="blog-card container rounded mb-[3.3rem]">
-                <div className="blog-card-image">
-                  <a href="/blog/thesittingdisease/">
-                    <Image
-                      src="/blog/sitting.svg"
-                      alt="Woman lounging on a couch using her phone"
-                      width={906}
-                      height={511}
-                    />
-                  </a>
-                </div>
-                <div className="blog-card-title mt-[1.1rem]">
-                  <h3>
-                    <a href="/blog/thesittingdisease/">
-                      The Sitting Disease: How your Workweek Habits are Damaging
-                      your Health
-                    </a>
-                  </h3>
-                </div>
-                <div className="blog-card-excerpt">
-                  <h2 id="we-are-sitting-ourselves-to-death">
-                    “We are sitting ourselves to death.”
-                  </h2>
-                  <p>
-                    A shocking, yet true statement from Dr. James Levine about
-                    the unintentional danger we put ourselves in each day just
-                    by living our lives. Our health classes teach us the risk of
-                    things like eating too much junk ...
-                  </p>
-                </div>
-                <div className="container row items-center">
-                  <a
-                    href="/blog/thesittingdisease/"
-                    className="rounded blog-card-button"
-                  >
-                    Continue{" "}
-                  </a>
-                </div>
-              </div>
+              <BlogCard
+                title="The Sitting Disease: How your Workweek Habits are Damaging your Health"
+                quote="“We are sitting ourselves to death.”"
+                excerpt="A shocking, yet true statement from Dr. James Levine about the unintentional danger we put ourselves in each day just by living our lives. Our health classes teach us the risk of things like eating too much junk ..."
+                imageSrc="/blog/sitting.svg"
+                imageAlt="Woman lounging on a couch using her phone"
+                width={906}
+                height={511}
+                href="/blog/thesittingdisease/"
+              />
             </div>
           </div>
         </div>
