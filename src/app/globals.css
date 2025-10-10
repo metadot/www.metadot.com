@@ -8,8 +8,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #2b70a9;
+  --color-text: #777;
+  --color-text-dark: #222;
+  --color-body: #000;
+  --color-border: #ececec;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-light: #edf6f5;
+
+  --breakpoint-mobile-xs: 400px;
+  --breakpoint-mobile: 575px;
+  --breakpoint-tablet: 767px;
+  --breakpoint-desktop: 991px;
+  --breakpoint-desktop-lg: 1200px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +35,99 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+/* Header */
+/* Header */
+/* Header */
+/* Header */
+
+.navigation {
+  @apply bg-transparent;
+}
+
+.container-header {
+  @apply max-w-[1500px] mx-auto w-full px-[15px];
+}
+
+.navbar {
+  @apply flex items-center justify-between;
+}
+
+.navbar-toggler {
+  @apply lg:hidden border-0 text-2xl pr-2;
+}
+
+.navbar-nav {
+  @apply flex flex-col lg:flex-row lg:items-center lg:ml-auto text-center absolute lg:static left-0 top-full w-full lg:w-auto bg-white lg:bg-transparent transition-all duration-300 ease-in-out opacity-0 invisible lg:opacity-100 lg:visible lg:translate-y-0;
+}
+
+.navbar-nav.open {
+  @apply opacity-100 visible translate-y-0;
+}
+
+.nav-item {
+  @apply m-0;
+}
+
+.nav-link {
+  @apply font-bold normal-case text-[19.2px] text-[var(--color-text-dark)] p-[20px] transition-colors cursor-pointer;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.dropdown {
+  @apply relative;
+}
+
+.dropdown-toggle {
+  @apply flex items-center gap-1;
+}
+
+.dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  vertical-align: 0.15em;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-toggle.open::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-icon {
+  @apply w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-180;
+}
+
+.dropdown-menu {
+  @apply group-hover:block absolute left-0 mt-2 w-56 rounded-[4px] border border-gray-200 bg-white shadow-md z-50;
+}
+
+.dropdown-item {
+  @apply items-center gap-3 px-4 py-2 text-[0.95rem] font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors;
+}
+
+.dropdown-image {
+  height: 30px;
+  width: auto;
+}
+
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+
+#banner {
+  padding: 50px 0;
+  height: 100vh;
+  background: url("/building.webp") no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
