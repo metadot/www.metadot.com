@@ -6,7 +6,7 @@ export interface BlogCardProps {
   title: string;
   excerpt: string;
   imageSrc: string;
-  imageAlt: string;
+  alt: string;
   width: number;
   height: number;
   href: string;
@@ -19,7 +19,7 @@ export default function BlogCard({
   quote,
   excerpt,
   imageSrc,
-  imageAlt,
+  alt,
   width,
   height,
   href,
@@ -29,7 +29,7 @@ export default function BlogCard({
     <div className="blog-card container rounded mb-[3.3rem]">
       <div className="blog-card-image">
         <a href={href}>
-          <Image src={imageSrc} alt={imageAlt} width={width} height={height} />
+          <Image src={imageSrc} alt={alt} width={width} height={height} />
         </a>
       </div>
 

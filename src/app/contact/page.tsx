@@ -19,107 +19,104 @@ export default function Contact() {
     {
       title: "For Das Keyboard",
       href: "https://www.daskeyboard.com/contact-us/",
-      icon: <FaRegKeyboard size={65} />,
+      icon: <FaRegKeyboard size={65} className="my-[1.65rem]" />,
     },
     {
       title: "For Bamzooka",
       href: "https://bamzooka.com/contact/",
-      icon: <FaTasks size={58} />,
+      icon: <FaTasks size={58} className="my-[1.65rem]" />,
     },
     {
       title: "For Metadot & Montastic",
       href: "https://support.metadot.com/login/create_request#/ticket-form/13",
-      icon: <FaShare size={58} />,
+      icon: <FaShare size={58} className="my-[1.65rem]" />,
     },
   ];
   return (
     <>
-      <section className="section-mojo bg-[#2b70a9]">
+      <section className="section-mojo bg-[#2b70a9] text-white">
         <div className="container mx-auto px-[15px]">
-          <div className="text-white">
-            <div className="container-sm text-center">
-              <h1 className="mb-[1.1rem]">Questions? We are here to help</h1>
-            </div>
-            <div className="mt-[3.3rem] flex flex-wrap justify-center  max-w-[1040px]">
-              {cards.map((card, i) => (
-                <a
-                  key={i}
-                  href={card.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full max-w-[260px]" // link is just a wrapper
-                >
-                  <div className="bg-white text-gray-800 rounded-lg shadow-md flex flex-col justify-between p-[0.55rem]">
-                    <div className="icon text-left pl-[1.1rem]">
-                      {card.icon}
-                    </div>
-                    <div className="sc-card-body px-[1.1rem]">
-                      <h6 className="flex flex-wrap font-semibold mt-[0.55rem]">
-                        {card.title}
-                      </h6>
-                    </div>
-                    <div className="sc-card-footer link-color flex items-center  small-text px-[1.1rem]">
-                      Go to support
-                      <FaArrowRight size={17} className="ml-auto" />
-                    </div>
+          <h1 className="mb-[1.1rem]">Questions? We are here to help</h1>
+          <div className="sc-cards-container flex rounded justify-center mx-auto mb-[1.65rem] mt-[3.3rem] px-[3.3rem] max-w-[1110px] ">
+            {cards.map((card, i) => (
+              <a
+                key={i}
+                href={card.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-[0.55rem] ${
+                  i !== cards.length - 1 ? "mr-[1.65rem]" : ""
+                }`}
+              >
+                <div className="  flex flex-1 flex-col ">
+                  <div className="icon pl-[1.1rem]">{card.icon}</div>
+                  <div className="sc-card-body px-[1.1rem]">
+                    <h6 className="text-left mt-[0.55rem]">{card.title}</h6>
                   </div>
-                </a>
-              ))}
-            </div>
+                  <div className="sc-card-footer flex items-center px-[1.1rem]">
+                    GO TO SUPPORT
+                    <FaArrowRight size={17} className="ml-auto" />
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
       <section className="section-mojo">
-        <div className="container mx-auto">
-          <div className="container-lg my-[3.3rem] px-[15px]">
-            <h3 className="mb-[1.65rem]">Our international offices</h3>
-          </div>
-          <div className="grid grid-cols-2 px-[15px]">
-            <div>
-              <p className="font-semibold text-[1.1rem] flex items-center mb-2">
-                <Image
-                  src="/flags/us-flag.webp"
-                  alt="USA flag"
-                  width={30}
-                  height={20}
-                  className="mr-2"
-                />
-                Austin, Texas, USA (HQ)
-              </p>
-              <div className="text-sm leading-relaxed text-gray-800">
-                <p>Metadot Corporation</p>
-                <p>14400 Piper Glen Dr</p>
-                <p>Austin, Texas 78738-6528</p>
-                <p>USA</p>
-                <br />
-                <p>
-                  Tel:{" "}
-                  <a
-                    href="tel:+15126379983"
-                    className="text-[#2b70a9] hover:underline"
-                  >
-                    +1 512-637-9983
-                  </a>
+        <div className="container mx-auto max-w-[1110px]">
+          <div className="px-[15px] my-[3.3rem]">
+            <h3 className="!mb-[1.65rem] text-left">
+              Our international offices
+            </h3>
+
+            <div className="grid grid-cols-2 ">
+              <div>
+                <p className="flex items-center !mb-0">
+                  <Image
+                    src="/flags/us-flag.webp"
+                    alt="USA flag"
+                    width={30}
+                    height={20}
+                    className="mr-2"
+                  />
+                  <strong>Austin, Texas, USA (HQ)</strong>
                 </p>
-                <p>Fax: +1 512-233-5335</p>
+                <div className="text-left">
+                  <small>
+                    Metadot Corporation <br /> 14400 Piper Glen Dr <br />{" "}
+                    Austin, Texas 78738-6528 <br /> USA <br />
+                    <br />
+                    Tel:{" "}
+                    <a
+                      href="tel:+15126379983"
+                      className="text-[#2b70a9] hover:underline"
+                    >
+                      +1 512-637-9983
+                    </a>
+                    <br />
+                    Fax: +1 512-233-5335
+                  </small>
+                </div>
               </div>
-            </div>
 
-            <div>
-              <p className="font-semibold text-[1.1rem] flex items-center mb-2">
-                <Image
-                  src="/flags/france-flag.webp"
-                  alt="France flag"
-                  width={30}
-                  height={20}
-                  className="mr-2"
-                />
-                France
-              </p>
+              <div>
+                <p className="flex items-center !mb-0">
+                  <Image
+                    src="/flags/france-flag.webp"
+                    alt="France flag"
+                    width={30}
+                    height={20}
+                    className="mr-2"
+                  />
+                  <strong>France</strong>
+                </p>
 
-              <div className="text-sm leading-relaxed text-gray-800">
-                <p>29 bis, Rue de la Prairie</p>
-                <p>78120 Rambouillet - FRANCE</p>
+                <div className="text-left">
+                  <small>
+                    29 bis, Rue de la Prairie <br /> 78120 Rambouillet - FRANCE
+                  </small>
+                </div>
               </div>
             </div>
           </div>

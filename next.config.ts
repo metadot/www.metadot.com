@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
+import nextMDX from "@next/mdx";
+import remarkGfm from "remark-gfm"; 
+import rehypePrism from "@mapbox/rehype-prism";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const nextConfig: NextConfig = {};
 
-export default nextConfig;
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypePrism],
+  },
+});
+
+export default withMDX(nextConfig);
