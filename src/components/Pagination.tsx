@@ -12,8 +12,8 @@ export default function Pagination({
   basePath = "/blog",
 }: PaginationProps) {
   const prevPage =
-    currentPage - 1 === 1 ? `${basePath}/` : `${basePath}/${currentPage - 1}`;
-  const nextPage = `${basePath}/${currentPage + 1}`;
+    currentPage - 1 === 1 ? `${basePath}/` : `${basePath}/page/${currentPage - 1}`;
+  const nextPage = `${basePath}/page/${currentPage + 1}`;
 
   return (
     <nav
@@ -31,7 +31,7 @@ export default function Pagination({
 
         {Array.from({ length: totalPages }).map((_, i) => {
           const page = i + 1;
-          const href = page === 1 ? "/blog" : `/blog/${page}`;
+          const href = page === 1 ? "/blog" : `/blog/page/${page}`;
           const isActive = page === currentPage;
           return (
             <li key={page} className={`page-item ${isActive ? "active" : ""}`}>

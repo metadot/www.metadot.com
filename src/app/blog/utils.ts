@@ -22,28 +22,36 @@ export interface BlogWithSlug extends Blog {
 const BLOG_DIR = path.join(process.cwd(), "src/app/blog-articles");
 
 async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
-  const { blog } = (await import(
-    `../../app/blog-articles/${blogFilename}`
-  )) as {
-    default: React.ComponentType;
-    blog: Blog;
-  };
-
   const filePath = path.join(BLOG_DIR, blogFilename);
   const fileContent = fs.readFileSync(filePath, "utf-8");
 
-  const parts = fileContent.split("---");
-  const content = parts[parts.length - 1].trim();
+  // --- extract blog frontmatter ---
+  const match = fileContent.match(/export const blog\s*=\s*({[\s\S]*?});/m);
+  if (!match) throw new Error(`Missing blog metadata in ${blogFilename}`);
 
-  // Find first non-empty line
-  const text = content
+  // evaluate safely
+  // eslint-disable-next-line no-eval
+  const blog = eval("(" + match[1] + ")") as Blog;
+
+  let content = fileContent;
+
+  // Remove everything before the first empty line after the export
+  const exportEnd = content.indexOf("};");
+  if (exportEnd !== -1) {
+    content = content.slice(exportEnd + 2).trim();
+  }
+  // Split and clean lines
+  const lines = content
     .split("\n")
     .map((l) => l.trim())
-    .join(" "); // join into one string
+    .filter((l) => l && !l.startsWith(">") && !l.startsWith("-"));
 
-  // Clean and limit to 297 chars
-  const excerpt =
-    text
+  // ✅ Just use the very first visible text line
+  let excerpt = lines.join(" ") || "";
+
+  // Clean up Markdown and limit length
+  const plainExcerpt =
+    excerpt
       .replace(/^#+\s*/, "")
       .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // remove markdown links
       .replace(/[*_`>]/g, "") // remove markdown symbols
@@ -55,7 +63,7 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
 
   return {
     slug,
-    excerpt,
+    excerpt: plainExcerpt,
     ...blog,
   };
 }

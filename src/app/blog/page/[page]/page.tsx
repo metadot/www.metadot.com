@@ -1,4 +1,4 @@
-import { getAllBlogs } from "../../blog/utils";
+import { getAllBlogs } from "../../utils";
 import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
 
@@ -26,7 +26,7 @@ export default async function BlogPage({
         </p>
       </div>
 
-      <div className="max-w-[1140px] mx-auto flex flex-wrap justify-center text-left">
+      <div className="max-w-[1140px] mx-auto flex flex-wrap justify-center text-left mb-[3.3rem]">
         {pageBlogs.map((post) => (
           <div key={post.slug} className="w-1/2 px-[15px] mb-[3rem]">
             <BlogCard
@@ -40,11 +40,7 @@ export default async function BlogPage({
             />
           </div>
         ))}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          basePath="/blog"
-        />
+        <Pagination currentPage={currentPage} totalPages={totalPages} />
       </div>
     </>
   );
