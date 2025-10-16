@@ -17,9 +17,9 @@ export default async function LatestPosts() {
             <div key={post.slug} className="w-[570px] px-[15px]">
               <BlogCard
                 title={post.title}
-                excerpt={post.description}
+                excerpt={post.excerpt || post.description}
                 imageSrc={post.image || "/blog/default.svg"}
-                alt={post.title}
+                alt={post.alt || post.title}
                 width={808}
                 height={582}
                 href={`/blog/${post.slug}/`}
