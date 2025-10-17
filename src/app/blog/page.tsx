@@ -1,8 +1,7 @@
 import { getAllBlogs } from "../blog/utils";
 import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
-
-const POSTS_PER_PAGE = 10;
+import { POSTS_PER_PAGE } from "./constants";
 
 export default async function BlogIndex() {
   const blogs = await getAllBlogs();

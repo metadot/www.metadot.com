@@ -955,7 +955,7 @@ aside ul li a {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   padding: 16px;
   background-color: white;
-  border-radius: 3px
+  border-radius: 3px;
 }
 
 .blogpost {
@@ -968,6 +968,21 @@ aside ul li a {
   line-height: 1.3;
 }
 
+.blog-content {
+  line-height: 1.7;
+}
+
+.blog-content h2 {
+  font-weight: 400 !important;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.blog-references {
+  font-size: 15px;
+  color: #62707c;
+}
+
 @media (min-width: 1000px) {
   .blogpost {
     padding: 3% 7%;
@@ -975,6 +990,27 @@ aside ul li a {
 
   .blog-title {
     font-size: 56px;
+  }
+
+  .blog-content h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .blogpost {
+    padding: 3% 4%;
+    font-size: 18px;
+    width: 92%;
+  }
+  .blog-content h2 {
+    font-size: 30px !important;
+  }
+  .blog-content ol {
+    padding-left: 2rem !important;
+  }
+  .blog-content ul {
+    padding-left: 2rem !important;
   }
 }
 

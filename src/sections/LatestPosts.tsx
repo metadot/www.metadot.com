@@ -14,7 +14,7 @@ export default async function LatestPosts() {
         </div>
         <div className="container-lg mx-auto flex flex-wrap justify-center text-left">
           {blogs.map((post) => (
-            <div key={post.slug} className="w-[570px] px-[15px]">
+            <div key={post.slug} className="w-[570px] px-[15px] mb-[3.3rem]">
               <BlogCard
                 title={post.title}
                 excerpt={post.excerpt || post.description}

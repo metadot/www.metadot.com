@@ -1,8 +1,7 @@
 import { getAllBlogs } from "../../utils";
 import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
-
-const POSTS_PER_PAGE = 10;
+import { POSTS_PER_PAGE } from "../../constants";
 
 export default async function BlogPage({
   params,
@@ -31,12 +30,12 @@ export default async function BlogPage({
           <div key={post.slug} className="w-1/2 px-[15px] mb-[3rem]">
             <BlogCard
               title={post.title}
-              excerpt={post.description}
+              excerpt={post.excerpt || post.description}
               imageSrc={post.image || "/blog/default.svg"}
-              alt={post.alt || post.title}
+              alt={post.title}
               width={808}
               height={582}
-              href={`/blog/${post.slug}`}
+              href={`/blog/${post.slug}/`}
             />
           </div>
         ))}

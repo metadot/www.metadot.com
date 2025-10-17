@@ -82,3 +82,24 @@ export async function getLatestBlogs(count: number = 2) {
   const allBlogs = await getAllBlogs();
   return allBlogs.slice(0, count);
 }
+
+export async function getBlogPost(slug: string) {
+  const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const match = fileContent.match(/export const blog\s*=\s*({[\s\S]*?});/m);
+  if (!match) throw new Error(`Missing blog metadata in ${slug}`);
+
+  const blog = eval("(" + match[1] + ")") as Blog;
+
+  const contentStart = fileContent.indexOf("---", match.index || 0);
+  let content = "";
+
+  if (contentStart !== -1) {
+    const afterMeta = fileContent.indexOf("};", match.index || 0);
+    content = fileContent.slice(afterMeta + 2).trim();
+  } else {
+    content = fileContent.slice(match[0].length).trim();
+  }
+
+  return { blog, content };
+}
