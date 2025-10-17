@@ -950,3 +950,36 @@ aside ul li a {
   margin-top: 50px;
   height: 13rem;
 }
+
+.mojo-card {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  padding: 16px;
+  background-color: white;
+  border-radius: 3px
+}
+
+.blogpost {
+  text-align: left;
+  color: #261e41;
+}
+
+.blog-title {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (min-width: 1000px) {
+  .blogpost {
+    padding: 3% 7%;
+  }
+
+  .blog-title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .title-h2 {
+    font-size: calc(2rem + (18 * 100vw - 400px) / 624) !important;
+  }
+}
