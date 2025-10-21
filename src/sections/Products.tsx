@@ -43,7 +43,7 @@ export default function Products() {
     <>
       {/* Software */}
       <section id="software" className="section-mojo border-b">
-        <div className="container mx-auto max-w-[1140px]">
+        <div className="container">
           {/* Title */}
           <h2 className="section-mojo-title !mb-[3.3rem]">
             <Image
@@ -57,7 +57,7 @@ export default function Products() {
           </h2>
 
           {/* Grid */}
-          <div className="software-products grid md:grid-cols-3 text-left">
+          <div className="software-products grid md:grid-cols-3 text-left mx-[-15px]">
             {softwareProducts.map((product) => (
               <div
                 key={product.name}
@@ -70,11 +70,11 @@ export default function Products() {
                   height={product.height}
                   className="h-[47px] w-auto"
                 />
-                <h2>{product.name}</h2>
+                <h2 className="whitespace-nowrap">{product.name}</h2>
                 <p>{product.desc}</p>
                 <a
                   href={product.href}
-                  className="btn btn-primary"
+                  className="btn btn-primary mb-[1rem]"
                   aria-label={`Link to ${product.name}`}
                 >
                   Visit the site »
@@ -87,7 +87,7 @@ export default function Products() {
 
       {/* Hardware */}
       <section className="section-mojo border-b" id="hardware">
-        <div className="container mx-auto max-w-[1140px]">
+        <div className="container">
           <h2 className="section-mojo-title !mb-[3.3rem]">
             <Image
               src="/icon-works.webp"

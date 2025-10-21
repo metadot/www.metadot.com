@@ -33,7 +33,7 @@ export default function Header() {
           {/* Logo */}
           {/* Logo */}
           {/* Logo */}
-          <Link href="/" className="navbar-brand">
+          <Link href="/" className="navbar-brand ">
             <Image
               src="/logo_metadot.webp"
               alt="Metadot"

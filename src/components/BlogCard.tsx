@@ -26,7 +26,7 @@ export default function BlogCard({
   buttonText = "Continue Reading",
 }: BlogCardProps) {
   return (
-    <div className="blog-card container rounded mx-auto">
+    <div className="blog-card rounded ">
       <div className="blog-card-image">
         <a href={href}>
           <Image src={imageSrc} alt={alt} width={width} height={height} />

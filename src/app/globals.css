@@ -165,6 +165,65 @@ strong {
   font-weight: bolder;
 }
 
+.container,
+.container-lg {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 100% !important;
+    max-width: 575px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg {
+    max-width: 1140px;
+  }
+}
+
 .border-b,
 .border-t {
   border-color: var(--color-border);
@@ -308,11 +367,31 @@ strong {
   text-decoration: underline;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Header */
 /* Header */
 /* Header */
 /* Header */
 /* Header */
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  margin-right: 1.1rem;
+  font-size: 1.4rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+@media (max-width: 375px) {
+  .navbar-brand {
+    width: 150px;
+  }
+}
 
 .navigation {
   @apply bg-transparent;
@@ -463,6 +542,10 @@ strong {
   margin-bottom: 3.3rem;
 }
 
+.hardware-description {
+  font-size: 20px;
+}
+
 #software .btn:hover {
   transform: scale(1.1);
 }
@@ -606,6 +689,7 @@ strong {
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
   transform: scaleX(1.05);
   text-decoration: none;
+  color: #1b486c;
 }
 
 .sc-cards-container a .sc-card-body {
@@ -647,6 +731,10 @@ aside ul li {
 }
 
 aside ul li a {
+  color: #6c63ff;
+}
+
+aside ul li a:hover {
   color: #6c63ff;
 }
 
@@ -828,12 +916,23 @@ aside ul li a {
 }
 
 .desc a {
-  color: var(--link-color);
+  color: #17c73a;
   text-decoration: none;
 }
 
 .desc a::hover {
   text-decoration: underline;
+}
+
+main .content {
+  overflow: hidden;
+  padding-left: 50px;
+}
+
+@media (max-width: 767px) {
+  main .content {
+    padding-left: 10px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -997,6 +1096,16 @@ aside ul li a {
   }
 }
 
+@media (max-width: 999px) and (min-width: 601px) {
+  .blogpost {
+    padding: 3% 5%;
+  }
+
+  .blog-content h2 {
+    font-size: 2rem !important;
+  }
+}
+
 @media (max-width: 600px) {
   .blogpost {
     padding: 3% 4%;
@@ -1016,6 +1125,6 @@ aside ul li a {
 
 @media (max-width: 767.98px) {
   .title-h2 {
-    font-size: calc(2rem + (18 * 100vw - 400px) / 624) !important;
+    font-size: calc(2rem + (18 * (100vw - 400px)) / 624) !important;
   }
 }

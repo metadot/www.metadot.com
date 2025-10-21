@@ -8,6 +8,9 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay, Pagination } from "swiper/modules";
 
 export default function Contact() {
   const cards = [
@@ -37,7 +40,49 @@ export default function Contact() {
       <section className="section-mojo bg-[#2b70a9] text-white">
         <div className="container mx-auto px-[15px]">
           <h1 className="mb-[1.1rem]">Questions? We are here to help</h1>
-          <div className="sc-cards-container flex rounded justify-center mx-auto mb-[1.65rem] mt-[3.3rem] px-[3.3rem] max-w-[1110px] ">
+
+          <div className="block sc-cards-container md:hidden">
+            <Swiper
+              modules={[Autoplay, Pagination]} // 👈 add modules here
+              spaceBetween={16}
+              slidesPerView={1}
+              centeredSlides
+              loop
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{ clickable: true }}
+              style={{ overflow: "hidden" }}
+            >
+              {cards.map((card, i) => (
+                <SwiperSlide key={i}>
+                  <a
+                    key={i}
+                    href={card.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-[0.55rem] ${
+                      i !== cards.length - 1 ? "mr-[1.65rem]" : ""
+                    }`}
+                  >
+                    <div className="flex flex-1 flex-col ">
+                      <div className="icon pl-[1.1rem]">{card.icon}</div>
+                      <div className="sc-card-body px-[1.1rem]">
+                        <h6 className="text-left mt-[0.55rem]">{card.title}</h6>
+                      </div>
+                      <div className="sc-card-footer flex text-left items-center px-[1.1rem]">
+                        GO TO SUPPORT
+                        <FaArrowRight className="ml-auto h-[19px] w-auto" />
+                      </div>
+                    </div>
+                  </a>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          <div className="hidden sc-cards-container md:flex rounded justify-center mx-auto mb-[1.65rem] mt-[3.3rem] px-[3.3rem] max-w-[1110px] ">
             {cards.map((card, i) => (
               <a
                 key={i}
@@ -48,14 +93,14 @@ export default function Contact() {
                   i !== cards.length - 1 ? "mr-[1.65rem]" : ""
                 }`}
               >
-                <div className="  flex flex-1 flex-col ">
+                <div className="flex flex-1 flex-col ">
                   <div className="icon pl-[1.1rem]">{card.icon}</div>
                   <div className="sc-card-body px-[1.1rem]">
                     <h6 className="text-left mt-[0.55rem]">{card.title}</h6>
                   </div>
-                  <div className="sc-card-footer flex items-center px-[1.1rem]">
+                  <div className="sc-card-footer flex text-left items-center px-[1.1rem]">
                     GO TO SUPPORT
-                    <FaArrowRight size={17} className="ml-auto" />
+                    <FaArrowRight className="ml-auto h-[19px] w-auto" />
                   </div>
                 </div>
               </a>
@@ -64,23 +109,25 @@ export default function Contact() {
         </div>
       </section>
       <section className="section-mojo">
-        <div className="container mx-auto max-w-[1110px]">
+        <div className="container">
           <div className="px-[15px] my-[3.3rem]">
             <h3 className="!mb-[1.65rem] text-left">
               Our international offices
             </h3>
 
-            <div className="grid grid-cols-2 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[30px] ">
               <div>
-                <p className="flex items-center !mb-0">
-                  <Image
-                    src="/flags/us-flag.webp"
-                    alt="USA flag"
-                    width={30}
-                    height={20}
-                    className="mr-2"
-                  />
-                  <strong>Austin, Texas, USA (HQ)</strong>
+                <p className="flex items-center !mb-0 whitespace-nowrap">
+                  <strong>
+                    <Image
+                      src="/flags/us-flag.webp"
+                      alt="USA flag"
+                      width={30}
+                      height={20}
+                      className="mr-2 inline-block"
+                    />{" "}
+                    Austin, Texas, USA (HQ)
+                  </strong>
                 </p>
                 <div className="text-left">
                   <small>
@@ -101,15 +148,17 @@ export default function Contact() {
               </div>
 
               <div>
-                <p className="flex items-center !mb-0">
-                  <Image
-                    src="/flags/france-flag.webp"
-                    alt="France flag"
-                    width={30}
-                    height={20}
-                    className="mr-2"
-                  />
-                  <strong>France</strong>
+                <p className="flex items-center !mb-0 whitespace-nowrap">
+                  <strong>
+                    <Image
+                      src="/flags/france-flag.webp"
+                      alt="France flag"
+                      width={30}
+                      height={20}
+                      className="mr-2 inline-block"
+                    />{" "}
+                    France
+                  </strong>
                 </p>
 
                 <div className="text-left">

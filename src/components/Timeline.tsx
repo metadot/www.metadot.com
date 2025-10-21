@@ -17,7 +17,7 @@ const timelineData: TimelineItem[] = [
       <>
         With the outbreak of the Covid-19 pandemic, Metadot made the transition
         to an entirely remote organization. With updated structures, new forms
-        of communication, and the official introduction of the Metaman —
+        of communication, and the official introduction of the Metaman:
         Metadot’s official manual.
       </>
     ),
@@ -27,8 +27,8 @@ const timelineData: TimelineItem[] = [
     title: "Bamzooka Creation",
     description: (
       <>
-        Bamzooka was released in Morocco. It helps document processes, organize
-        work, and improve the quality of everything our teams do.
+        Bamzooka was released in Morocco. Bamzooka helps document processes,
+        organize work, and improve the quality of everything our teams do.
       </>
     ),
   },
@@ -38,7 +38,7 @@ const timelineData: TimelineItem[] = [
     description: (
       <>
         Mojo Helpdesk was invented to fill a need from the Das Keyboard company,
-        improving after-sale service.
+        to help improve the after-sale service.
       </>
     ),
   },
@@ -47,15 +47,14 @@ const timelineData: TimelineItem[] = [
     title: "First edition of UTC",
     description: (
       <>
-        UTC (Ultimate Typing Championship) is a competition organized by Metadot
-        promoting typing worldwide. The first edition went viral on{" "}
+        UTC or Ultimate Typing Championship is a competition organized by
+        Metadot promoting typing over the world. The first edition knew an
+        absolute craze on{" "}
         <a
           href="https://www.youtube.com/watch?v=m9EXEpjSDEw&t=134s"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
+          target="_top"
         >
-          YouTube
+          youtube
         </a>
         .
       </>
@@ -67,8 +66,10 @@ const timelineData: TimelineItem[] = [
     description: (
       <>
         Das Keyboard launches the Model S with upgraded electronics,
-        laser-etched keys, and full n-key rollover — also debuting the quieter
-        Professional S Tactile Soft keyboard with Cherry MX Brown switches.
+        laser-etched keys and full n-key rollover. The Model S also debuts the
+        Professional Model S Tactile Soft keyboard featuring Cherry MX brown key
+        switches which gives a quieter typing experience for those in
+        environments where the blue switch is too loud.
       </>
     ),
   },
@@ -78,16 +79,16 @@ const timelineData: TimelineItem[] = [
     description: (
       <>
         Das Keyboard announces the launch of its first keyboard: a completely
-        blank keyboard designed for “über geeks.” Praised by many, including the{" "}
+        blank keyboard designed specifically for "über geeks." The keyboard
+        features individually weighted keys. Praised by many prominent sources
+        such as the{" "}
         <a
           href="https://www.nytimes.com/2005/05/26/technology/circuits/a-keyboard-that-lets-the-supremely-confident-show.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
+          target="_top"
         >
           New York Times
-        </a>
-        , for its originality and quality.
+        </a> {" "}
+        for its quality and originality.
       </>
     ),
   },
@@ -96,8 +97,9 @@ const timelineData: TimelineItem[] = [
     title: "Creation of Metadot",
     description: (
       <>
-        Founded by Daniel Guermeur — the beginning of a company that would grow
-        globally, producing innovative products by talented individuals.
+        Founded by Daniel Guermeur, this was the beginning of a successful
+        company that would grow globally, producing impressive products by
+        talented individuals.
       </>
     ),
   },

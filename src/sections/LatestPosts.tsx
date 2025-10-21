@@ -3,18 +3,16 @@ import BlogCard from "@/components/BlogCard";
 
 export default async function LatestPosts() {
   const blogs = await getLatestBlogs(2);
-  console.log("COUCOU");
-  console.log(blogs);
 
   return (
     <>
       <section className="section-mojo">
-        <div className="container mx-auto text-center px-[10px] pb-[40px]">
-          <h2 className="section-mojo-title">Our most recent posts</h2>
+        <div className="container text-center px-[10px] pb-[40px]">
+          <h2 className="section-title !text-[2.75rem]">Our most recent posts</h2>
         </div>
-        <div className="container-lg mx-auto flex flex-wrap justify-center text-left">
+        <div className="container-lg flex flex-col md:flex-row justify-center md:gap-[30px]">
           {blogs.map((post) => (
-            <div key={post.slug} className="w-[570px] px-[15px] mb-[3.3rem]">
+            <div key={post.slug} className="mb-[3.3rem]">
               <BlogCard
                 title={post.title}
                 excerpt={post.excerpt || post.description}

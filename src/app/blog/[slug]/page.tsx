@@ -45,18 +45,22 @@ export default async function BlogArticlePage({
 
   return (
     <>
-      <div className="max-w-[1140px] px-[15px] mx-auto mt-[1.1rem]">
+      <div className="container mt-[1.1rem]">
         <nav className="nav flex">
           <a className="p-[0.55rem] !text-[#6c757d]" href="/blog/">
             Back to Home
           </a>
         </nav>
       </div>{" "}
-      <article className="mojo-card blogpost max-w-[1140px] mx-auto px-[15px] mb-[3.3rem]">
+      <article className="mojo-card blogpost container mb-[3.3rem]">
         <h2 className="blog-title title-h2">{blog.title}</h2>
         <p className="blog-references my-[1.65rem]">
           {blog.author?.name} on{" "}
-          <time>{new Date(blog.date).toLocaleDateString()}</time>
+          <time>{new Date(blog.date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })}</time>
         </p>
 
         {blog.image && (

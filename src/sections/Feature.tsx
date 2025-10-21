@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+// TODO (AY): fix layout on small screens
+
 interface FeatureProps {
   id: string;
   title: string;
@@ -25,16 +27,18 @@ function FeatureSection({
 }: FeatureProps) {
   return (
     <section id={id} className="section-mojo border-b">
-      <div className="container mx-auto">
+      <div className="container">
         <div
-          className={`flex flex-wrap justify-center items-center text-left ${
-            reverse ? "flex-row-reverse" : ""
+          className={`flex flex-col justify-center items-center md:gap-[30px] text-left ${
+            reverse ? "flex-col-reverse md:flex-row-reverse" : "md:flex-row"
           }`}
         >
           {/* Text */}
-          <div className="w-[570px] px-[15px] flex flex-col justify-center">
+          <div className=" md:w-1/2 flex flex-col justify-center">
             <h2 className="section-mojo-title mb-[1.1rem]">{title}</h2>
-            <p className="mb-[1rem]">{description}</p>
+            <p className={`mb-[1rem] ${!reverse ? "pt-[1.1rem]" : ""} `}>
+              {description}
+            </p>
 
             <div className="flex flex-wrap gap-x-[1.1rem]">
               {links.map((link) => (
@@ -46,13 +50,15 @@ function FeatureSection({
           </div>
 
           {/* Image */}
-          <div className="w-[570px] px-[15px]">
+          <div className=" md:w-1/2">
             <Image
               src={image}
               alt={`${title} image`}
               width={width}
               height={height}
-              className="rounded img-fluid"
+              className={`rounded img-fluid ${
+                !reverse ? "pt-[1.1rem]" : "pb-[1.1rem]"
+              }`}
             />
           </div>
         </div>

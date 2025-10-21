@@ -14,9 +14,9 @@ export default function AboutUs() {
         <h1>Metadot, A Team That Puts Quality, And Customer, First</h1>
       </section>
       <section id="about-us">
-        <div className="container max-w-[1140px] mx-auto">
-          <div className="flex flex-row mx-auto">
-            <aside className="hidden lg:block basis-1/4 px-[15px]">
+        <div className="container">
+          <div className="flex flex-row mx-[-15px]">
+            <aside className="hidden md:block w-1/4 px-[15px]">
               <nav className="sticky top-24">
                 <ul className="pl-[40px]">
                   <li className="py-[0.75rem]">
@@ -54,7 +54,7 @@ export default function AboutUs() {
                 </ul>
               </nav>
             </aside>
-            <main className="basis-3/4 px-[15px]">
+            <main className="md:w-3/4 px-[15px]">
               <div id="identity-section">
                 <div className="mb-[3rem]">
                   <h2 className="section-title">Our Identity</h2>
@@ -64,9 +64,9 @@ export default function AboutUs() {
                     notions we focus on:
                   </p>
                 </div>
-                <div className="container">
-                  <div className="grid grid-cols-1 sm:grid-cols-2  ">
-                    <div className="flex flex-col px-[15px] mb-[3.3rem]">
+                <div className="container !px-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="flex flex-col mb-[3.3rem] px-[15px]">
                       <div>
                         <Image
                           src="/about-us/quality.svg"
@@ -83,7 +83,7 @@ export default function AboutUs() {
                         into creating top notch products and service.
                       </p>
                     </div>
-                    <div className="flex flex-col px-[15px] mb-[3.3rem]">
+                    <div className="flex flex-col  mb-[3.3rem] px-[15px]">
                       <div>
                         <Image
                           src="/about-us/potential.svg"
@@ -101,7 +101,7 @@ export default function AboutUs() {
                         goals, possible.
                       </p>
                     </div>
-                    <div className="flex flex-col px-[15px] pb-[3.3rem]">
+                    <div className="flex flex-col  mb-[3.3rem] px-[15px]">
                       <div>
                         <Image
                           src="/about-us/communication.svg"
@@ -121,7 +121,7 @@ export default function AboutUs() {
                         company.
                       </p>
                     </div>
-                    <div className="flex flex-col px-[15px] pb-[3.3rem]">
+                    <div className="flex flex-col  mb-[3.3rem] px-[15px]">
                       <div>
                         <Image
                           src="/about-us/improve.svg"
@@ -170,7 +170,7 @@ export default function AboutUs() {
                         <p className="title !mb-0">THE BEST</p>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="pl-[50px]">
+                    <AccordionContent className="content">
                       <ul className="list-disc ps-[40px]">
                         <li>
                           The Best People:
@@ -191,7 +191,7 @@ export default function AboutUs() {
                         <li>
                           The Best Customers:
                           <p>
-                            From professional end-users to uber geeks, our
+                            From professional end-users, to uber geeks, our
                             customers do their research, and seek our products
                             to bring their productivity to the next level.
                           </p>
@@ -213,12 +213,12 @@ export default function AboutUs() {
                         <p className="title !mb-0">QUALITY OBSESSED</p>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="pl-[50px]">
-                      <ul className="list-disc ps-[40px]">
+                    <AccordionContent className="content">
+                      <ul className="list-disc ps-[40px] ">
                         <li>
                           Premium Materials: In hardware, quality starts with
                           our product components:
-                          <ul className="list-disc ps-[40px]">
+                          <ul className="list-disc ps-[40px] mb-[0.55rem]">
                             <li>Gold-plated key switches</li>
                             <li>N-key rollover on all keyboards</li>
                             <li>Aluminum construction details</li>
@@ -227,7 +227,7 @@ export default function AboutUs() {
                         </li>
 
                         <li>
-                          Durable Construction:
+                          Durable construction:
                           <p>
                             Our products aren’t afraid to be the overachievers
                             that they are.
@@ -238,7 +238,7 @@ export default function AboutUs() {
                           Superior Experience:
                           <p>
                             Every element of each product is taken into
-                            consideration – we’ve held full staff meetings to
+                            consideration - we’ve held full staff meetings to
                             test the precise feel, sound, and reactivity of a
                             single keystroke until we are all completely
                             satisfied.
@@ -250,7 +250,7 @@ export default function AboutUs() {
 
                   <AccordionItem value="item-3" className="border-b">
                     <AccordionTrigger>
-                      <div className="left-item flex items-center gap-4">
+                      <div className="left-item flex items-center">
                         <Image
                           src="/about-us/best.webp"
                           alt="Best"
@@ -261,11 +261,11 @@ export default function AboutUs() {
                         <p className="title !mb-0">BE YOUR BEST SELF</p>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent>
+                    <AccordionContent className="content">
                       <ul className="list-disc ps-[40px]">
                         <li>
                           Cultivate Personal Growth:
-                          <ul className="list-disc ps-[40px]">
+                          <ul className="list-disc ps-[40px] mb-[0.55rem]">
                             <li>
                               We create a work/life balance to provide the
                               harmony that allows our employees to thrive.
@@ -280,7 +280,7 @@ export default function AboutUs() {
                         </li>
                         <li>
                           Cultivate Professional Growth:
-                          <ul className="list-disc ps-[40px]">
+                          <ul className="list-disc ps-[40px] mb-[0.55rem]">
                             <li>
                               Our goal is to help our employees enrich their
                               skill sets in a way that will help them not just
@@ -291,7 +291,7 @@ export default function AboutUs() {
                         </li>
                         <li>
                           Cultivate Friendship:
-                          <ul className="list-disc ps-[40px]">
+                          <ul className="list-disc ps-[40px] mb-[0.55rem]">
                             <li>
                               We inspire each other, and nurture a positive work
                               environment that congratulates each other’s hard
@@ -309,7 +309,7 @@ export default function AboutUs() {
 
                   <AccordionItem value="item-4" className="border-b">
                     <AccordionTrigger>
-                      <div className="left-item flex items-center gap-4">
+                      <div className="left-item flex items-center">
                         <Image
                           src="/about-us/innovation.webp"
                           alt="Innovation"
@@ -320,7 +320,7 @@ export default function AboutUs() {
                         <p className="title !mb-0">INNOVATION</p>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent>
+                    <AccordionContent className="content">
                       <ul className="list-disc ps-[40px]">
                         <p>
                           Fearlessly Pushing the Limits with Products that
@@ -347,7 +347,7 @@ export default function AboutUs() {
 
                   <AccordionItem value="item-5" className="border-b">
                     <AccordionTrigger>
-                      <div className="left-item flex items-center gap-4">
+                      <div className="left-item flex items-center">
                         <Image
                           src="/about-us/getitdone.webp"
                           alt="Get it done"
@@ -358,7 +358,7 @@ export default function AboutUs() {
                         <p className="title !mb-0">GET IT DONE</p>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent>
+                    <AccordionContent className="content">
                       <ul className="list-disc ps-[40px]">
                         <p>
                           Metadot employees do what it takes to ensure our
@@ -376,13 +376,13 @@ export default function AboutUs() {
 
               <div id="work-section" className="mb-[5rem]">
                 <h2 className="section-title">How Do We Work</h2>
-                <div className="flex justify-center my-[1.65rem]">
+                <div className="flex justify-center my-[1.65rem] mx-[-15px]">
                   <Image
                     src="/about-us/map.svg"
                     alt="Map"
                     width={1177}
                     height={874}
-                    className="max-w-[83%]"
+                    className="max-w-[80%]"
                   />
                 </div>
                 <p>

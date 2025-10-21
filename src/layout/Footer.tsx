@@ -5,13 +5,13 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <footer className="py-[1.1rem] bg-[#f8f9fa] flex justify-center !pr-[3.3rem]">
+      <footer className="py-[1.1rem] bg-[#f8f9fa] flex justify-center md:pr-[3.3rem]">
         <div className="flex items-center">
           <a className="nav-link mr-[0.55rem] font-bold" href="/contact">
             Contact Us
           </a>
 
-          <a className="nav-link mr-[0.55rem] font-bold" href="/contact">
+          <a className="nav-link mr-[0.55rem] font-bold" href="/about-us">
             About Us
           </a>
 
@@ -22,7 +22,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub size={26} />
+            <FaGithub className="w-[26px] h-auto" />
           </a>
           <a
             className="nav-link"
@@ -31,7 +31,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin size={23} />
+            <FaLinkedin className="w-[26px] h-auto" />
           </a>
         </div>
       </footer>
