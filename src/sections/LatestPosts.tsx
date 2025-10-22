@@ -8,9 +8,9 @@ export default async function LatestPosts() {
     <>
       <section className="section-mojo">
         <div className="container text-center px-[10px] pb-[40px]">
-          <h2 className="section-title !text-[2.75rem]">Our most recent posts</h2>
+          <h2 className="section-title">Our most recent posts</h2>
         </div>
-        <div className="container-lg flex flex-col md:flex-row justify-center md:gap-[30px]">
+        <div className="latest-posts container-lg">
           {blogs.map((post) => (
             <div key={post.slug} className="mb-[3.3rem]">
               <BlogCard

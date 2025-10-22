@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 interface SoftwareProduct {
   name: string;
@@ -57,11 +58,11 @@ export default function Products() {
           </h2>
 
           {/* Grid */}
-          <div className="software-products grid md:grid-cols-3 text-left mx-[-15px]">
+          <div className="grid md:grid-cols-3 text-left mx-[-15px]">
             {softwareProducts.map((product) => (
               <div
                 key={product.name}
-                className="software-product mb-[3.3rem] px-[15px]"
+                className="mb-[3.3rem] px-[15px]"
               >
                 <Image
                   src={product.logo}
@@ -72,13 +73,13 @@ export default function Products() {
                 />
                 <h2 className="whitespace-nowrap">{product.name}</h2>
                 <p>{product.desc}</p>
-                <a
+                <Link
                   href={product.href}
                   className="btn btn-primary mb-[1rem]"
                   aria-label={`Link to ${product.name}`}
                 >
                   Visit the site »
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -120,9 +121,9 @@ export default function Products() {
                 enthusiasts, and gamers. A reference in the market.
               </p>
               <div>
-                <a href="https://www.daskeyboard.com" className="btn-link">
+                <Link href="https://www.daskeyboard.com" className="btn-link">
                   Visit Das Keyboard
-                </a>
+                </Link>
               </div>
             </div>
           </div>
