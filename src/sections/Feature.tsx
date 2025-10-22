@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-// TODO (AY): fix layout on small screens
+import Link from "next/link";
 
 interface FeatureProps {
   id: string;
@@ -22,7 +21,7 @@ function FeatureSection({
   image,
   width,
   height,
-  reverse,
+  reverse = false,
   links,
 }: FeatureProps) {
   return (
@@ -35,16 +34,16 @@ function FeatureSection({
         >
           {/* Text */}
           <div className=" md:w-1/2 flex flex-col justify-center">
-            <h2 className="section-mojo-title mb-[1.1rem]">{title}</h2>
+            <h2 className="section-mojo-title">{title}</h2>
             <p className={`mb-[1rem] ${!reverse ? "pt-[1.1rem]" : ""} `}>
               {description}
             </p>
 
             <div className="flex flex-wrap gap-x-[1.1rem]">
               {links.map((link) => (
-                <a key={link.href} href={link.href} className="btn-link">
+                <Link key={link.href} href={link.href} className="btn-link">
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
