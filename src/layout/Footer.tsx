@@ -1,21 +1,24 @@
 "use client";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <>
       <footer className="py-[1.1rem] bg-[#f8f9fa] flex justify-center md:pr-[3.3rem]">
         <div className="flex items-center">
-          <a className="nav-link mr-[0.55rem] font-bold" href="/contact">
+          <Link className="nav-link mr-[0.55rem] font-bold" href="/contact">
             Contact Us
-          </a>
+          </Link>
 
-          <a className="nav-link mr-[0.55rem] font-bold" href="/about-us">
+          <Link className="nav-link mr-[0.55rem] font-bold" href="/about-us">
             About Us
-          </a>
+          </Link>
 
-          <a
+          <Link
             className="nav-link"
             href="https://github.com/metadot"
             aria-label="GitHub link"
@@ -23,8 +26,8 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <FaGithub className="w-[26px] h-auto" />
-          </a>
-          <a
+          </Link>
+          <Link
             className="nav-link"
             href="https://www.linkedin.com/company/metadot-corporation"
             aria-label="LinkedIn link"
@@ -32,12 +35,12 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <FaLinkedin className="w-[26px] h-auto" />
-          </a>
+          </Link>
         </div>
       </footer>
       <footer className="text-center copyright">
-        © Copyright 2020, product of{" "}
-        <a href="/" className="btn-link" style={{ color: "#1034ea" }}>
+        © Copyright {year}, product of{" "}
+        <a href="/" className="btn-link !text-[#1034ea]">
           Metadot
         </a>
         . All rights reserved. Made with ♥ in Austin, Texas.

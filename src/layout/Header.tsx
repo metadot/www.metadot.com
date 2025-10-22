@@ -5,26 +5,66 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 
+const products = [
+  {
+    name: "Bamzooka",
+    href: "https://bamzooka.com",
+    src: "/brand/bamzooka.webp",
+    width: 192,
+    height: 192,
+  },
+  {
+    name: "Das Keyboard",
+    href: "https://www.daskeyboard.com",
+    src: "/brand/dkbrand.webp",
+    width: 49,
+    height: 63,
+  },
+  {
+    name: "Mojo HelpDesk",
+    href: "https://www.mojohelpdesk.com",
+    src: "/brand/mojo-star.svg",
+    width: 129,
+    height: 123,
+  },
+  {
+    name: "Montastic",
+    href: "https://www.montastic.com",
+    src: "/brand/montastic.webp",
+    width: 75,
+    height: 64,
+  },
+];
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
-  const toggleNav = () => setNavOpen(!navOpen);
   const dropdownRef = useRef<HTMLLIElement>(null);
 
-  const toggleDropdown = () => setMenuOpen(!menuOpen);
+  const toggleNav = () => setNavOpen(!navOpen);
+  const desktopDropRef = useRef<HTMLLIElement>(null);
+  const mobileDropRef = useRef<HTMLLIElement>(null);
+
+  const toggleDropdown = (e: React.MouseEvent) => {
+    e.stopPropagation(); // prevent outside handler
+    setMenuOpen((prev) => !prev);
+  };
 
   // Close dropdown on outside click
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
-      ) {
+    const onMouseDown = (e: MouseEvent) => {
+      const t = e.target as Node;
+
+      const clickedInsideDesktop = desktopDropRef.current?.contains(t) ?? false;
+      const clickedInsideMobile = mobileDropRef.current?.contains(t) ?? false;
+
+      if (!clickedInsideDesktop && !clickedInsideMobile) {
         setMenuOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    document.addEventListener("mousedown", onMouseDown);
+    return () => document.removeEventListener("mousedown", onMouseDown);
   }, []);
 
   return (
@@ -48,14 +88,14 @@ export default function Header() {
           </Link>
 
           <button
-            className="navbar-toggler lg:hidden relative cursor-pointer "
+            className="navbar-toggler relative cursor-pointer "
             aria-label="Toggle navigation"
             onClick={toggleNav}
           >
             <FaBars size={24} />
           </button>
 
-          <ul className="navbar-nav hidden lg:flex">
+          <ul className="navbar-nav">
             <li className="nav-item">
               <Link href="/about-us" className="nav-link">
                 About Us
@@ -72,7 +112,7 @@ export default function Header() {
             {/* Dropdown */}
             {/* Dropdown */}
             {/* Dropdown */}
-            <li ref={dropdownRef} className="nav-item dropdown">
+            <li ref={desktopDropRef} className="nav-item dropdown">
               <button
                 className="nav-link dropdown-toggle"
                 onClick={toggleDropdown}
@@ -83,55 +123,18 @@ export default function Header() {
 
               {menuOpen && (
                 <div className="dropdown-menu show">
-                  <Link href="https://bamzooka.com" className="dropdown-item">
-                    <Image
-                      src="/brand/bamzooka.webp"
-                      alt="Bamzooka"
-                      width={192}
-                      height={192}
-                      className="dropdown-image"
-                    />
-                    Bamzooka
-                  </Link>
-                  <Link
-                    href="https://www.daskeyboard.com"
-                    className="dropdown-item"
-                  >
-                    <Image
-                      src="/brand/dkbrand.webp"
-                      alt="Das Keyboard"
-                      width={49}
-                      height={63}
-                      className="dropdown-image"
-                    />
-                    Das Keyboard
-                  </Link>
-                  <Link
-                    href="https://www.mojohelpdesk.com"
-                    className="dropdown-item"
-                  >
-                    <Image
-                      src="/brand/mojo-star.svg"
-                      alt="Mojo Helpdesk"
-                      width={129}
-                      height={123}
-                      className="dropdown-image"
-                    />
-                    Mojo Helpdesk
-                  </Link>
-                  <Link
-                    href="https://www.montastic.com"
-                    className="dropdown-item"
-                  >
-                    <Image
-                      src="/brand/montastic.webp"
-                      alt="Montastic"
-                      width={75}
-                      height={64}
-                      className="dropdown-image"
-                    />
-                    Montastic
-                  </Link>
+                  {products.map(({ name, href, src, width, height }) => (
+                    <Link key={name} href={href} className="dropdown-item">
+                      <Image
+                        src={src}
+                        alt={name}
+                        width={width}
+                        height={height}
+                        className="dropdown-image"
+                      />
+                      {name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </li>
@@ -144,91 +147,51 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="  lg:hidden text-center">
+        <div className="mobile-nav text-center">
           <ul
-            className={`transition-all lg:hidden ${
-              navOpen
-                ? "max-h-500 visible"
-                : "max-h-0 invisible overflow-hidden"
+            className={`dropdown ${
+              navOpen ? "visible" : "max-h-0 invisible overflow-hidden"
             }`}
           >
-            <li className="nav-item p-[10px]">
+            <li className="nav-item">
               <a href="/about-us" className="nav-link ">
                 About Us
               </a>
             </li>
 
-            <li className="nav-item p-[10px]">
+            <li className="nav-item">
               <Link href="/contact" className="nav-link">
                 Contact
               </Link>
             </li>
 
-            <li ref={dropdownRef} className="nav-item p-[10px]">
-              <button
-                className="nav-link dropdown-toggle "
+            <li ref={mobileDropRef} className="nav-item">
+              <Link
+                className="nav-link dropdown-toggle"
+                href="#"
                 onClick={toggleDropdown}
                 aria-expanded={menuOpen}
               >
                 Products
-              </button>
-
-              {menuOpen && (
-                <div className="dropdown-menu show">
-                  <Link href="https://bamzooka.com" className="dropdown-item">
-                    <Image
-                      src="/brand/bamzooka.webp"
-                      alt="Bamzooka"
-                      width={192}
-                      height={192}
-                      className="dropdown-image"
-                    />
-                    Bamzooka
-                  </Link>
-                  <Link
-                    href="https://www.daskeyboard.com"
-                    className="dropdown-item"
-                  >
-                    <Image
-                      src="/brand/dkbrand.webp"
-                      alt="Das Keyboard"
-                      width={49}
-                      height={63}
-                      className="dropdown-image"
-                    />
-                    Das Keyboard
-                  </Link>
-                  <Link
-                    href="https://www.mojohelpdesk.com"
-                    className="dropdown-item"
-                  >
-                    <Image
-                      src="/brand/mojo-star.svg"
-                      alt="Mojo Helpdesk"
-                      width={129}
-                      height={123}
-                      className="dropdown-image"
-                    />
-                    Mojo Helpdesk
-                  </Link>
-                  <Link
-                    href="https://www.montastic.com"
-                    className="dropdown-item"
-                  >
-                    <Image
-                      src="/brand/montastic.webp"
-                      alt="Montastic"
-                      width={75}
-                      height={64}
-                      className="dropdown-image"
-                    />
-                    Montastic
-                  </Link>
-                </div>
-              )}
+              </Link>
             </li>
-
-            <li className="nav-item p-[10px]">
+            {menuOpen && (
+              <div className="dropdown-menu show">
+                {products.map(({ name, href, src, width, height }) => (
+                  <Link key={name} href={href} className="dropdown-item">
+                    <Image
+                      src={src}
+                      alt={name}
+                      width={width}
+                      height={height}
+                      className="dropdown-image"
+                    />
+                    {name}
+                  </Link>
+                ))}
+              </div>
+            )}
+            <li className="nav-item">
               <Link href="/blog" className="nav-link">
                 Blog
               </Link>
