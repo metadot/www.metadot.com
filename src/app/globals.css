@@ -406,7 +406,13 @@ strong {
 }
 
 .navbar-toggler {
-  @apply lg:hidden border-0 text-2xl pr-2;
+  color: #202020;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
 }
 
 .navbar-nav {
@@ -421,8 +427,10 @@ strong {
   @apply m-0;
 }
 
-.nav-item .nav-link {
-  @apply font-bold normal-case text-[19.2px] text-[var(--color-text-dark)] p-[20px] transition-colors cursor-pointer;
+header .nav-link {
+  padding: 10px;
+  color: #222;
+  font-weight: 700;
 }
 
 .nav-item .nav-link:hover {
@@ -654,7 +662,7 @@ strong {
 /* Footer */
 /* Footer */
 
-.nav-link {
+footer .nav-link {
   /* display: block; */
   padding: 0.5rem 1rem;
 }
