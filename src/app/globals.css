@@ -447,6 +447,10 @@ header .nav-link {
   color: var(--color-primary);
 }
 
+aside .nav-link:hover {
+  color: var(--color-primary);
+}
+
 .dropdown {
   position: relative;
 }
@@ -455,7 +459,6 @@ header .nav-link {
   white-space: nowrap;
   cursor: pointer;
 }
-
 
 .dropdown-toggle::after {
   display: inline-block;
@@ -475,7 +478,6 @@ header .nav-link {
 .dropdown-icon {
   @apply w-3 h-3 ml-1 transition-transform duration-200 group-hover:rotate-180;
 }
-
 
 .dropdown-menu {
   position: static;
@@ -502,7 +504,6 @@ header .nav-link {
   /* position: static; */
   float: none;
 }
-
 
 .dropdown-item {
   display: flex;
@@ -556,6 +557,14 @@ header .nav-link {
     opacity: 1;
     visibility: visible;
     transform: none;
+  }
+
+  header aside {
+    display: none;
+  }
+
+  .background-blur {
+    display: none;
   }
 }
 

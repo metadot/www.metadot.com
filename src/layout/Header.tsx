@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const products = [
   {
@@ -41,8 +41,10 @@ export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => setNavOpen(!navOpen);
+  const closeNav = () => setNavOpen(false);
+
   const desktopDropRef = useRef<HTMLLIElement>(null);
-  const mobileDropRef = useRef<HTMLLIElement>(null);
+  const mobileDropRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = (e: React.MouseEvent) => {
     e.stopPropagation(); // prevent outside handler
@@ -64,6 +66,18 @@ export default function Header() {
     document.addEventListener("mouseup", onMouseUp);
     return () => document.removeEventListener("mouseup", onMouseUp);
   }, []);
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [navOpen]);
 
   return (
     <header className="navigation">
@@ -145,7 +159,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div
+        {/* <div
           className={`mobile-nav text-center grid transition-[grid-template-rows] duration-400 ease ${
             navOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           }`}
@@ -153,6 +167,7 @@ export default function Header() {
           <ul className="dropdown overflow-hidden">
             <li className="nav-item">
               <a href="/about-us" className="nav-link ">
+
                 About Us
               </a>
             </li>
@@ -195,7 +210,88 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
+
+        <div
+          className={`background-blur fixed inset-0 backdrop-blur-sm transition-opacity ${
+            navOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          onClick={closeNav}
+        />
+
+        {/* Side Drawer (mobile nav) */}
+        <aside
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ${
+            navOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex items-center justify-between p-4 border-b text-center">
+            <Image
+              src="/logo_metadot.webp"
+              alt="Metadot"
+              width={140}
+              height={40}
+              className="object-contain"
+            />
+            <button aria-label="Close menu" onClick={closeNav} className="cursor-pointer">
+              <FaTimes size={22} />
+            </button>
+          </div>
+
+          <nav className="flex flex-col text-center px-[5px]">
+            <Link
+              href="/about-us"
+              className="nav-item nav-link !py-[10px]"
+              onClick={closeNav}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contact"
+              className="nav-link !py-[10px]"
+              onClick={closeNav}
+            >
+              Contact
+            </Link>
+
+            {/* Mobile dropdown */}
+            <div ref={mobileDropRef} className="nav-item py-[10px]">
+              <Link
+                className="nav-link dropdown-toggle"
+                href="#"
+                onClick={toggleDropdown}
+                aria-expanded={menuOpen}
+              >
+                Products
+              </Link>
+
+              {menuOpen && (
+                <div className="dropdown-menu show">
+                  {products.map(({ name, href, src, width, height }) => (
+                    <Link key={name} href={href} className="dropdown-item">
+                      <Image
+                        src={src}
+                        alt={name}
+                        width={width}
+                        height={height}
+                        className="dropdown-image"
+                      />
+                      {name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/blog"
+              className="nav-link !py-[10px]"
+              onClick={closeNav}
+            >
+              Blog
+            </Link>
+          </nav>
+        </aside>
       </div>
     </header>
   );

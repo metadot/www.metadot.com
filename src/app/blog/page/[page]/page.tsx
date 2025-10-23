@@ -24,7 +24,7 @@ export default async function BlogPage({
           A blog about productivity, startups, Metadot products and news.
         </p>
       </div>
-      <div className="container-lg flex flex-wrap justify-center text-left md:gap-[30px] lg:gap-[42px]">
+      <div className="container-lg grid grid-cols-1 md:grid-cols-2 gap-[30px] lg:gap-[42px]">
         {pageBlogs.map((post) => (
           <div key={post.slug} className="mb-[3rem]">
             <BlogCard

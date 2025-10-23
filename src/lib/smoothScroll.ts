@@ -8,7 +8,7 @@ export function smoothScroll(
   const end = target.getBoundingClientRect().top + start;
   const distance = end - start;
 
-  const duration = 1500;
+  const durationInMs = 200;
   const startTime = performance.now();
 
   const ease = (t: number): number =>
@@ -16,7 +16,7 @@ export function smoothScroll(
 
   function animateScroll(currentTime: number) {
     const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
+    const progress = Math.min(elapsed / durationInMs, 1);
     const eased = ease(progress);
     window.scrollTo(0, start + distance * eased);
     if (progress < 1) requestAnimationFrame(animateScroll);
