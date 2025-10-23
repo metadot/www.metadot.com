@@ -49,9 +49,8 @@ export default function Header() {
     setMenuOpen((prev) => !prev);
   };
 
-  // Close dropdown on outside click
   useEffect(() => {
-    const onMouseDown = (e: MouseEvent) => {
+    const onMouseUp = (e: MouseEvent) => {
       const t = e.target as Node;
 
       const clickedInsideDesktop = desktopDropRef.current?.contains(t) ?? false;
@@ -62,8 +61,8 @@ export default function Header() {
       }
     };
 
-    document.addEventListener("mousedown", onMouseDown);
-    return () => document.removeEventListener("mousedown", onMouseDown);
+    document.addEventListener("mouseup", onMouseUp);
+    return () => document.removeEventListener("mouseup", onMouseUp);
   }, []);
 
   return (
@@ -146,12 +145,12 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="mobile-nav text-center">
-          <ul
-            className={`dropdown ${
-              navOpen ? "visible" : "max-h-0 invisible overflow-hidden"
-            }`}
-          >
+        <div
+          className={`mobile-nav text-center grid transition-[grid-template-rows] duration-400 ease ${
+            navOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
+        >
+          <ul className="dropdown overflow-hidden">
             <li className="nav-item">
               <a href="/about-us" className="nav-link ">
                 About Us
