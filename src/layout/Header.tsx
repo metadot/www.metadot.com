@@ -39,7 +39,6 @@ const products = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
-  const dropdownRef = useRef<HTMLLIElement>(null);
 
   const toggleNav = () => setNavOpen(!navOpen);
   const desktopDropRef = useRef<HTMLLIElement>(null);
