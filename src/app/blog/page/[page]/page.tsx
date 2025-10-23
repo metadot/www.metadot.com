@@ -8,7 +8,8 @@ export default async function BlogPage({
 }: {
   params: { page: string };
 }) {
-  const currentPage = parseInt(params.page, 10);
+  const {page} = await params;
+  const currentPage = parseInt(page, 10);
   const blogs = await getAllBlogs();
 
   const totalPages = Math.ceil(blogs.length / POSTS_PER_PAGE);
