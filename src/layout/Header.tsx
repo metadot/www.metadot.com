@@ -80,8 +80,8 @@ export default function Header() {
   }, [navOpen]);
 
   return (
-    <header className="navigation">
-      <div className="container-header">
+    <header className="navigation z-[1000]">
+      <div className="container-header z-[1000]">
         <nav className="navbar">
           {/* Logo */}
           {/* Logo */}
@@ -213,7 +213,7 @@ export default function Header() {
         </div> */}
 
         <div
-          className={`background-blur fixed inset-0 backdrop-blur-sm transition-opacity ${
+          className={`background-blur fixed inset-0 backdrop-blur-sm transition-opacity z-[999] ${
             navOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
           onClick={closeNav}
@@ -221,7 +221,7 @@ export default function Header() {
 
         {/* Side Drawer (mobile nav) */}
         <aside
-          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ${
+          className={`fixed top-0 right-0 h-full z-[1000] w-64 bg-white shadow-xl transform transition-transform duration-300  ${
             navOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

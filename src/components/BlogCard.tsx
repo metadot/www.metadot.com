@@ -29,7 +29,7 @@ export default function BlogCard({
     <div className="blog-card rounded mx-auto">
       <div className="blog-card-image">
         <a href={href}>
-          <Image src={imageSrc} alt={alt} width={width} height={height} />
+          <Image src={imageSrc} alt={alt} width={width} height={height}/>
         </a>
       </div>
 
