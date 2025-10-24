@@ -652,6 +652,7 @@ aside .nav-link:hover {
 
 #software .btn:hover {
   transform: scale(1.1);
+  text-decoration: none;
 }
 
 .latest-posts {
