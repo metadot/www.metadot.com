@@ -40,7 +40,7 @@ export default function BlogCard({
       </div>
 
       <div className="blog-card-excerpt">
-        {quote && <h2>{quote}</h2>}
+        {quote && <h4>“{quote}”</h4>}
         <p>{excerpt}</p>
       </div>
 

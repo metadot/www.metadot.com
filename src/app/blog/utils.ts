@@ -17,6 +17,7 @@ interface Blog {
 export interface BlogWithSlug extends Blog {
   slug: string;
   excerpt?: string;
+  quote?: string;
 }
 
 const BLOG_DIR = path.join(process.cwd(), "src/app/blog-articles");
@@ -39,6 +40,14 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
   const exportEnd = content.indexOf("};");
   if (exportEnd !== -1) {
     content = content.slice(exportEnd + 2).trim();
+  }
+
+  const quoteMatch = content.match(/^#+\s*["“](.+?)["”]\s*$/m);
+  let quote = "";
+
+  if (quoteMatch) {
+    quote = quoteMatch[1].trim();
+    content = content.replace(quoteMatch[0], "").trim();
   }
   // Split and clean lines
   const lines = content
@@ -63,6 +72,7 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
 
   return {
     slug,
+    quote,
     excerpt: plainExcerpt,
     ...blog,
   };

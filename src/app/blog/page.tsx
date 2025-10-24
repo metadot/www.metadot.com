@@ -21,6 +21,7 @@ export default async function BlogIndex() {
           <div key={post.slug} className="mb-[3.3rem]">
             <BlogCard
               title={post.title}
+              quote={post.quote}
               excerpt={post.excerpt || post.description}
               imageSrc={post.image || "/blog/default.svg"}
               alt={post.title}

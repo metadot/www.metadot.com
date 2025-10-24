@@ -159,59 +159,6 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* <div
-          className={`mobile-nav text-center grid transition-[grid-template-rows] duration-400 ease ${
-            navOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-          }`}
-        >
-          <ul className="dropdown overflow-hidden">
-            <li className="nav-item">
-              <a href="/about-us" className="nav-link ">
-
-                About Us
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/contact" className="nav-link">
-                Contact
-              </Link>
-            </li>
-
-            <li ref={mobileDropRef} className="nav-item">
-              <Link
-                className="nav-link dropdown-toggle"
-                href="#"
-                onClick={toggleDropdown}
-                aria-expanded={menuOpen}
-              >
-                Products
-              </Link>
-            </li>
-            {menuOpen && (
-              <div className="dropdown-menu show">
-                {products.map(({ name, href, src, width, height }) => (
-                  <Link key={name} href={href} className="dropdown-item">
-                    <Image
-                      src={src}
-                      alt={name}
-                      width={width}
-                      height={height}
-                      className="dropdown-image"
-                    />
-                    {name}
-                  </Link>
-                ))}
-              </div>
-            )}
-            <li className="nav-item">
-              <Link href="/blog" className="nav-link">
-                Blog
-              </Link>
-            </li>
-          </ul>
-        </div> */}
-
         <div
           className={`background-blur fixed inset-0 backdrop-blur-sm transition-opacity z-[999] ${
             navOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -238,26 +185,26 @@ export default function Header() {
             </button>
           </div>
 
-          <nav className="flex flex-col text-center px-[5px]">
+          <nav className="flex flex-col text-left px-[5px]">
             <Link
               href="/about-us"
-              className="nav-item nav-link !py-[10px]"
+              className="nav-item nav-link !py-[10px] !px-[11px]"
               onClick={closeNav}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className="nav-link !py-[10px]"
+              className="nav-link !py-[10px] !px-[11px]"
               onClick={closeNav}
             >
               Contact
             </Link>
 
             {/* Mobile dropdown */}
-            <div ref={mobileDropRef} className="nav-item py-[10px]">
+            <div ref={mobileDropRef} className="nav-item py-[10px] ">
               <Link
-                className="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle !px-[11px]"
                 href="#"
                 onClick={toggleDropdown}
                 aria-expanded={menuOpen}
@@ -285,7 +232,7 @@ export default function Header() {
 
             <Link
               href="/blog"
-              className="nav-link !py-[10px]"
+              className="nav-link !py-[10px] !px-[11px]"
               onClick={closeNav}
             >
               Blog

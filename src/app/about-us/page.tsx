@@ -1,3 +1,5 @@
+"use client";
+
 import Timeline from "@/components/Timeline";
 import {
   Accordion,
@@ -6,8 +8,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function AboutUs() {
+  useEffect(() => {
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const targetId = link.getAttribute("href")?.substring(1);
+        const target = targetId && document.getElementById(targetId);
+
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", () => {});
+      });
+    };
+  }, []);
+
   return (
     <>
       <section className="section-mojo text-center">
