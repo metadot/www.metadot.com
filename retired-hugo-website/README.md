@@ -1,6 +1,8 @@
 # README
 
-This repo contains the [Metadot](www.metadot.com) website files. 
+# THIS README IS FOR THE RETIRED HUGO WEBSITE, PLEASE REFER TO THE README IN THE ROOT DIRECTORY
+
+This repo contains the [Metadot](www.metadot.com) website files.
 This repo contains git submodules.
 
 ## Setup environment
