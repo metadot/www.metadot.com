@@ -42,7 +42,7 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
     content = content.slice(exportEnd + 2).trim();
   }
 
-  const quoteMatch = content.match(/^#+\s*["“](.+?)["”]\s*$/m);
+  const quoteMatch = content.match(/^#+\s*["“](.+?)["”]\s*$/m); // finding a heading quote in the articles
   let quote = "";
 
   if (quoteMatch) {
