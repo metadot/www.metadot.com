@@ -1,0 +1,52 @@
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<div class="sc-four-sections pb-4 container-fluid container-lg pt-4">
+    {{ if (isset .Params "title") }}
+    <div class="intro mb-5">
+        <h3 class="title mb-4">{{.Get "title"}}</h3>
+        {{ if (isset .Params "description") }}
+        <p>{{.Get "description"}}</p>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="row">
+        {{ if (isset .Params "section1_title") }}
+        <div class="col-md-6 mb-4">
+            <div class="section-title">
+                <i class="{{.Get "section1_icon"}} mr-1"></i> {{.Get "section1_title"}}
+            </div>
+            <p class="section-text">{{.Get "section1_text"}}</p>
+        </div>
+        {{ end }}
+
+        {{ if (isset .Params "section2_title") }}
+        <div class="col-md-6 mb-4">
+            <div class="section-title">
+                <i class="{{.Get "section2_icon"}} mr-1"></i> {{.Get "section2_title"}}
+            </div>
+            <p class="section-text">{{.Get "section2_text"}}</p>
+        </div>
+        {{ end }}
+
+        {{ if (isset .Params "section3_title") }}
+        <div class="col-md-6 mb-4">
+            <div class="section-title">
+                <i class="{{.Get "section3_icon"}} mr-1"></i> {{.Get "section3_title"}}
+            </div>
+            <p class="section-text">{{.Get "section3_text"}}</p>
+        </div>
+        {{ end }}
+
+        {{ if (isset .Params "section4_title") }}
+        <div class="col-md-6 mb-4">
+            <div class="section-title">
+                <i class="{{.Get "section4_icon"}} mr-1"></i> {{.Get "section4_title"}}
+            </div>
+            <p class="section-text">{{.Get "section4_text"}}</p>
+        </div>
+        {{ end }}
+    </div>
+</div>

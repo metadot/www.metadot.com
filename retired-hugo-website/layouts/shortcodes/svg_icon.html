@@ -1,0 +1,6 @@
+{{$base := "assets/svg_icons/"}}
+{{$icon := $.Get "icon_name"}}
+{{$src := print $base $icon }}
+<figure>
+  {{readFile (print $src) | safeHTML}}
+</figure>

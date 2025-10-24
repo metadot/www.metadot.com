@@ -1,0 +1,49 @@
+<div class="sc-popup">
+  <!-- <div id="news-signup">
+    <div class="wrapper" style="background-image: url({{.Get "background-image"}})!important; background-size:100% 100%;">
+      <div id="news-signup_close"></div>
+      <div class="container" style="padding:10px;" id="phplistsubscriberesult">
+        <h2 style="color:white;">{{.Get "title"}}</h2>
+        <p style="color:white;">{{.Get "description"}}</p>
+        <a href="/{{.Get "page_url"}}" class="btn btn-danger" style="display:{{.Get "display_button"}}">{{.Get "title_button"}}</a>
+        <br/>
+
+        <span id="wistia_async_3yv405ad68_demo" class="wistia_embed wistia_async_3yv405ad68 popover=true popoverAnimateThumbnail=true img-fluid" 
+        style="display:{{.Get "display_wistia_video"}};height:260px;width:50%">&nbsp;</span>
+          
+      </div>
+    </div>
+  </div> -->
+</div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    $("#wistia_async_3yv405ad68_demo").on("click", () => {
+      window.bioEp.hidePopup();
+    });
+  });
+  </script>
+  <script>
+    const mouseTarget = document.getElementById('mouseTarget');
+    mouseTarget.addEventListener('mouseleave', e => {
+      window.bioEp.addPopup("news-signup", "news-signup_bg");
+      window.bioEp.showPopup();
+    });
+  </script>
+<script src="//fast.wistia.com/embed/medias/pukozq6xf0.jsonp" async></script>
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+
+{{ if not (.Page.Scratch.Get "popupLoaded") }}
+{{ .Page.Scratch.Set "popupLoaded" true }}
+{{$file := resources.Get "js/shortcodes/popup.js"}}
+{{ if not .Site.IsServer }}
+<!-- Minify on production -->
+{{$file := $file | resources.Minify}}
+{{end}}
+<script defer
+  src="{{($file).RelPermalink}}"></script>
+{{ end }}
+
+
+
+

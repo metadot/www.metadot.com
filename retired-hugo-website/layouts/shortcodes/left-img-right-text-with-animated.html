@@ -1,0 +1,59 @@
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+<!-- Shortcode error handling  -->
+{{ with .Get "image_url" }}
+{{ else }}
+{{ errorf "missing value for param 'image_url': %s" .Position }}
+{{ end }}
+
+{{ with .Get "image_alt" }}
+{{ else }}
+{{ errorf "missing value for param 'image_alt': %s" .Position }}
+{{ end }}
+
+{{ with .Get "title" }}
+{{ else }}
+{{ errorf "missing value for param 'title': %s" .Position }}
+{{ end }}
+
+{{$image_url := .Get "image_url"}}
+{{ $original := .Page.Resources.GetMatch (printf "*%s*" ($image_url)) }}
+{{ .Scratch.Set "image" ($original.Resize "600x") }}
+{{ $image := .Scratch.Get "image" }}
+
+{{with .Get "no_shadow"}}
+{{else}}
+{{.Scratch.Set "imageShadowClass" (print "shadow")}}
+{{end}}
+<div class="row align-items-center" style="justify-content: space-around;">
+  <div class="col-md-6">
+    <img data-src="{{ $original.RelPermalink }}"
+    width="{{ $image.Width }}"
+    class='lazy border mb-2 img-fluid rounded {{ .Scratch.Get "imageShadowClass" }} '
+    height="{{ $image.Height }}"
+    alt='{{.Get "image_alt"}}'
+    >
+    
+  </div>
+  <div class="col-md-6">
+  {{ if (isset .Params "bigtitle") }}
+  <h1>{{.Get "bigtitle"}}</h1>
+  {{ end }}
+
+  {{ if (isset .Params "title") }}
+  <h2 class="text-center">{{.Get "title"}}</h2>
+  {{ end }}
+
+  <div style="text-align: justify;text-align-last: center;">{{ .Inner}}</div>
+{{$url_content := .Get "url_content"}}
+{{ with .Get "url_link" }}
+<div class="pt-3">
+  <a class="link-color-before animated" href="{{.}}">
+    {{ $url_content }}&nbsp;<i class="fas fa-arrow-right"></i>
+  </a>
+  
+</div>
+{{ end }}
+</div>
+</div>

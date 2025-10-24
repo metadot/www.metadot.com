@@ -1,0 +1,89 @@
+####################### Banner #########################
+banner:
+  title : "Move forward. Faster."
+  image : "/images/homepage.jpg"
+  content : "Tools that boost productivity up through the roof."
+  buttons:
+    - label : "Use it with caution"
+      link : "#software"
+
+##################### Software_list ##########################
+software_list:
+  enable : true
+  title : "Our software products"
+  items:
+    # feature item loop
+    - name : "Bamzooka"
+      url_img : "/images/brand/bamzooka.webp"
+      alt_img : "Bamzooka Logo"
+      content : "Bamzooka is a recurring checklist software for easy business process management (BPM). "
+      link : "https://bamzooka.com/"
+      color : "#1976d2"
+      bgcolor : "#81d4fa"
+      label : "Link to Bamzooka website"
+
+    # feature item loop
+    - name : "Montastic"
+      url_img : "images/brand/montastic.webp"
+      alt_img : "Montastic Logo"
+      content : "Montastic monitors websites and sends notifications when a problem is detected."
+      link : "https://www.montastic.com/"
+      color : "#A94628"
+      bgcolor : "#81d4fa"
+      label : "Link to Montastic website"
+
+    # feature item loop
+    - name : "Mojo&nbsp;Helpdesk"
+      url_img : "/images/brand/mojo-star.svg"
+      alt_img : "Mojo Helpdesk Logo"
+      content : "Mojo Helpdesk is a leading ticketing system to centralize support requests and improve customer service."
+      link : "https://www.mojohelpdesk.com/"
+      color : "#066F20"
+      bgcolor : "#81d4fa"
+      label : "Link to Mojo Helpdesk website"
+
+
+##################### Hardware_list ##########################
+hardware_list:
+  enable : true
+  title : "Our hardware products"
+  item:
+    # feature item loop
+    - name : "Das&nbsp;Keyboard"
+      url_img : "images/brand/daskeyboard.webp"
+      alt : "Das Keyboard keyboard"
+      content : "is a brand of high-quality mechanical keyboards for typists, software developers, tech enthusiasts, and gamers. A reference in the market."
+      brandicon : "/images/brand/daskeyboardbrand.webp"
+      button:
+        enable : true
+        label : "Visit Das Keyboard"
+        link : "https://www.daskeyboard.com/"
+
+####################### Typrx section ########################""
+typrx:
+  enable : true
+  items:
+    - title : "Typrx"
+      images: 
+        - "images/home-page/race.webp"
+      content : "Typrx is an online game where you can compete with people from all around the world, while increasing your typing speed and accuracy. The more you play, the more your typing improves. Increase your speed to earn coins and unlock new skins for your typing vehicle. Keep practicing, and one day - you might just be a Typrx Champion!"
+      button:
+        - label : "Try it, it's free!"
+          link : "https://www.typrx.com/"
+    - title : "Ultimate Typing Championship"
+      image : "/images/utc.webp"
+      content : "Ultimate Typing Championship : UTC is a world wide competition, where some of the best compete for the title of Quickest Typist in the World! Online or offline, this competition is open to everyone - so why not give it your best shot?"
+      images: 
+        - "/images/home-page/utc.webp"
+      button:
+        - label : "Learn more about UTC"
+          link : "https://ultimatetypingchampionship.com/"
+        - label : "Watch the 2020 competion"
+          link : "https://www.youtube.com/watch?v=vPlb8IwJIzY"
+
+################### Recent posts ########################
+posts:
+  enable : true
+  title : "Our most recent posts"
+  number : 2
+  section : "blog"

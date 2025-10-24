@@ -1,0 +1,30 @@
+<!-- Disposition of blog-cards items -->
+<div class="blog-card container rounded mb-5">
+
+  <!-- cards image -->
+  <div class="blog-card-image">
+    <a href="{{ .Page.Permalink }}">
+      <img src="{{ .Params.image }}" class="img-fluid rounded
+      mx-auto" alt="{{ .Params.alt }}" />
+    </a>
+  </div>
+
+  <!-- cards title -->
+  <div class="blog-card-title mt-3">
+    <h3><a href="{{ .Page.Permalink }}">{{ .Title }}</a></h3>
+  </div>
+  
+  <!-- cards summary -->
+  <div class="blog-card-excerpt">
+    <p>
+      {{ print (substr .Summary 0 300) "..." | safeHTML }}
+    </p>
+  </div>
+  
+  <!-- cards button -->
+  <div class="container row justify-content-center ">  
+     <a href="{{.RelPermalink}}" class="rounded
+     blog-card-button">Continue Reading</a>
+  </div>
+
+</div>
