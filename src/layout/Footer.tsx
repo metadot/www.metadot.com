@@ -40,9 +40,9 @@ export default function Footer() {
       </footer>
       <footer className="text-center copyright">
         © Copyright {year}, product of{" "}
-        <a href="/" className="btn-link !text-[#1034ea]">
+        <Link href="/" className="btn-link !text-[#1034ea]">
           Metadot
-        </a>
+        </Link>
         . All rights reserved. Made with ♥ in Austin, Texas.
       </footer>
     </>

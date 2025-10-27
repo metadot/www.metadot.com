@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
@@ -25,10 +27,10 @@ export default function Pagination({
       <ul className="pagination">
         {currentPage > 1 && (
           <li className="page-item">
-            <a href={prevPage} className="page-link">
+            <Link href={prevPage} className="page-link">
               <span className="hidden md:inline">‹ Previous</span>
               <span className="md:hidden">‹</span>
-            </a>
+            </Link>
           </li>
         )}
         {Array.from({ length: totalPages }).map((_, i) => {
@@ -73,10 +75,10 @@ export default function Pagination({
 
         {currentPage < totalPages && (
           <li className="page-item">
-            <a href={nextPage} className="page-link">
+            <Link href={nextPage} className="page-link">
               <span className="hidden md:inline">Next ›</span>
               <span className="md:hidden">›</span>
-            </a>
+            </Link>
           </li>
         )}
       </ul>

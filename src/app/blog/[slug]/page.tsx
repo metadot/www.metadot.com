@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getBlogPost } from "../utils";
+import Link from "next/link";
 
 const components = {
   h2: (props: any) => <h2 className="blog-title title-h2" {...props} />,
@@ -47,9 +48,9 @@ export default async function BlogArticlePage({
     <>
       <div className="container mt-[1.1rem]">
         <nav className="nav flex">
-          <a className="p-[0.55rem] !text-[#6c757d]" href="/blog/">
+          <Link className="p-[0.55rem] !text-[#6c757d]" href="/blog/">
             Back to Home
-          </a>
+          </Link>
         </nav>
       </div>{" "}
       <article className="mojo-card blogpost container mb-[3.3rem]">

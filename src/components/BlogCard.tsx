@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export interface BlogCardProps {
   title: string;
@@ -28,14 +29,14 @@ export default function BlogCard({
   return (
     <div className="blog-card rounded mx-auto">
       <div className="blog-card-image">
-        <a href={href}>
+        <Link href={href}>
           <Image src={imageSrc} alt={alt} width={width} height={height}/>
-        </a>
+        </Link>
       </div>
 
       <div className="blog-card-title mt-[1.1rem]">
         <h3>
-          <a href={href}>{title}</a>
+          <Link href={href}>{title}</Link>
         </h3>
       </div>
 
@@ -45,9 +46,9 @@ export default function BlogCard({
       </div>
 
       <div className="px-[15px] text-center">
-        <a href={href} className="rounded blog-card-button">
+        <Link href={href} className="rounded blog-card-button">
           {buttonText}
-        </a>
+        </Link>
       </div>
     </div>
   );
