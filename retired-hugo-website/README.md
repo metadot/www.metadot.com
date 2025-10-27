@@ -1,6 +1,13 @@
 # README
 
-# THIS README IS FOR THE RETIRED HUGO WEBSITE, PLEASE REFER TO THE README IN THE ROOT DIRECTORY
+This is a backup of the Hugo website, do not use, delete in 2026.
+This is a backup of the Hugo website, do not use, delete in 2026.
+This is a backup of the Hugo website, do not use, delete in 2026.
+This is a backup of the Hugo website, do not use, delete in 2026.
+This is a backup of the Hugo website, do not use, delete in 2026.
+This is a backup of the Hugo website, do not use, delete in 2026.
+This is a backup of the Hugo website, do not use, delete in 2026.
+This is a backup of the Hugo website, do not use, delete in 2026.
 
 This repo contains the [Metadot](www.metadot.com) website files.
 This repo contains git submodules.

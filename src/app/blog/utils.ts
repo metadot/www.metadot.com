@@ -5,10 +5,7 @@ import fs from "fs";
 interface Blog {
   title: string;
   description: string;
-  author: {
-    name: string;
-    src: string;
-  };
+  author: string;
   date: string;
   image?: string;
   alt?: string;
@@ -32,7 +29,7 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
 
   // evaluate metadata safely
   // eslint-disable-next-line no-eval
-  const blog = eval("(" + match[1] + ")") as Blog;
+  const blog = Function('"use strict";return (' + match[1] + ')')() as Blog;
 
   let content = fileContent;
 
@@ -79,7 +76,7 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
 }
 
 export async function getAllBlogs() {
-  const blogFilenames = await glob("*.mdx", {
+  const blogFilenames = await glob("**/*.mdx", {
     cwd: BLOG_DIR,
   });
 

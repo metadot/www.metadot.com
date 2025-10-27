@@ -40,9 +40,10 @@ const components = {
 export default async function BlogArticlePage({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string[] };
 }) {
-  const { blog, content } = await getBlogPost(params.slug);
+  const slugPath = params.slug.join("/");
+  const { blog, content } = await getBlogPost(slugPath);
 
   return (
     <>
@@ -56,12 +57,14 @@ export default async function BlogArticlePage({
       <article className="mojo-card blogpost container mb-[3.3rem]">
         <h2 className="blog-title title-h2">{blog.title}</h2>
         <p className="blog-references my-[1.65rem]">
-          {blog.author?.name} on{" "}
-          <time>{new Date(blog.date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  })}</time>
+          {blog.author} on{" "}
+          <time>
+            {new Date(blog.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
         </p>
 
         {blog.image && (
