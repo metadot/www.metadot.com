@@ -7,8 +7,8 @@ interface Blog {
   description: string;
   author: string;
   date: string;
-  image?: string;
-  alt?: string;
+  image: string;
+  alt: string;
   draft: boolean;
 }
 
