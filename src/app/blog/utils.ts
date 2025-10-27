@@ -9,6 +9,7 @@ interface Blog {
   date: string;
   image?: string;
   alt?: string;
+  draft: boolean;
 }
 
 export interface BlogWithSlug extends Blog {
@@ -82,7 +83,9 @@ export async function getAllBlogs() {
 
   const blogs = await Promise.all(blogFilenames.map(importBlog));
 
-  return blogs.sort((a, z) => +new Date(z.date) - +new Date(a.date));
+  const published = blogs.filter((b) => !b.draft);
+
+  return published.sort((a, z) => +new Date(z.date) - +new Date(a.date));
 }
 
 export async function getLatestBlogs(count: number = 2) {
