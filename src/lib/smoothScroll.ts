@@ -1,4 +1,4 @@
-export function smoothScroll(
+export function smoothScroll( //quick, smooth scrolling for the hero section of the homepage
   targetSelector: string,
 ): void {
   const target = document.querySelector<HTMLElement>(targetSelector);

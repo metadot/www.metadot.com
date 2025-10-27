@@ -43,7 +43,7 @@ export default function Contact() {
 
           <div className="block sc-cards-container md:hidden">
             <Swiper
-              modules={[Autoplay, Pagination]} // 👈 add modules here
+              modules={[Autoplay, Pagination]}
               spaceBetween={16}
               slidesPerView={1}
               centeredSlides

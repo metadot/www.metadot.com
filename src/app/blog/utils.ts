@@ -30,7 +30,7 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
   const match = fileContent.match(/export const blog\s*=\s*({[\s\S]*?});/m);
   if (!match) throw new Error(`Missing blog metadata in ${blogFilename}`);
 
-  // evaluate safely
+  // evaluate metadata safely
   // eslint-disable-next-line no-eval
   const blog = eval("(" + match[1] + ")") as Blog;
 

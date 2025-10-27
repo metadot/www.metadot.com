@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 export default function AboutUs() {
-  useEffect(() => {
+  useEffect(() => { // enables smooth scrolling when clicking on a "#" anchor link within this page
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
