@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import Timeline from "@/components/Timeline";
@@ -11,7 +12,8 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 export default function AboutUs() {
-  useEffect(() => { // enables smooth scrolling when clicking on a "#" anchor link within this page
+  useEffect(() => {
+    // enables smooth scrolling when clicking on a "#" anchor link within this page
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
@@ -37,7 +39,7 @@ export default function AboutUs() {
 
   return (
     <>
-      <section className="section-mojo text-center">
+      <section className="section-mojo text-center py-[6.6rem]!">
         <h1>Metadot, A Team That Puts Quality, And Customer, First</h1>
       </section>
       <section id="about-us">
@@ -339,7 +341,7 @@ export default function AboutUs() {
                       <div className="left-item flex items-center">
                         <Image
                           src="/about-us/innovation.webp"
-                          alt="Innovation"
+                          alt="Innovation image"
                           width={584}
                           height={584}
                           className="value-icon"
@@ -377,7 +379,7 @@ export default function AboutUs() {
                       <div className="left-item flex items-center">
                         <Image
                           src="/about-us/getitdone.webp"
-                          alt="Get it done"
+                          alt="Get it done image"
                           width={584}
                           height={584}
                           className="value-icon"

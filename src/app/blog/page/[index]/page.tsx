@@ -3,13 +3,15 @@ import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
 import { POSTS_PER_PAGE } from "../../constants";
 
-export default async function BlogPage({
-  params,
-}: {
-  params: { page: string };
-}) {
-  const {page} = await params;
-  const currentPage = parseInt(page, 10);
+interface PageProps {
+  params: Promise<{
+    index: string;
+  }>;
+}
+
+export default async function BlogPage({ params }: PageProps) {
+  const {index} = await params;
+  const currentPage = parseInt(index, 10);
   const blogs = await getAllBlogs();
 
   const totalPages = Math.ceil(blogs.length / POSTS_PER_PAGE);

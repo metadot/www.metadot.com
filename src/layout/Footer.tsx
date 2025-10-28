@@ -1,5 +1,3 @@
-"use client";
-
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
@@ -40,7 +38,7 @@ export default function Footer() {
       </footer>
       <footer className="text-center copyright">
         © Copyright {year}, product of{" "}
-        <Link href="/" className="btn-link !text-[#1034ea]">
+        <Link href="/" className="btn-link text-[#1e3a8a]! underline! underline-offset-2">
           Metadot
         </Link>
         . All rights reserved. Made with ♥ in Austin, Texas.

@@ -80,7 +80,7 @@ export default function Header() {
   }, [navOpen]);
 
   return (
-    <header className="navigation z-[1000]">
+    <header className="navigation z-[1000] bg-white!" >
       <div className="container-header z-[1000]">
         <nav className="navbar">
           {/* Logo */}

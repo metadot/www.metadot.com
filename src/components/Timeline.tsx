@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import React from "react";
 
 interface TimelineItem {
@@ -79,7 +76,7 @@ const timelineData: TimelineItem[] = [
     description: (
       <>
         Das Keyboard announces the launch of its first keyboard: a completely
-        blank keyboard designed specifically for "über geeks." The keyboard
+        blank keyboard designed specifically for &quot;über geeks.&quot; The keyboard
         features individually weighted keys. Praised by many prominent sources
         such as the{" "}
         <a

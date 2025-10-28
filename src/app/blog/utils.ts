@@ -29,7 +29,6 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
   if (!match) throw new Error(`Missing blog metadata in ${blogFilename}`);
 
   // evaluate metadata safely
-  // eslint-disable-next-line no-eval
   const blog = Function('"use strict";return (' + match[1] + ')')() as Blog;
 
   let content = fileContent;
@@ -54,7 +53,7 @@ async function importBlog(blogFilename: string): Promise<BlogWithSlug> {
     .filter((l) => l && !l.startsWith(">") && !l.startsWith("-"));
 
   // ✅ Just use the very first visible text line
-  let excerpt = lines.join(" ") || "";
+  const excerpt = lines.join(" ") || "";
 
   // Clean up Markdown and limit length
   const plainExcerpt =

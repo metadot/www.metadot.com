@@ -6,7 +6,7 @@ export default async function LatestPosts() {
 
   return (
     <>
-      <section className="section-mojo">
+      <section className="section-mojo bg-white">
         <div className="container text-center px-[10px] pb-[40px]">
           <h2 className="section-title">Our most recent posts</h2>
         </div>

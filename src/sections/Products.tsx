@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,7 +41,7 @@ export default function Products() {
   return (
     <>
       {/* Software */}
-      <section id="software" className="section-mojo border-b">
+      <section id="software" className="section-mojo border-b bg-white">
         <div className="container">
           {/* Title */}
           <h2 className="section-mojo-title !mb-[3.3rem]">
@@ -60,10 +58,7 @@ export default function Products() {
           {/* Grid */}
           <div className="grid md:grid-cols-3 text-left mx-[-15px]">
             {softwareProducts.map((product) => (
-              <div
-                key={product.name}
-                className="mb-[3.3rem] px-[15px]"
-              >
+              <div key={product.name} className="mb-[3.3rem] px-[15px]">
                 <Image
                   src={product.logo}
                   alt={`${product.name} Logo`}
@@ -87,7 +82,7 @@ export default function Products() {
       </section>
 
       {/* Hardware */}
-      <section className="section-mojo border-b" id="hardware">
+      <section className="section-mojo border-b bg-white" id="hardware">
         <div className="container">
           <h2 className="section-mojo-title !mb-[3.3rem]">
             <Image
@@ -101,13 +96,15 @@ export default function Products() {
           </h2>
           <div className="hardware-products">
             <div className="hardware-product text-center">
-              <Image
-                src="/daskeyboard.webp"
-                alt="Product image"
-                width={1909}
-                height={766}
-                className="hardware-image mb-[.275rem] img-fluid"
-              />
+              <div className="hardware-image aspect-[1909/766] max-w-[1140px] relative mb-[.275rem]">
+                <Image
+                  src="/daskeyboard.webp"
+                  alt="Product image"
+                  fill
+                  sizes="(min-width: 1024px) 1140px, 100vw"
+                />
+              </div>
+
               <Image
                 src="/daskeyboardbrand.webp"
                 alt="Brand image"

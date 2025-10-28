@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,7 +23,7 @@ function FeatureSection({
   links,
 }: FeatureProps) {
   return (
-    <section id={id} className="section-mojo border-b">
+    <section id={id} className="section-mojo border-b bg-white">
       <div className="container">
         <div
           className={`flex flex-col justify-center items-center md:gap-[30px] text-left ${

@@ -2,10 +2,27 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getBlogPost } from "../utils";
 import Link from "next/link";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
+
+type HeadingProps = ComponentPropsWithoutRef<"h2">;
+type AnchorProps = ComponentPropsWithoutRef<"a"> & {
+  children?: ReactNode;
+};
+type ListProps = ComponentPropsWithoutRef<"ul">;
+type ListItemProps = ComponentPropsWithoutRef<"li">;
+
+interface ImgProps extends ComponentPropsWithoutRef<"img"> {
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+}
 
 const components = {
-  h2: (props: any) => <h2 className="blog-title title-h2" {...props} />,
-  a: (props: any) => {
+  h2: (props: HeadingProps) => (
+    <h2 className="blog-title title-h2" {...props} />
+  ),
+  a: (props: AnchorProps) => {
     const text =
       typeof props.children === "string"
         ? props.children.trim() // removes trailing (and leading) whitespace
@@ -14,7 +31,7 @@ const components = {
     return (
       <a
         {...props}
-        className="text-[#2b70a9] hover:underline"
+        className="text-[#2b70a9] underline! underline-offset-2"
         target={props.href?.startsWith("http") ? "_blank" : undefined}
         rel={props.href?.startsWith("http") ? "noopener noreferrer" : undefined}
       >
@@ -22,11 +39,11 @@ const components = {
       </a>
     );
   },
-  ul: (props: any) => (
+  ul: (props: ListProps) => (
     <ul className="list-disc ps-[40px] mb-[1.65rem]" {...props} />
   ),
-  li: (props: any) => <li className="mb-[0.55rem]" {...props} />,
-  img: (props: any) => {
+  li: (props: ListItemProps) => <li className="mb-[0.55rem]" {...props} />,
+  img: (props: ImgProps) => {
     <Image
       {...props}
       alt={props.alt || ""}
@@ -37,12 +54,15 @@ const components = {
   },
 };
 
+type Params = Promise<{ slug: string[] }>;
+
 export default async function BlogArticlePage({
   params,
 }: {
-  params: { slug: string[] };
+  params: Params;
 }) {
-  const slugPath = params.slug.join("/");
+  const {slug} = await params;
+  const slugPath = slug.join("/");
   const { blog, content } = await getBlogPost(slugPath);
 
   return (

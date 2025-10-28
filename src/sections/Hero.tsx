@@ -1,6 +1,7 @@
 "use client";
 
 import { smoothScroll } from "@/lib/smoothScroll";
+import Image from "next/image";
 
 export default function Hero() {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -13,7 +14,20 @@ export default function Hero() {
 
   return (
     <>
-      <section id="banner" className="section-mojo border-b text-center">
+      <section
+        id="banner"
+        className="section-mojo border-b text-center h-screen"
+      >
+        <div className="pointer-events-none fixed inset-0 -z-10">
+          <Image
+            src="/building.webp"
+            alt="Hero"
+            fill
+            priority
+            sizes="(min-width: 1600px) 1600px, 100vw"
+            className="bg-img"
+          />
+        </div>
         <div className="container">
           <h1 className="banner-title">Move Forward. Faster.</h1>
           <h2 className="banner-subtitle">
