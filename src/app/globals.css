@@ -319,13 +319,6 @@ strong {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .section-mojo {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-}
-
 .btn {
   display: inline-block;
   font-weight: 400;
