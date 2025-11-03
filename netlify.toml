@@ -1,0 +1,61 @@
+# Redirect old Hugo blog slugs to new date-based slugs
+
+[[redirects]]
+from = "/blog/globalteam/"
+to = "/blog/2021/05/global"
+status = 301
+
+[[redirects]]
+from = "/blog/thesittingdisease/"
+to = "/blog/2021/04/sittingdisease"
+status = 301
+
+[[redirects]]
+from = "/blog/zoomfatigue/"
+to = "/blog/2021/04/zoomfatigue"
+status = 301
+
+[[redirects]]
+from = "/blog/360reviews/"
+to = "/blog/2021/03/360reviews"
+status = 301
+
+[[redirects]]
+from = "/blog/thebuddysystem/"
+to = "/blog/2021/03/buddysystem"
+status = 301
+
+[[redirects]]
+from = "/blog/fourattributes/"
+to = "/blog/2021/03/fourattributes"
+status = 301
+
+[[redirects]]
+from = "/blog/deepwork/"
+to = "/blog/2021/02/deepwork"
+status = 301
+
+[[redirects]]
+from = "/blog/coffeedates/"
+to = "/blog/2021/02/coffeedates"
+status = 301
+
+[[redirects]]
+from = "/blog/dresscode/"
+to = "/blog/2021/01/dresscode"
+status = 301
+
+[[redirects]]
+from = "/blog/meetings/"
+to = "/blog/2021/01/meetings"
+status = 301
+
+[[redirects]]
+from = "/blog/remote-leadership/"
+to = "/blog/2020/11/successremoteteam" # double-check if “remote-leadership” is successremoteteam
+status = 301
+
+[[redirects]]
+from = "/blog/onboarding-to-onboarded/"
+to = "/blog/2020/10/firstweekremote" # check if this matches the correct slug
+status = 301

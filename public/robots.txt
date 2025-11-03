@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /_next/
+
+# Host
+Host: https://www.metadot.com
+
+# Sitemaps
+Sitemap: https://www.metadot.com/sitemap.xml
