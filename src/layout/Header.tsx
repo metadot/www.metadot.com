@@ -21,7 +21,7 @@ const products = [
     height: 63,
   },
   {
-    name: "Mojo HelpDesk",
+    name: "Mojo Helpdesk",
     href: "https://www.mojohelpdesk.com",
     src: "/brand/mojo-star.svg",
     width: 129,
