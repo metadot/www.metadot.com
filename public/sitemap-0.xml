@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.metadot.com/contact</loc><lastmod>2025-11-03T17:36:03.246Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.metadot.com/blog</loc><lastmod>2025-11-03T17:36:03.247Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.metadot.com</loc><lastmod>2025-11-03T17:36:03.247Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.metadot.com/about-us</loc><lastmod>2025-11-03T17:36:03.247Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.metadot.com/blog/2020/11/successremoteteam</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://www.metadot.com/about-us</loc><lastmod>2026-02-04T14:24:29.552Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.metadot.com/blog</loc><lastmod>2026-02-04T14:24:29.554Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.metadot.com/contact</loc><lastmod>2026-02-04T14:24:29.554Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.metadot.com</loc><lastmod>2026-02-04T14:24:29.554Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.metadot.com/blog/2020/10/firstweekremote</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://www.metadot.com/blog/2020/11/successremoteteam</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.metadot.com/blog/2021/01/dresscode</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.metadot.com/blog/2021/01/meetings</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-<url><loc>https://www.metadot.com/blog/2021/03/360reviews</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-<url><loc>https://www.metadot.com/blog/2021/03/buddysystem</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-<url><loc>https://www.metadot.com/blog/2021/03/fourattributes</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.metadot.com/blog/2021/02/coffeedates</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.metadot.com/blog/2021/02/deepwork</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.metadot.com/blog/2021/04/sittingdisease</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.metadot.com/blog/2021/04/zoomfatigue</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.metadot.com/blog/2021/05/global</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://www.metadot.com/blog/2021/03/360reviews</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://www.metadot.com/blog/2021/03/buddysystem</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://www.metadot.com/blog/2021/03/fourattributes</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 </urlset>
