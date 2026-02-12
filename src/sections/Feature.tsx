@@ -69,12 +69,12 @@ export default function Feature() {
     <>
       <FeatureSection
         id="typrx"
-        title="Typrx"
-        description="Typrx is an online game where you can compete with people from all around the world, while increasing your typing speed and accuracy. The more you play, the more your typing improves. Increase your speed to earn coins and unlock new skins for your typing vehicle. Keep practicing, and one day - you might just be a Typrx Champion!"
+        title="How fast do you type? Let's find out with Typrx."
+        description="Typrx is an online typing race app. Type a random sentence as fast as you can and compete with others"
         image="/race.webp"
         width={1142}
         height={788}
-        links={[{ href: "https://typrx.com/", label: "Try it, it's free!" }]}
+        links={[{ href: "https://typrx.com/", label: "Try a tying race with TyprX" }]}
       />
 
       <FeatureSection

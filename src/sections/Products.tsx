@@ -112,7 +112,7 @@ export default function Products() {
                 height={211}
                 className="hardware-brand-image mb-[3.3rem]"
               />
-              <p className="hardware-description text-center">
+              <p className="hardware-description text-center max-w-2xl mx-auto">
                 <strong>Das Keyboard</strong> is a brand of high-quality
                 mechanical keyboards for typists, software developers, tech
                 enthusiasts, and gamers. A reference in the market.
