@@ -70,7 +70,7 @@ export default function Feature() {
       <FeatureSection
         id="typrx"
         title="How fast do you type? Let's find out with Typrx."
-        description="Typrx is an online typing race app. Type a random sentence as fast as you can and compete with others"
+        description="Typrx is an online typing race app. Type a random sentence as fast as you can and compete with others."
         image="/race.webp"
         width={1142}
         height={788}
