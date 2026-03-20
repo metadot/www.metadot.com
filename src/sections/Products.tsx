@@ -66,7 +66,7 @@ export default function Products() {
                   height={product.height}
                   className="h-[47px] w-auto"
                 />
-                <h2 className="whitespace-nowrap">{product.name}</h2>
+                <h3 className="whitespace-nowrap">{product.name}</h3>
                 <p>{product.desc}</p>
                 <Link
                   href={product.href}
