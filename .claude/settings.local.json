@@ -4,7 +4,16 @@
       "Skill(commit-commands:commit:*)",
       "Bash(find /Users/supercobra/workspace/0.make/www.metadot.com -maxdepth 2 -type f -name CLAUDE.md -o -name .cursorrules -o -name next.config.* -o -name tsconfig.json -o -name .eslintrc*)",
       "Bash(head:*)",
-      "Bash(xargs basename:*)"
+      "Bash(xargs basename:*)",
+      "Bash(git push:*)",
+      "Bash(npm run:*)",
+      "Bash(B=~/.claude/skills/gstack/browse/dist/browse)",
+      "Bash($B screenshot:*)",
+      "Bash($B js:*)",
+      "Bash(kill %1)",
+      "Bash($B stop:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
