@@ -361,6 +361,9 @@ strong {
   font-weight: 400;
   color: var(--color-primary);
   text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-link:hover {
@@ -743,7 +746,10 @@ aside .nav-link:hover {
   font-size: 0.9rem;
   font-weight: 700;
   color: #007cba;
-  padding: 0.375rem 0.75rem;
+  padding: 0.5rem 0.75rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .blog-card-button:hover {
@@ -784,8 +790,10 @@ aside .nav-link:hover {
 /* Footer */
 
 footer .nav-link {
-  /* display: block; */
   padding: 0.5rem 1rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-link:hover {
