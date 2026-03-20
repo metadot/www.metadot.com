@@ -38,7 +38,7 @@ export default function Hero() {
             className="btn banner-button"
             onClick={handleSmoothScroll}
           >
-            USE IT WITH CAUTION
+            EXPLORE OUR PRODUCTS
           </a>
         </div>
       </section>
