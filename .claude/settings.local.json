@@ -13,7 +13,9 @@
       "Bash(kill %1)",
       "Bash($B stop:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm install:*)"
     ]
   }
 }
