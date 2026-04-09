@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.0] - 2026-04-09
+
+### Changed
+- Redesigned `/beta` page to match updated mockup: SVG icons with pastel backgrounds, color-matched badges per app, increased border radius on cards, consistent section label styling, and "Metadot Apps" eyebrow above hero
+
 ## [2.1.0] - 2026-04-09
 
 ### Added
