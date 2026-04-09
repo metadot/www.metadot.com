@@ -142,8 +142,8 @@ export default function BetaPage() {
       <hr className="border-t border-[#f0f0f0] mb-11" />
 
       {/* What's in the suite */}
-      <h2 className="text-xs font-medium tracking-[0.1em] uppercase text-[#aaa] mb-6">
-        What&apos;s in the suite
+      <h2 className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#aaa] mb-6 origin-left scale-[0.45]">
+        WHAT&apos;S IN THE SUITE
       </h2>
 
       <div className="flex flex-col border border-[#f0f0f0] rounded-2xl overflow-hidden mb-10">
@@ -154,7 +154,7 @@ export default function BetaPage() {
           >
             <div className="flex items-center gap-3 mb-2">
               <div
-                className="w-8 h-8 rounded-lg shrink-0 flex items-center justify-center"
+                className="w-8 h-8 rounded-2xl shrink-0 flex items-center justify-center"
                 style={{ backgroundColor: app.bgColor, color: app.iconColor }}
               >
                 {app.icon}
@@ -176,8 +176,8 @@ export default function BetaPage() {
 
       {/* Coming soon */}
       <div className="border border-[#f0f0f0] rounded-2xl p-6 mb-14">
-        <h3 className="text-xs font-medium tracking-[0.1em] uppercase text-[#aaa] mb-4">
-          Coming soon
+        <h3 className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#aaa] mb-4 origin-left scale-[0.45]">
+          COMING SOON
         </h3>
         <div className="flex flex-wrap gap-2">
           {comingSoon.map((item) => (
