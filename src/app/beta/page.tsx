@@ -92,14 +92,14 @@ const apps = [
 ];
 
 const comingSoon = [
-  "Assets",
-  "CRM",
-  "Inventory",
-  "InvoiceMe",
-  "Knowledge base",
-  "Polls",
-  "Suppliers",
-  "Tickets",
+  { name: "Assets", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /></svg> },
+  { name: "CRM", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg> },
+  { name: "Inventory", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><path d="M21 16V8a2 2 0 0 0-1-1.73L13 2.27a2 2 0 0 0-2 0L4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg> },
+  { name: "InvoiceMe", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg> },
+  { name: "Knowledge base", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg> },
+  { name: "Polls", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg> },
+  { name: "Suppliers", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg> },
+  { name: "Tickets", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><path d="M15 5v2" /><path d="M15 11v2" /><path d="M15 17v2" /><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4V7a2 2 0 0 1 2-2z" /></svg> },
 ];
 
 export default function BetaPage() {
@@ -114,16 +114,10 @@ export default function BetaPage() {
         <em className="font-bold">One suite.</em> No duct tape.
       </h1>
 
-      <p className="text-lg leading-relaxed text-text mb-2 max-w-[540px]">
-        Most teams are running five tools that don&apos;t talk to each other.{" "}
-        <strong className="font-medium text-text-dark">
-          Metadot replaces the stack.
-        </strong>
-      </p>
-
-      <p className="text-sm leading-relaxed text-gray-400 max-w-[520px] mb-10">
-        Projects, scheduling, change communication, automation, and AI. All in
-        one place.
+      <p className="text-lg leading-relaxed text-text mb-10 max-w-[540px]">
+        Metadot replaces the five tools that don&apos;t talk to each
+        other&mdash;projects, scheduling, change communication, automation, and
+        AI, all in one place.
       </p>
 
       <div className="flex items-center gap-4 flex-wrap mb-16">
@@ -131,26 +125,25 @@ export default function BetaPage() {
           href={POLL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary"
+          className="btn bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] !text-white border-none hover:opacity-90"
         >
           Join the private beta
         </a>
-        <span className="text-sm text-gray-400">Limited spots.</span>
       </div>
 
       {/* Divider */}
       <hr className="border-t border-[#f0f0f0] mb-11" />
 
       {/* What's in the suite */}
-      <h2 className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#aaa] mb-6 origin-left scale-[0.45]">
+      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#555] mb-6">
         WHAT&apos;S IN THE SUITE
-      </h2>
+      </p>
 
-      <div className="flex flex-col border border-[#f0f0f0] rounded-2xl overflow-hidden mb-10">
-        {apps.map((app, i) => (
+      <div className="flex flex-col gap-3 mb-10">
+        {apps.map((app) => (
           <div
             key={app.name}
-            className={`bg-white px-6 py-5 ${i < apps.length - 1 ? "border-b border-[#f0f0f0]" : ""}`}
+            className="relative overflow-hidden rounded-2xl px-6 py-5 bg-gradient-to-br from-[#1a1744] via-[#3d3785] to-[#2e2d5e]"
           >
             <div className="flex items-center gap-3 mb-2">
               <div
@@ -159,7 +152,7 @@ export default function BetaPage() {
               >
                 {app.icon}
               </div>
-              <span className="text-[15px] font-medium">{app.name}</span>
+              <span className="text-[15px] font-medium text-white">{app.name}</span>
               <span
                 className="text-[11px] font-medium tracking-[0.06em] uppercase ml-auto px-2 py-0.5 rounded"
                 style={{ backgroundColor: app.bgColor, color: app.iconColor }}
@@ -167,34 +160,36 @@ export default function BetaPage() {
                 {app.tag}
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-[#666]">
+            <p className="text-sm leading-relaxed text-white/90">
               {app.description}
             </p>
           </div>
         ))}
       </div>
 
+      {/* Divider */}
+      <hr className="border-t border-[#f0f0f0] mb-11" />
+
       {/* Coming soon */}
-      <div className="border border-[#f0f0f0] rounded-2xl p-6 mb-14">
-        <h3 className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#aaa] mb-4 origin-left scale-[0.45]">
-          COMING SOON
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {comingSoon.map((item) => (
-            <span
-              key={item}
-              className="text-sm text-gray-500 bg-[#f7f7f7] rounded-full px-3.5 py-1"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#555] mb-6">
+        COMING SOON
+      </p>
+      <div className="flex flex-wrap gap-2 mb-14">
+        {comingSoon.map((item) => (
+          <span
+            key={item.name}
+            className="inline-flex items-center gap-1.5 text-sm text-[#666] bg-[#f0f0f0] rounded-full px-3.5 py-1"
+          >
+            {item.icon}
+            {item.name}
+          </span>
+        ))}
       </div>
 
       {/* Bottom CTA */}
-      <div className="bg-[#f9f9f9] rounded-2xl p-8" id="beta-section">
-        <h2 className="text-2xl font-bold mb-2">Join the private beta</h2>
-        <p className="text-sm text-gray-500 leading-relaxed mb-6">
+      <div className="rounded-2xl p-8 bg-[#f5f5f5]" id="beta-section">
+        <h2 className="!text-2xl font-bold mb-2 text-[#222]">Join the private beta</h2>
+        <p className="text-sm text-[#666] leading-relaxed mb-6">
           Metadot Apps is in active development. Private beta participants get
           first access and shape what gets built. Spots are limited.
         </p>
@@ -202,11 +197,11 @@ export default function BetaPage() {
           href={POLL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary"
+          className="btn bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] !text-white border-none hover:opacity-90"
         >
           Request a spot
         </a>
-        <p className="text-xs text-gray-400 mt-4">
+        <p className="text-xs text-[#999] mt-4">
           Built by the team behind Mojo Helpdesk.
         </p>
       </div>
