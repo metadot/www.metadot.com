@@ -16,7 +16,7 @@ No test framework is configured.
 ## Architecture
 
 **Stack**: Next.js 16 (App Router) + React 19 + Tailwind CSS 4 + TypeScript (strict mode)
-**Deployment**: Netlify (with legacy Hugo URL redirects in `netlify.toml`)
+**Deployment**: Vercel (auto-deploy on push to main; legacy Hugo redirects in `next.config.ts`)
 **Font**: Roboto (400/500/700) via `next/font/google`
 
 ### Source Layout (`src/`)
@@ -62,3 +62,38 @@ Tailwind CSS 4 with PostCSS plugin. Global styles in `app/globals.css` define cu
 ### Sitemap/SEO
 
 `next-sitemap` generates sitemap and robots.txt in postbuild. Config in `next-sitemap.config.js` adds blog post paths by scanning the MDX filesystem. Site URL: `https://www.metadot.com`.
+
+## Deploy Configuration (configured by /setup-deploy)
+- Platform: Vercel
+- Production URL: https://www.metadot.com
+- Deploy workflow: auto-deploy on push to main
+- Deploy status command: HTTP health check
+- Merge method: squash
+- Project type: web app (Next.js)
+- Post-deploy health check: https://www.metadot.com
+
+### Custom deploy hooks
+- Pre-merge: npm run build
+- Deploy trigger: automatic on push to main
+- Deploy status: poll production URL
+- Health check: https://www.metadot.com
+
+## Skill routing
+
+When the user's request matches an available skill, ALWAYS invoke it using the Skill
+tool as your FIRST action. Do NOT answer directly, do NOT use other tools first.
+The skill has specialized workflows that produce better results than ad-hoc answers.
+
+Key routing rules:
+- Product ideas, "is this worth building", brainstorming → invoke office-hours
+- Bugs, errors, "why is this broken", 500 errors → invoke investigate
+- Ship, deploy, push, create PR → invoke ship
+- QA, test the site, find bugs → invoke qa
+- Code review, check my diff → invoke review
+- Update docs after shipping → invoke document-release
+- Weekly retro → invoke retro
+- Design system, brand → invoke design-consultation
+- Visual audit, design polish → invoke design-review
+- Architecture review → invoke plan-eng-review
+- Save progress, checkpoint, resume → invoke checkpoint
+- Code quality, health check → invoke health
