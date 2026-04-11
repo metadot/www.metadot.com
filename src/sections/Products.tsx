@@ -60,7 +60,7 @@ export default function Products() {
                   <span className="font-mono text-base font-semibold text-white">
                     {product.name}
                   </span>
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#94a3b8] border border-[#475569] px-2 py-0.5 rounded-sm">
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#94a3b8] border border-[#94a3b8] px-2 py-0.5 rounded-sm">
                     {product.tag}
                   </span>
                 </div>
