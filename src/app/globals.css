@@ -12,7 +12,7 @@
   --color-border-subtle: #1e293b;
   --color-text-primary: #f1f5f9;
   --color-text-secondary: #94a3b8;
-  --color-text-muted: #475569;
+  --color-text-muted: #94a3b8;
   --color-accent: #f0b93c;
   --color-accent-hover: #e5a825;
   --color-white: #ffffff;
@@ -613,13 +613,14 @@ main .content { overflow: hidden; padding-left: 50px; }
   color: var(--color-white);
 }
 
-/* Light reading well for blog content */
+/* Dark reading well for blog content */
 .blog-content {
   line-height: 1.8;
-  color: #1a1a1a;
-  background: #ffffff;
+  color: #e2e8f0;
+  background: #1e293b;
   padding: 2rem;
   border-radius: 2px;
+  border: 1px solid #334155;
   margin: 1.5rem 0;
 }
 
@@ -627,16 +628,16 @@ main .content { overflow: hidden; padding-left: 50px; }
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  color: #111;
+  color: #f1f5f9;
   font-size: 1.75rem;
 }
 
 .blog-content a {
-  color: #1a3764;
+  color: #f0b93c;
 }
 
 .blog-content a:hover {
-  color: #f0b93c;
+  color: #e5a825;
   text-decoration: underline;
 }
 

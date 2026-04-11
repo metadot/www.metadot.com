@@ -40,7 +40,7 @@ export default function BlogCard({
 
       <div className="blog-card-excerpt">
         {quote && (
-          <p className="text-sm text-[#475569] italic mb-2">&ldquo;{quote}&rdquo;</p>
+          <p className="text-sm text-[#94a3b8] italic mb-2">&ldquo;{quote}&rdquo;</p>
         )}
         <p>{excerpt}</p>
       </div>

@@ -8,7 +8,7 @@ export default async function LatestPosts() {
     <section className="py-16 md:py-24">
       <div className="container">
         <div className="mb-12">
-          <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-3">
+          <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-3">
             From the Blog
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">Latest Posts</h2>

@@ -11,7 +11,7 @@ export default async function BlogIndex() {
   return (
     <>
       <div className="container pt-16 pb-8">
-        <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-4 text-center">
+        <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-4 text-center">
           Blog
         </p>
         <h1 className="text-center text-3xl md:text-5xl mb-2">Metadot Blog</h1>

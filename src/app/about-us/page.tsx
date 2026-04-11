@@ -40,7 +40,7 @@ export default function AboutUs() {
     <>
       <section className="py-16 md:py-24 text-center border-b border-[#334155]">
         <div className="container">
-          <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-4">
+          <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-4">
             About Us
           </p>
           <h1 className="text-3xl md:text-5xl">

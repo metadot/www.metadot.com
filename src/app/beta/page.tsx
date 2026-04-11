@@ -135,7 +135,7 @@ export default function BetaPage() {
       <hr className="border-t border-[#334155] mb-11" />
 
       {/* What's in the suite */}
-      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#475569] mb-6">
+      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-6">
         WHAT&apos;S IN THE SUITE
       </p>
 
@@ -171,7 +171,7 @@ export default function BetaPage() {
       <hr className="border-t border-[#334155] mb-11" />
 
       {/* Coming soon */}
-      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#475569] mb-6">
+      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-6">
         COMING SOON
       </p>
       <div className="flex flex-wrap gap-2 mb-14">
@@ -201,7 +201,7 @@ export default function BetaPage() {
         >
           Request a spot
         </a>
-        <p className="text-xs text-[#475569] mt-4">
+        <p className="text-xs text-[#94a3b8] mt-4">
           Built by the team behind Mojo Helpdesk.
         </p>
       </div>
