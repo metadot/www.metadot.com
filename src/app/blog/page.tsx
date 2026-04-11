@@ -10,15 +10,18 @@ export default async function BlogIndex() {
 
   return (
     <>
-      <div className="container head-section px-[15px]">
-        <h1 className="text-center !mb-0">Metadot Blog</h1>
-        <p className="text-center mt-[0.55rem] mb-[3.3rem]">
-          A blog about productivity, startups, Metadot products and news.
+      <div className="container pt-16 pb-8">
+        <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-4 text-center">
+          Blog
+        </p>
+        <h1 className="text-center text-3xl md:text-5xl mb-2">Metadot Blog</h1>
+        <p className="text-center text-[#94a3b8] mb-12">
+          Productivity, startups, Metadot products and news.
         </p>
       </div>
-      <div className="container-lg grid grid-cols-1 md:grid-cols-2 gap-[30px] lg:gap-[42px]">
+      <div className="container-lg grid grid-cols-1 md:grid-cols-2 gap-6 pb-8">
         {pageBlogs.map((post) => (
-          <div key={post.slug} className="mb-[3.3rem]">
+          <div key={post.slug} className="mb-4">
             <BlogCard
               title={post.title}
               quote={post.quote}
@@ -32,7 +35,7 @@ export default async function BlogIndex() {
           </div>
         ))}
       </div>
-      <div className="container-lg flex justify-center mb-[3.3rem]">
+      <div className="container-lg flex justify-center py-8">
         <Pagination currentPage={1} totalPages={totalPages} />
       </div>
     </>

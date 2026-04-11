@@ -1,7 +1,6 @@
 "use client";
 
 import { smoothScroll } from "@/lib/smoothScroll";
-import Image from "next/image";
 
 export default function Hero() {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -13,35 +12,48 @@ export default function Hero() {
   };
 
   return (
-    <>
-      <section
-        id="banner"
-        className="section-mojo border-b text-center h-screen"
-      >
-        <div className="pointer-events-none fixed inset-0 -z-10">
-          <Image
-            src="/building.webp"
-            alt="Hero"
-            fill
-            priority
-            sizes="(min-width: 1600px) 1600px, 100vw"
-            className="bg-img"
-          />
+    <section className="relative min-h-[90vh] flex items-center border-b border-[#334155]">
+      {/* Subtle grid background */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(240,185,60,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(240,185,60,0.04) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+        }}
+      />
+
+      <div className="container relative z-10 py-24">
+        <div className="max-w-3xl">
+          <p className="font-mono text-sm text-[#f0b93c] tracking-wider mb-6">
+            METADOT CORPORATION
+          </p>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+            Built for
+            <br />
+            Overachievers.
+          </h1>
+          <p className="text-lg md:text-xl text-[#94a3b8] max-w-xl mb-10 leading-relaxed">
+            Hardware and software tools that boost productivity through the
+            roof. From mechanical keyboards to helpdesk systems.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#products"
+              className="btn-primary btn"
+              onClick={handleSmoothScroll}
+            >
+              Explore Products
+            </a>
+            <a
+              href="/beta"
+              className="btn"
+            >
+              Join the Beta
+            </a>
+          </div>
         </div>
-        <div className="container">
-          <h1 className="banner-title">Move Forward. Faster.</h1>
-          <h2 className="banner-subtitle">
-            Tools That Boost Productivity Up Through The Roof.
-          </h2>
-          <a
-            href="#software"
-            className="btn banner-button"
-            onClick={handleSmoothScroll}
-          >
-            EXPLORE OUR PRODUCTS
-          </a>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

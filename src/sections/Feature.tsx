@@ -1,101 +1,68 @@
-import Image from "next/image";
 import Link from "next/link";
 
-interface FeatureProps {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  width: number;
-  height: number;
-  reverse?: boolean;
-  links: { href: string; label: string }[];
-}
-
-function FeatureSection({
-  id,
-  title,
-  description,
-  image,
-  width,
-  height,
-  reverse = false,
-  links,
-}: FeatureProps) {
+export default function Feature() {
   return (
-    <section id={id} className="section-mojo border-b bg-white">
+    <section className="py-16 md:py-24 border-b border-[#334155]">
       <div className="container">
-        <div
-          className={`flex flex-col justify-center items-center md:gap-[30px] text-left ${
-            reverse ? "flex-col-reverse md:flex-row-reverse" : "md:flex-row"
-          }`}
-        >
-          {/* Text */}
-          <div className=" md:w-1/2 flex flex-col justify-center">
-            <h2 className="section-mojo-title">{title}</h2>
-            <p className={`mb-[1rem] ${!reverse ? "pt-[1.1rem]" : ""} `}>
-              {description}
-            </p>
+        <div className="mb-12">
+          <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-3">
+            Typing Culture
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            We take typing seriously.
+          </h2>
+        </div>
 
-            <div className="flex flex-wrap gap-x-[1.1rem]">
-              {links.map((link) => (
-                <Link key={link.href} href={link.href} className="btn-link">
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* TyprX */}
+          <div className="p-6 bg-[#1e293b] border border-[#334155] rounded-sm">
+            <h3 className="font-mono text-lg font-semibold text-white mb-2">
+              TyprX
+            </h3>
+            <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+              How fast do you type? TyprX is an online typing race app. Type
+              a random sentence as fast as you can and compete with others.
+            </p>
+            <Link
+              href="https://typrx.com/"
+              className="btn-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try a typing race
+            </Link>
           </div>
 
-          {/* Image */}
-          <div className=" md:w-1/2">
-            <Image
-              src={image}
-              alt={`${title} image`}
-              width={width}
-              height={height}
-              className={`rounded img-fluid ${
-                !reverse ? "pt-[1.1rem]" : "pb-[1.1rem]"
-              }`}
-            />
+          {/* UTC */}
+          <div className="p-6 bg-[#1e293b] border border-[#334155] rounded-sm">
+            <h3 className="font-mono text-lg font-semibold text-white mb-2">
+              Ultimate Typing Championship
+            </h3>
+            <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+              A worldwide competition where the best compete for the title
+              of Quickest Typist in the World. Online or offline, open to everyone.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="https://ultimatetypingchampionship.com/"
+                className="btn-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn more
+              </Link>
+              <Link
+                href="https://www.youtube.com/watch?v=vPlb8IwJIzY"
+                className="btn-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch 2020 finals
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-export default function Feature() {
-  return (
-    <>
-      <FeatureSection
-        id="typrx"
-        title="How fast do you type? Let's find out with Typrx."
-        description="Typrx is an online typing race app. Type a random sentence as fast as you can and compete with others."
-        image="/race.webp"
-        width={1142}
-        height={788}
-        links={[{ href: "https://typrx.com/", label: "Try a tying race with TyprX" }]}
-      />
-
-      <FeatureSection
-        id="utc"
-        title="Ultimate Typing Championship"
-        description="Ultimate Typing Championship : UTC is a world wide competition, where some of the best compete for the title of Quickest Typist in the World! Online or offline, this competition is open to everyone - so why not give it your best shot?"
-        image="/utc.webp"
-        width={701}
-        height={484}
-        reverse
-        links={[
-          {
-            href: "https://ultimatetypingchampionship.com/",
-            label: "Learn more about UTC",
-          },
-          {
-            href: "https://www.youtube.com/watch?v=vPlb8IwJIzY",
-            label: "Watch the 2020 competition",
-          },
-        ]}
-      />
-    </>
   );
 }

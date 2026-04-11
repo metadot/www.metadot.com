@@ -1,127 +1,119 @@
-import Image from "next/image";
 import Link from "next/link";
 
-interface SoftwareProduct {
+interface Product {
   name: string;
-  logo: string;
+  tag: string;
   href: string;
   desc: string;
-  width: number;
-  height: number;
 }
 
-const softwareProducts: SoftwareProduct[] = [
+const softwareProducts: Product[] = [
+  {
+    name: "Mojo Helpdesk",
+    tag: "Ticketing",
+    href: "https://www.mojohelpdesk.com/",
+    desc: "Centralize support requests. Track, prioritize, and resolve tickets faster.",
+  },
   {
     name: "Bamzooka",
-    logo: "/brand/bamzooka.webp",
+    tag: "Checklists",
     href: "https://bamzooka.com/",
-    desc: "Bamzooka is a recurring checklist software for easy business process management (BPM).",
-    width: 192,
-    height: 192,
+    desc: "Recurring checklists for business process management. Never miss a step.",
   },
   {
     name: "Montastic",
-    logo: "/brand/montastic.webp",
+    tag: "Monitoring",
     href: "https://www.montastic.com/",
-    desc: "Montastic monitors websites and sends notifications when a problem is detected.",
-    width: 75,
-    height: 64,
+    desc: "Website monitoring with instant notifications when something goes down.",
   },
   {
-    name: "Mojo Helpdesk",
-    logo: "/brand/mojo-star.svg",
-    href: "https://www.mojohelpdesk.com/",
-    desc: "Mojo Helpdesk is a leading ticketing system to centralize support requests and improve customer service.",
-    width: 129,
-    height: 123,
+    name: "TyprX",
+    tag: "Typing",
+    href: "https://typrx.com/",
+    desc: "Online typing races. Compete against others and track your speed.",
   },
 ];
 
 export default function Products() {
   return (
     <>
-      {/* Software */}
-      <section id="software" className="section-mojo border-b bg-white">
+      {/* Software Products */}
+      <section id="products" className="py-16 md:py-24 border-b border-[#334155]">
         <div className="container">
-          {/* Title */}
-          <h2 className="section-mojo-title !mb-[3.3rem]">
-            <Image
-              src="/icon-works.webp"
-              alt="separator"
-              width={94}
-              height={64}
-              className="mx-auto my-[10px]"
-            />
-            Our Software Products
-          </h2>
+          <div className="mb-12">
+            <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-3">
+              Software
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold">Our Products</h2>
+          </div>
 
-          {/* Grid */}
-          <div className="grid md:grid-cols-3 text-left mx-[-15px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {softwareProducts.map((product) => (
-              <div key={product.name} className="mb-[3.3rem] px-[15px]">
-                <Image
-                  src={product.logo}
-                  alt={`${product.name} Logo`}
-                  width={product.width}
-                  height={product.height}
-                  className="h-[47px] w-auto"
-                />
-                <h3 className="whitespace-nowrap">{product.name}</h3>
-                <p>{product.desc}</p>
-                <Link
-                  href={product.href}
-                  className="btn btn-primary mb-[1rem]"
-                  aria-label={`Link to ${product.name}`}
-                >
-                  Visit the site »
-                </Link>
-              </div>
+              <Link
+                key={product.name}
+                href={product.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block p-6 bg-[#1e293b] border border-[#334155] rounded-sm hover:border-[#475569] transition-colors"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-mono text-base font-semibold text-white">
+                    {product.name}
+                  </span>
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#475569] border border-[#475569] px-2 py-0.5 rounded-sm">
+                    {product.tag}
+                  </span>
+                </div>
+                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                  {product.desc}
+                </p>
+                <span className="font-mono text-xs text-[#f0b93c] group-hover:text-[#e5a825] transition-colors inline-flex items-center gap-1">
+                  Visit site
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    &rarr;
+                  </span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Hardware */}
-      <section className="section-mojo border-b bg-white" id="hardware">
+      {/* Hardware: Das Keyboard */}
+      <section id="hardware" className="py-16 md:py-24 bg-[#1e293b] border-b border-[#334155]">
         <div className="container">
-          <h2 className="section-mojo-title !mb-[3.3rem]">
-            <Image
-              src="/icon-works.webp"
-              alt="separator"
-              width={94}
-              height={64}
-              className="mx-auto my-[10px]"
-            />
-            Our Hardware Products
-          </h2>
-          <div className="hardware-products">
-            <div className="hardware-product text-center">
-              <div className="hardware-image aspect-[1909/766] max-w-[1140px] relative mb-[.275rem]">
-                <Image
-                  src="/daskeyboard.webp"
-                  alt="Product image"
-                  fill
-                  sizes="(min-width: 1024px) 1140px, 100vw"
-                />
-              </div>
-
-              <Image
-                src="/daskeyboardbrand.webp"
-                alt="Brand image"
-                width={1500}
-                height={211}
-                className="hardware-brand-image mb-[3.3rem]"
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+            {/* Image */}
+            <div className="md:w-3/5">
+              <img
+                src="/daskeyboard.webp"
+                alt="Das Keyboard mechanical keyboard"
+                className="w-full h-auto"
+                loading="lazy"
               />
-              <p className="hardware-description text-center max-w-2xl mx-auto">
-                <strong>Das Keyboard</strong> is a brand of high-quality
-                mechanical keyboards for typists, software developers, tech
-                enthusiasts, and gamers. A reference in the market.
+            </div>
+
+            {/* Text */}
+            <div className="md:w-2/5">
+              <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-3">
+                Hardware
               </p>
-              <div>
-                <Link href="https://www.daskeyboard.com" className="btn-link">
-                  Visit Das Keyboard
-                </Link>
-              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Das Keyboard
+              </h2>
+              <p className="text-[#94a3b8] leading-relaxed mb-6">
+                Premium mechanical keyboards for typists, developers, and
+                enthusiasts. Gold-plated switches, aluminum construction,
+                built to last.
+              </p>
+              <Link
+                href="https://www.daskeyboard.com"
+                className="btn-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Das Keyboard
+              </Link>
             </div>
           </div>
         </div>
