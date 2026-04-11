@@ -41,7 +41,7 @@ export default function Products() {
       <section id="products" className="py-16 md:py-24 border-b border-[#334155]">
         <div className="container">
           <div className="mb-12">
-            <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-3">
+            <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-3">
               Software
             </p>
             <h2 className="text-3xl md:text-4xl font-bold">Our Products</h2>
@@ -60,7 +60,7 @@ export default function Products() {
                   <span className="font-mono text-base font-semibold text-white">
                     {product.name}
                   </span>
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#94a3b8] border border-[#475569] px-2 py-0.5 rounded-sm">
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#94a3b8] border border-[#94a3b8] px-2 py-0.5 rounded-sm">
                     {product.tag}
                   </span>
                 </div>
@@ -95,7 +95,7 @@ export default function Products() {
 
             {/* Text */}
             <div className="md:w-2/5">
-              <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-3">
+              <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-3">
                 Hardware
               </p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">

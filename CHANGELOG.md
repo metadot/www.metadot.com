@@ -2,6 +2,14 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.1] - 2026-04-11
+
+### Fixed
+- Text contrast sitewide: replaced `#475569` (slate-600, ~3.3:1 ratio) with `#94a3b8` (slate-400, ~6.7:1) on all section labels, footer copyright, blog page labels, beta page labels, BlogCard quote text, and product tag badge text and border
+- Blog post reading well: replaced white background (`#fff`) with dark card (`#1e293b`) — consistent with the site's existing card pattern, eliminates jarring light-on-dark contrast transition
+- Product tag badge border updated for visibility (1.93:1 → 5.71:1 contrast)
+- `tsconfig.json` jsx mode set to `preserve` (required by Next.js 16 SWC transform)
+
 ## [2.1.1.0] - 2026-04-09
 
 ### Changed
