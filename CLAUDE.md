@@ -5,10 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev        # Start dev server at localhost:3000
-npm run build      # Production build (runs next-sitemap as postbuild)
-npm run start      # Serve production build
-npm run lint       # ESLint (flat config, Next.js recommended rules)
+pnpm dev        # Start dev server at localhost:3000
+pnpm build      # Production build (runs next-sitemap as postbuild)
+pnpm start      # Serve production build
+pnpm lint       # ESLint (flat config, Next.js recommended rules)
 ```
 
 No test framework is configured.
@@ -73,7 +73,7 @@ Tailwind CSS 4 with PostCSS plugin. Global styles in `app/globals.css` define cu
 - Post-deploy health check: https://www.metadot.com
 
 ### Custom deploy hooks
-- Pre-merge: npm run build
+- Pre-merge: pnpm build
 - Deploy trigger: automatic on push to main
 - Deploy status: poll production URL
 - Health check: https://www.metadot.com
