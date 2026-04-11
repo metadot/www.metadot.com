@@ -12,7 +12,7 @@
   --color-border-subtle: #1e293b;
   --color-text-primary: #f1f5f9;
   --color-text-secondary: #94a3b8;
-  --color-text-muted: #94a3b8;
+  --color-text-muted: #64748b; /* intentionally dim: disabled states, decorative borders */
   --color-accent: #f0b93c;
   --color-accent-hover: #e5a825;
   --color-white: #ffffff;
@@ -294,7 +294,7 @@ header .nav-link:hover {
 /* ── Footer ────────────────────────────────────────────── */
 .copyright {
   font-size: 0.75rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   background: var(--color-bg-primary);
   padding: 1rem;
   text-align: center;
