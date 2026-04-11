@@ -38,7 +38,7 @@ export default function Contact() {
       <section className="py-16 md:py-24 border-b border-[#334155]">
         <div className="container">
           <div className="text-center mb-12">
-            <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#475569] mb-4">
+            <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-4">
               Support
             </p>
             <h1 className="text-3xl md:text-5xl">
@@ -58,14 +58,14 @@ export default function Contact() {
                 <div className="text-[#94a3b8] group-hover:text-[#f0b93c] transition-colors mb-4">
                   {card.icon}
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-auto">
+                <h3 className="text-sm font-semibold text-white">
                   {card.title}
                 </h3>
-                <div className="flex items-center justify-between mt-4 pt-4 border-t border-[#334155]">
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#475569] group-hover:text-[#f0b93c] transition-colors">
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#334155]">
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#94a3b8] group-hover:text-[#f0b93c] transition-colors">
                     Go to support
                   </span>
-                  <FaArrowRight className="w-3 h-3 text-[#475569] group-hover:text-[#f0b93c] group-hover:translate-x-1 transition-all" />
+                  <FaArrowRight className="w-3 h-3 text-[#94a3b8] group-hover:text-[#f0b93c] group-hover:translate-x-1 transition-all" />
                 </div>
               </a>
             ))}

@@ -35,14 +35,14 @@ export default function Footer() {
                 className="brightness-0 invert"
               />
             </Link>
-            <p className="text-sm text-[#475569] leading-relaxed mt-2">
+            <p className="text-sm text-[#94a3b8] leading-relaxed mt-2">
               Hardware and software products built in Austin, Texas.
             </p>
           </div>
 
           {/* Products */}
           <div>
-            <h4 className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-[#475569] mb-4">
+            <h4 className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-[#94a3b8] mb-4">
               Products
             </h4>
             <ul className="space-y-2">
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-[#475569] mb-4">
+            <h4 className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-[#94a3b8] mb-4">
               Company
             </h4>
             <ul className="space-y-2">
@@ -82,7 +82,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-[#475569] mb-4">
+            <h4 className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-[#94a3b8] mb-4">
               Connect
             </h4>
             <div className="flex gap-3">
@@ -105,7 +105,7 @@ export default function Footer() {
                 <FaLinkedin size={16} />
               </Link>
             </div>
-            <p className="text-xs text-[#475569] mt-4 leading-relaxed">
+            <p className="text-xs text-[#94a3b8] mt-4 leading-relaxed">
               Austin, Texas, USA
             </p>
           </div>
