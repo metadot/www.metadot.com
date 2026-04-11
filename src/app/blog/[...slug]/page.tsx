@@ -25,13 +25,13 @@ const components = {
   a: (props: AnchorProps) => {
     const text =
       typeof props.children === "string"
-        ? props.children.trim() // removes trailing (and leading) whitespace
+        ? props.children.trim()
         : props.children;
 
     return (
       <a
         {...props}
-        className="text-[#2b70a9] underline! underline-offset-2"
+        className="text-[#e5a825] underline! underline-offset-2"
         target={props.href?.startsWith("http") ? "_blank" : undefined}
         rel={props.href?.startsWith("http") ? "noopener noreferrer" : undefined}
       >
@@ -43,15 +43,15 @@ const components = {
     <ul className="list-disc ps-[40px] mb-[1.65rem]" {...props} />
   ),
   li: (props: ListItemProps) => <li className="mb-[0.55rem]" {...props} />,
-  img: (props: ImgProps) => {
+  img: (props: ImgProps) => (
     <Image
       {...props}
       alt={props.alt || ""}
       className="img-fluid rounded img-post"
       width={props.width || 808}
       height={props.height || 582}
-    />;
-  },
+    />
+  ),
 };
 
 type Params = Promise<{ slug: string[] }>;
@@ -67,16 +67,16 @@ export default async function BlogArticlePage({
 
   return (
     <>
-      <div className="container mt-[1.1rem]">
-        <nav className="nav flex">
-          <Link className="p-[0.55rem] !text-[#6c757d]" href="/blog/">
-            Back to Home
+      <div className="container pt-6">
+        <nav>
+          <Link className="font-mono text-sm text-[#94a3b8] hover:text-[#f0b93c] transition-colors" href="/blog/">
+            &larr; Back to Blog
           </Link>
         </nav>
-      </div>{" "}
-      <article className="mojo-card blogpost container mb-[3.3rem]">
-        <h2 className="blog-title title-h2">{blog.title}</h2>
-        <p className="blog-references my-[1.65rem]">
+      </div>
+      <article className="blogpost container mb-12">
+        <h2 className="blog-title text-3xl md:text-4xl mt-6">{blog.title}</h2>
+        <p className="blog-references my-4 text-sm text-[#94a3b8]">
           {blog.author} on{" "}
           <time>
             {new Date(blog.date).toLocaleDateString("en-US", {

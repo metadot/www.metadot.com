@@ -106,7 +106,7 @@ export default function BetaPage() {
   return (
     <div className="max-w-[720px] mx-auto px-6 pt-12 pb-20">
       {/* Hero */}
-      <p className="text-xs font-medium tracking-[0.12em] uppercase text-[#888] mb-4">
+      <p className="text-xs font-medium tracking-[0.12em] uppercase text-[#94a3b8] mb-4">
         Metadot Apps
       </p>
       <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
@@ -114,7 +114,7 @@ export default function BetaPage() {
         <em className="font-bold">One suite.</em> No duct tape.
       </h1>
 
-      <p className="text-lg leading-relaxed text-text mb-10 max-w-[540px]">
+      <p className="text-lg leading-relaxed text-[#94a3b8] mb-10 max-w-[540px]">
         Metadot replaces the five tools that don&apos;t talk to each
         other&mdash;projects, scheduling, change communication, automation, and
         AI, all in one place.
@@ -132,10 +132,10 @@ export default function BetaPage() {
       </div>
 
       {/* Divider */}
-      <hr className="border-t border-[#f0f0f0] mb-11" />
+      <hr className="border-t border-[#334155] mb-11" />
 
       {/* What's in the suite */}
-      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#555] mb-6">
+      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#475569] mb-6">
         WHAT&apos;S IN THE SUITE
       </p>
 
@@ -143,11 +143,11 @@ export default function BetaPage() {
         {apps.map((app) => (
           <div
             key={app.name}
-            className="relative overflow-hidden rounded-2xl px-6 py-5 bg-gradient-to-br from-[#1a1744] via-[#3d3785] to-[#2e2d5e]"
+            className="relative overflow-hidden rounded-sm px-6 py-5 bg-gradient-to-br from-[#1a1744] via-[#3d3785] to-[#2e2d5e]"
           >
             <div className="flex items-center gap-3 mb-2">
               <div
-                className="w-8 h-8 rounded-2xl shrink-0 flex items-center justify-center"
+                className="w-8 h-8 rounded-sm shrink-0 flex items-center justify-center"
                 style={{ backgroundColor: app.bgColor, color: app.iconColor }}
               >
                 {app.icon}
@@ -168,17 +168,17 @@ export default function BetaPage() {
       </div>
 
       {/* Divider */}
-      <hr className="border-t border-[#f0f0f0] mb-11" />
+      <hr className="border-t border-[#334155] mb-11" />
 
       {/* Coming soon */}
-      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#555] mb-6">
+      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#475569] mb-6">
         COMING SOON
       </p>
       <div className="flex flex-wrap gap-2 mb-14">
         {comingSoon.map((item) => (
           <span
             key={item.name}
-            className="inline-flex items-center gap-1.5 text-sm text-[#666] bg-[#f0f0f0] rounded-full px-3.5 py-1"
+            className="inline-flex items-center gap-1.5 text-sm text-[#94a3b8] bg-[#1e293b] border border-[#334155] rounded-full px-3.5 py-1"
           >
             {item.icon}
             {item.name}
@@ -187,9 +187,9 @@ export default function BetaPage() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="rounded-2xl p-8 bg-[#f5f5f5]" id="beta-section">
-        <h2 className="!text-2xl font-bold mb-2 text-[#222]">Join the private beta</h2>
-        <p className="text-sm text-[#666] leading-relaxed mb-6">
+      <div className="rounded-sm p-8 bg-[#1e293b] border border-[#334155]" id="beta-section">
+        <h2 className="!text-2xl font-bold mb-2 text-white">Join the private beta</h2>
+        <p className="text-sm text-[#94a3b8] leading-relaxed mb-6">
           Metadot Apps is in active development. Private beta participants get
           first access and shape what gets built. Spots are limited.
         </p>
@@ -201,7 +201,7 @@ export default function BetaPage() {
         >
           Request a spot
         </a>
-        <p className="text-xs text-[#999] mt-4">
+        <p className="text-xs text-[#475569] mt-4">
           Built by the team behind Mojo Helpdesk.
         </p>
       </div>
