@@ -86,7 +86,7 @@ export default function Products() {
             {/* Image */}
             <div className="md:w-3/5">
               <img
-                src="/daskeyboard.webp"
+                src="/daskeyboard-dark.webp"
                 alt="Das Keyboard mechanical keyboard"
                 className="w-full h-auto"
                 loading="lazy"
