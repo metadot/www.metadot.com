@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getAllBlogs } from "../../utils";
 import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
@@ -7,6 +8,23 @@ interface PageProps {
   params: Promise<{
     index: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { index } = await params;
+  const page = parseInt(index, 10);
+
+  return {
+    title: page === 1 ? "Blog" : `Blog — Page ${page}`,
+    description:
+      "Productivity tips, startup insights, and news from Metadot.",
+    alternates: {
+      canonical: page === 1 ? "/blog" : `/blog/page/${page}`,
+    },
+    robots: page === 1 ? { index: false, follow: true } : undefined,
+  };
 }
 
 export default async function BlogPage({ params }: PageProps) {

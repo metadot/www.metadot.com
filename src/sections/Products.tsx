@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface Product {
@@ -85,11 +86,12 @@ export default function Products() {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             {/* Image */}
             <div className="md:w-3/5">
-              <img
+              <Image
                 src="/daskeyboard-dark.webp"
                 alt="Das Keyboard mechanical keyboard"
+                width={800}
+                height={450}
                 className="w-full h-auto"
-                loading="lazy"
               />
             </div>
 
