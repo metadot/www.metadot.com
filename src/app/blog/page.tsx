@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { getAllBlogs } from "../blog/utils";
 import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
 import { POSTS_PER_PAGE } from "./constants";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Productivity tips, startup insights, and news from Metadot. Topics include remote work, team management, and product updates.",
+  alternates: { canonical: "/blog" },
+};
 
 export default async function BlogIndex() {
   const blogs = await getAllBlogs();
