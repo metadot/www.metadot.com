@@ -101,7 +101,7 @@ export default function BetaPage() {
       </p>
       <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
         Everything your team needs to work.{" "}
-        <em className="font-bold">One suite.</em> No duct tape.
+        <em className="font-bold text-[#f0b93c] not-italic">One suite.</em> No duct tape.
       </h1>
 
       <p className="text-lg leading-relaxed text-[#94a3b8] mb-10 max-w-[540px]">
@@ -115,7 +115,7 @@ export default function BetaPage() {
           href={POLL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary"
+          className="btn"
         >
           Join the private beta
         </a>
@@ -171,7 +171,7 @@ export default function BetaPage() {
       {/* Bottom CTA */}
       <div className="rounded-sm p-8 bg-[#1e293b] border border-[#334155]" id="beta-section">
         <h2 className="!text-2xl font-bold mb-2 text-white">Join the private beta</h2>
-        <p className="text-sm text-[#94a3b8] leading-relaxed mb-6">
+        <p className="text-xs text-[#94a3b8] leading-relaxed mb-6">
           Metadot Apps is in active development. Private beta participants get
           first access and shape what gets built. Spots are limited.
         </p>
@@ -179,13 +179,11 @@ export default function BetaPage() {
           href={POLL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary"
+          className="btn"
         >
           Request a spot
         </a>
-        <p className="text-xs text-[#94a3b8] mt-4">
-          Built by the team behind Mojo Helpdesk.
-        </p>
+
       </div>
     </div>
   );
