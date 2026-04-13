@@ -1,4 +1,20 @@
 import type { Metadata } from "next";
+import type { IconType } from "react-icons";
+import {
+  FaColumns,
+  FaCalendarCheck,
+  FaClipboardList,
+  FaCogs,
+  FaRobot,
+  FaBox,
+  FaUsers,
+  FaWarehouse,
+  FaFileInvoiceDollar,
+  FaBookOpen,
+  FaPoll,
+  FaTruck,
+  FaTicketAlt,
+} from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Metadot Apps — Private Beta",
@@ -10,49 +26,60 @@ export const metadata: Metadata = {
 const POLL_URL =
   "https://metadot.net/poll/metadot/DZCxa6_xZmN747gDtAgQt";
 
-const apps = [
+const apps: {
+  name: string;
+  tag: string;
+  wide?: boolean;
+  icon: IconType;
+  description: string;
+}[] = [
   {
     name: "Stackr Projects",
     tag: "Kanban",
     wide: true,
+    icon: FaColumns,
     description:
       "Stackr gives your team a visual board that makes it clear what\u2019s done, what\u2019s in progress, and what\u2019s stuck. If your team runs on spreadsheets right now, this is built for you.",
   },
   {
     name: "BookMe",
     tag: "Scheduling",
+    icon: FaCalendarCheck,
     description:
       "BookMe eliminates the scheduling back-and-forth. Share a link, let people pick a time. Works for internal meetings, customer appointments, service calls, and consultations.",
   },
   {
     name: "Changelog",
     tag: "Updates",
+    icon: FaClipboardList,
     description:
       "Changelog gives you a single, searchable record of what changed \u2014 policies, procedures, system updates, tool rollouts. So nobody has to ask again.",
   },
   {
     name: "Workflows",
     tag: "Automation",
+    icon: FaCogs,
     description:
       "Workflows automates the handoffs between apps so work moves on its own. No manual steps, no third-party tools connecting things together.",
   },
   {
     name: "AI Assistant",
     tag: "Built in",
+    icon: FaRobot,
     description:
       "The AI assistant works across the whole suite. Ask it to create a board, surface what\u2019s overdue, or answer questions about your data.",
   },
 ];
 
-const comingSoon = [
-  "Assets",
-  "CRM",
-  "Inventory",
-  "InvoiceMe",
-  "Knowledge base",
-  "Polls",
-  "Suppliers",
-  "Tickets",
+const comingSoon: { name: string; icon: IconType }[] = [
+  { name: "Assets", icon: FaBox },
+  { name: "CRM", icon: FaUsers },
+  { name: "Inventory", icon: FaWarehouse },
+  { name: "InvoiceMe", icon: FaFileInvoiceDollar },
+  { name: "Knowledge base", icon: FaBookOpen },
+  { name: "Polls", icon: FaPoll },
+  { name: "Suppliers", icon: FaTruck },
+  { name: "Tickets", icon: FaTicketAlt },
 ];
 
 const painPoints = [
@@ -159,7 +186,8 @@ export default function BetaPage() {
               <span className="font-mono text-[10px] font-semibold tracking-[0.16em] uppercase text-[#f0b93c] mb-3 block">
                 {app.tag}
               </span>
-              <div className="font-bold text-xl tracking-tight leading-tight text-white mb-3">
+              <div className="flex items-center gap-2.5 font-bold text-xl tracking-tight leading-tight text-white mb-3">
+                <app.icon className="text-[#f0b93c] text-lg shrink-0" />
                 {app.name}
               </div>
               <p className="text-sm leading-relaxed text-[#94a3b8] mb-0">
@@ -181,10 +209,11 @@ export default function BetaPage() {
           <div className="flex gap-2 flex-wrap">
             {comingSoon.map((item) => (
               <span
-                key={item}
-                className="font-mono text-[10px] font-semibold tracking-[0.1em] uppercase text-[#94a3b8] border border-[#475569] px-3 py-1"
+                key={item.name}
+                className="inline-flex items-center gap-1.5 font-mono text-[10px] font-semibold tracking-[0.1em] uppercase text-[#94a3b8] border border-[#475569] px-3 py-1"
               >
-                {item}
+                <item.icon className="text-[11px] text-[#64748b]" />
+                {item.name}
               </span>
             ))}
           </div>
