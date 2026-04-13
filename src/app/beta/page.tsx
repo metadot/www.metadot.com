@@ -14,10 +14,8 @@ const apps = [
   {
     name: "Stackr Projects",
     tag: "Kanban",
-    bgColor: "#EAF3DE",
-    iconColor: "#3B6D11",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
         <rect x="3" y="3" width="7" height="7" rx="1" />
         <rect x="14" y="3" width="7" height="7" rx="1" />
         <rect x="3" y="14" width="7" height="7" rx="1" />
@@ -30,10 +28,8 @@ const apps = [
   {
     name: "BookMe",
     tag: "Scheduling",
-    bgColor: "#E6F1FB",
-    iconColor: "#185FA5",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
         <rect x="3" y="4" width="18" height="18" rx="2" />
         <line x1="16" y1="2" x2="16" y2="6" />
         <line x1="8" y1="2" x2="8" y2="6" />
@@ -46,10 +42,8 @@ const apps = [
   {
     name: "Changelog",
     tag: "Updates",
-    bgColor: "#FAEEDA",
-    iconColor: "#854F0B",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
         <polyline points="14 2 14 8 20 8" />
         <line x1="8" y1="13" x2="16" y2="13" />
@@ -62,10 +56,8 @@ const apps = [
   {
     name: "Workflows",
     tag: "Automation",
-    bgColor: "#EEEDFE",
-    iconColor: "#534AB7",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
         <polyline points="17 1 21 5 17 9" />
         <path d="M3 11V9a4 4 0 0 1 4-4h14" />
         <polyline points="7 23 3 19 7 15" />
@@ -78,10 +70,8 @@ const apps = [
   {
     name: "AI assistant",
     tag: "Built in",
-    bgColor: "#F1EFE8",
-    iconColor: "#5F5E5A",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
         <circle cx="12" cy="12" r="3" />
         <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
       </svg>
@@ -106,7 +96,7 @@ export default function BetaPage() {
   return (
     <div className="max-w-[720px] mx-auto px-6 pt-12 pb-20">
       {/* Hero */}
-      <p className="text-xs font-medium tracking-[0.12em] uppercase text-[#94a3b8] mb-4">
+      <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-3">
         Metadot Apps
       </p>
       <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
@@ -125,7 +115,7 @@ export default function BetaPage() {
           href={POLL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] !text-white border-none hover:opacity-90"
+          className="btn btn-primary"
         >
           Join the private beta
         </a>
@@ -135,7 +125,7 @@ export default function BetaPage() {
       <hr className="border-t border-[#334155] mb-11" />
 
       {/* What's in the suite */}
-      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-6">
+      <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-6">
         WHAT&apos;S IN THE SUITE
       </p>
 
@@ -143,24 +133,16 @@ export default function BetaPage() {
         {apps.map((app) => (
           <div
             key={app.name}
-            className="relative overflow-hidden rounded-sm px-6 py-5 bg-gradient-to-br from-[#1a1744] via-[#3d3785] to-[#2e2d5e]"
+            className="p-6 bg-[#1e293b] border border-[#334155] rounded-sm hover:border-[#475569] transition-colors"
           >
-            <div className="flex items-center gap-3 mb-2">
-              <div
-                className="w-8 h-8 rounded-sm shrink-0 flex items-center justify-center"
-                style={{ backgroundColor: app.bgColor, color: app.iconColor }}
-              >
-                {app.icon}
-              </div>
-              <span className="text-[15px] font-medium text-white">{app.name}</span>
-              <span
-                className="text-[11px] font-medium tracking-[0.06em] uppercase ml-auto px-2 py-0.5 rounded"
-                style={{ backgroundColor: app.bgColor, color: app.iconColor }}
-              >
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-[#94a3b8]">{app.icon}</span>
+              <span className="font-mono text-base font-semibold text-white">{app.name}</span>
+              <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[#94a3b8] border border-[#94a3b8] px-2 py-0.5 rounded-sm ml-auto">
                 {app.tag}
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-white/90">
+            <p className="text-sm leading-relaxed text-[#94a3b8]">
               {app.description}
             </p>
           </div>
@@ -171,7 +153,7 @@ export default function BetaPage() {
       <hr className="border-t border-[#334155] mb-11" />
 
       {/* Coming soon */}
-      <p className="text-[13px] font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-6">
+      <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#94a3b8] mb-6">
         COMING SOON
       </p>
       <div className="flex flex-wrap gap-2 mb-14">
@@ -197,7 +179,7 @@ export default function BetaPage() {
           href={POLL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] !text-white border-none hover:opacity-90"
+          className="btn btn-primary"
         >
           Request a spot
         </a>
