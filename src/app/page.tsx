@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Metadot — Productivity Tools for Teams",
+  title: { absolute: "Metadot — Productivity Tools for Teams" },
   description:
     "Move forward faster with tools that supercharge productivity — Montastic uptime monitoring, Das Keyboard mechanical keyboards, Mojo Helpdesk ticketing, and Bamzooka checklists.",
   alternates: { canonical: "/" },
@@ -51,6 +51,11 @@ const productsJsonLd = {
   "@type": "Organization",
   name: "Metadot",
   url: "https://www.metadot.com",
+  logo: "https://www.metadot.com/icon.svg",
+  sameAs: [
+    "https://github.com/nickmoline/metadot",
+    "https://www.linkedin.com/company/metadot",
+  ],
   makesOffer: products.map((p) => ({
     "@type": "Offer",
     itemOffered: p,
