@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
@@ -61,6 +62,14 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <Script
+          src="https://metadot.net/changelog/widget.js?workspace=metadot&topic=metadot"
+          data-position="bottom-right"
+          data-title="News"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className="bg-[#0f172a] text-[#f1f5f9] antialiased">
         <JsonLd data={organizationJsonLd} />
         <a
