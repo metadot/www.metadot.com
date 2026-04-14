@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Metadot Apps — Private Beta",
   description:
     "One suite to replace your stack. Join the Metadot Apps private beta.",
-  robots: { index: false, follow: false },
+  alternates: { canonical: "/beta" },
   openGraph: {
     title: "Metadot Apps — Private Beta",
     description:
