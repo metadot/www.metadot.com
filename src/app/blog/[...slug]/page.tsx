@@ -73,7 +73,7 @@ export async function generateMetadata({
     const description =
       blog.description ||
       `${title} — by ${blog.author || "Metadot"} on the Metadot blog.`;
-    const ogImage = blog.image || "/building-dark.png";
+    const ogImage = `/api/og?slug=${encodeURIComponent(slugPath)}`;
 
     return {
       title,
@@ -83,7 +83,7 @@ export async function generateMetadata({
         type: "article",
         title,
         description,
-        images: [{ url: ogImage, alt: blog.alt || title }],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: blog.alt || title }],
         publishedTime: blog.date,
       },
       alternates: { canonical: `/blog/${slugPath}` },
@@ -169,10 +169,26 @@ export default async function BlogArticlePage({
       <JsonLd data={blogPostingJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <div className="container pt-6">
-        <nav>
-          <Link className="font-mono text-sm text-[#94a3b8] hover:text-[#f0b93c] transition-colors" href="/blog/">
-            &larr; Back to Blog
-          </Link>
+        <nav aria-label="Breadcrumb">
+          <ol className="flex items-center gap-1.5 font-mono text-sm text-[#94a3b8]">
+            <li>
+              <Link href="/" className="hover:text-[#f0b93c] transition-colors">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-[#64748b]">/</li>
+            <li>
+              <Link href="/blog/" className="hover:text-[#f0b93c] transition-colors">
+                Blog
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-[#64748b]">/</li>
+            <li>
+              <span className="text-[#f1f5f9] truncate max-w-[300px] inline-block align-bottom">
+                {blog.title}
+              </span>
+            </li>
+          </ol>
         </nav>
       </div>
       <article className="blogpost container mb-12">
