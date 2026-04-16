@@ -2,6 +2,15 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.2] - 2026-04-16
+
+### Changed
+- Beta page hero: updated heading to "Productivity apps for teams." with new tagline and description
+- Beta page "Why it exists" section: updated heading to "Built for teams that want to move faster."
+- Stackr Projects and Changelog app descriptions refreshed with clearer product positioning
+- Beta page metadata (description, OpenGraph) updated to match new copy
+- Removed "Beta" link from header navigation (desktop and mobile)
+
 ## [2.1.1.1] - 2026-04-11
 
 ### Fixed

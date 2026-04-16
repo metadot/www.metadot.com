@@ -19,12 +19,12 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "Metadot Apps — Private Beta" },
   description:
-    "One suite to replace your stack. Join the Metadot Apps private beta.",
+    "Productivity apps for teams. Project management, CRM, inventory, tickets, and more.",
   alternates: { canonical: "/beta" },
   openGraph: {
     title: "Metadot Apps — Private Beta",
     description:
-      "One suite to replace your stack. Join the Metadot Apps private beta.",
+      "Productivity apps for teams. Project management, CRM, inventory, tickets, and more.",
   },
 };
 
@@ -44,7 +44,7 @@ const apps: {
     wide: true,
     icon: FaColumns,
     description:
-      "Stackr gives your team a visual board that makes it clear what\u2019s done, what\u2019s in progress, and what\u2019s stuck. If your team runs on spreadsheets right now, this is built for you.",
+      "Stackr is a visual project management board that makes it clear what\u2019s done, what\u2019s in progress, and what\u2019s stuck. Keep your projects visible and your team moving forward.",
   },
   {
     name: "BookMe",
@@ -58,7 +58,7 @@ const apps: {
     tag: "Updates",
     icon: FaClipboardList,
     description:
-      "Changelog gives you a single, searchable record of what changed \u2014 policies, procedures, system updates, tool rollouts. So nobody has to ask again.",
+      "Changelog gives you a single, searchable record of what changed. Policies, procedures, system updates, tool rollouts. One source of truth for every change your team makes.",
   },
   {
     name: "Workflows",
@@ -115,17 +115,13 @@ export default function BetaPage() {
           Metadot Apps &mdash; Private Beta
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-3">
-          One suite to replace
-          <br />
-          your stack.
+          Productivity apps for teams.
         </h1>
         <p className="font-mono text-sm md:text-base font-semibold tracking-[0.12em] uppercase text-[#94a3b8] mb-6">
-          Everything your team needs to work. No duct tape.
+          Built to work together. Powered by AI.
         </p>
         <p className="text-base leading-relaxed text-[#94a3b8] max-w-[480px] mx-auto mb-8">
-          Metadot replaces the five tools that don&apos;t talk to each
-          other&mdash;projects, scheduling, change communication, automation, and
-          AI, all in one place.
+          Project management, CRM, inventory, tickets, and more.
         </p>
         <div className="flex items-center gap-4 justify-center flex-wrap mb-6">
           <a
@@ -157,7 +153,7 @@ export default function BetaPage() {
       <section className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 mb-6">
         <div>
           <h3 className="text-xl md:text-2xl font-bold leading-snug text-white mb-1">
-            Built for teams tired of duct tape.
+            Built for teams that want to move faster.
           </h3>
           <p className="text-base md:text-lg font-semibold text-[#64748b]">
             One place. Everything connected.
