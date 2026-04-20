@@ -19,12 +19,12 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "Metadot Apps — Private Beta" },
   description:
-    "Productivity apps for teams. Project management, CRM, inventory, tickets, and more.",
+    "Productivity apps for teams. Project management, CRM, scheduling, tickets, and more.",
   alternates: { canonical: "/beta" },
   openGraph: {
     title: "Metadot Apps — Private Beta",
     description:
-      "Productivity apps for teams. Project management, CRM, inventory, tickets, and more.",
+      "Productivity apps for teams. Project management, CRM, scheduling, tickets, and more.",
   },
 };
 
@@ -87,11 +87,66 @@ const comingSoon: { name: string; icon: IconType }[] = [
   { name: "Tickets", icon: FaTicketAlt },
 ];
 
-const painPoints = [
-  "Projects tracked in spreadsheets nobody updates",
-  "Scheduling still happening over email",
-  "Policy changes buried in a Slack thread",
-  "Manual handoffs eating up everyone\u2019s time",
+const tools = [
+  "Project mgmt",
+  "Scheduling",
+  "CRM",
+  "Automation",
+  "Change tracking",
+];
+
+const workflows: {
+  trigger: string;
+  cause: string;
+  effect: string;
+  from: string;
+  to: string;
+  direction: "a-to-b" | "b-to-a";
+}[] = [
+  {
+    trigger: "When a deal closes",
+    cause: "A deal is won in the CRM.",
+    effect:
+      "An onboarding project is automatically kicked off in Stackr Projects.",
+    from: "CRM",
+    to: "Stackr Projects",
+    direction: "a-to-b",
+  },
+  {
+    trigger: "When a booking is made",
+    cause: "A prospect books a meeting through BookMe.",
+    effect: "An opportunity is automatically created in the CRM.",
+    from: "BookMe",
+    to: "CRM",
+    direction: "a-to-b",
+  },
+  {
+    trigger: "When a project is done",
+    cause: "A project is marked complete in Stackr Projects.",
+    effect: "Changelog automatically writes and publishes the update.",
+    from: "Stackr Projects",
+    to: "Changelog",
+    direction: "b-to-a",
+  },
+];
+
+const aiExamples: { title: string; body: string }[] = [
+  {
+    title: "New feature shipped?",
+    body: "AI writes and publishes the Changelog.",
+  },
+  {
+    title: "Need a project plan?",
+    body: "Describe it. AI builds the board.",
+  },
+  {
+    title: "Want a status update?",
+    body: "AI gives you a snapshot across every app.",
+  },
+  {
+    title: "Something overdue?",
+    body: "AI surfaces it before anyone asks.",
+  },
 ];
 
 function Separator({ label }: { label: string }) {
@@ -117,13 +172,13 @@ export default function BetaPage() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-3">
           Productivity apps for teams.
         </h1>
-        <p className="font-mono text-sm md:text-base font-semibold tracking-[0.12em] uppercase text-[#94a3b8] mb-6">
-          Built to work together. Powered by AI.
+        <p className="text-base md:text-lg text-[#94a3b8] mb-2">
+          Project management, CRM, scheduling, tickets, and more.
         </p>
-        <p className="text-base leading-relaxed text-[#94a3b8] max-w-[480px] mx-auto mb-8">
-          Project management, CRM, inventory, tickets, and more.
+        <p className="font-mono text-xs md:text-sm font-semibold tracking-[0.12em] uppercase text-[#64748b] mb-8">
+          Connected apps. Powered by AI.
         </p>
-        <div className="flex items-center gap-4 justify-center flex-wrap mb-6">
+        <div className="flex items-center gap-4 justify-center flex-wrap">
           <a
             href={POLL_URL}
             target="_blank"
@@ -136,39 +191,39 @@ export default function BetaPage() {
             Explore the suite &darr;
           </a>
         </div>
-        <p className="font-mono text-[10px] font-semibold tracking-[0.14em] uppercase text-[#64748b]">
-          Built by the team behind{" "}
-          <a
-            href="https://www.mojohelpdesk.com"
-            className="text-[#94a3b8] no-underline border-b border-[#475569] hover:text-[#f0b93c] hover:border-[#f0b93c] transition-colors"
-          >
-            Mojo Helpdesk
-          </a>
-        </p>
       </section>
 
-      {/* Why it exists */}
-      <Separator label="Why it exists" />
-
-      <section className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 mb-6">
-        <div>
-          <h3 className="text-xl md:text-2xl font-bold leading-snug text-white mb-1">
-            Built for teams that want to move faster.
-          </h3>
-          <p className="text-base md:text-lg font-semibold text-[#64748b]">
-            One place. Everything connected.
+      {/* Cost band */}
+      <section className="mt-12 mb-6 bg-[#1e293b] border border-[#334155] py-12 px-6 text-center">
+        <div className="max-w-[640px] mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight text-white mb-3">
+            How many tools is{" "}
+            <em className="not-italic text-[#f0b93c]">your team running?</em>
+          </h2>
+          <p className="text-[15px] text-[#94a3b8] leading-relaxed max-w-[480px] mx-auto mb-8">
+            More than you need.
+            <br />
+            Separate logins. Separate bills.
+            <br />
+            Separate apps that don&rsquo;t share a single piece of data.
           </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2">
-          {painPoints.map((point) => (
-            <div
-              key={point}
-              className="flex items-start gap-2.5 py-3 pr-2 border-b border-[#1e293b] text-sm text-[#94a3b8] leading-relaxed"
-            >
-              <span className="text-red-500 font-bold text-xs mt-0.5 shrink-0">&times;</span>
-              {point}
-            </div>
-          ))}
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            {tools.map((tool) => (
+              <span
+                key={tool}
+                className="inline-flex items-center gap-2 font-mono text-[10px] font-semibold tracking-[0.14em] uppercase text-[#94a3b8] bg-[#0f172a] border border-[#334155] px-3.5 py-2.5"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#475569]" />
+                {tool}
+              </span>
+            ))}
+          </div>
+          <p className="text-base md:text-lg font-bold text-white">
+            Metadot changes that with{" "}
+            <em className="not-italic text-[#0f172a] bg-[#f0b93c] px-1">
+              one suite.
+            </em>
+          </p>
         </div>
       </section>
 
@@ -196,6 +251,94 @@ export default function BetaPage() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Your apps, working together */}
+      <Separator label="Your apps, working together" />
+
+      <section className="mb-6">
+        <div className="max-w-[580px] mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight text-white mb-2">
+            Put your work on{" "}
+            <em className="not-italic text-[#f0b93c]">autopilot.</em>
+          </h2>
+          <p className="text-[15px] text-[#94a3b8] leading-relaxed">
+            When tools connect, work moves itself. Here is what that looks like.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-[#334155]">
+          {workflows.map((w) => (
+            <div
+              key={w.trigger}
+              className="border-b border-r border-[#334155] p-6 hover:bg-[#1e293b] transition-colors"
+            >
+              <div className="font-mono text-[10px] font-semibold tracking-[0.14em] uppercase text-[#f0b93c] mb-4">
+                {w.trigger}
+              </div>
+              <p className="text-sm font-semibold text-white leading-snug mb-1">
+                {w.cause}
+              </p>
+              <div className="text-lg text-[#334155] my-2">&darr;</div>
+              <p className="text-sm text-[#94a3b8] leading-relaxed">
+                {w.effect}
+              </p>
+              <div className="mt-5 flex items-center gap-1.5">
+                <span
+                  className={`font-mono text-[10px] font-semibold tracking-[0.1em] uppercase px-2 py-1 ${
+                    w.direction === "a-to-b"
+                      ? "bg-[#f0b93c]/15 text-[#f0b93c]"
+                      : "bg-[#ffffff]/8 text-[#94a3b8]"
+                  }`}
+                >
+                  {w.from}
+                </span>
+                <span className="text-[#475569] text-xs">&rarr;</span>
+                <span
+                  className={`font-mono text-[10px] font-semibold tracking-[0.1em] uppercase px-2 py-1 ${
+                    w.direction === "a-to-b"
+                      ? "bg-[#ffffff]/8 text-[#94a3b8]"
+                      : "bg-[#f0b93c]/15 text-[#f0b93c]"
+                  }`}
+                >
+                  {w.to}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* AI section */}
+      <section className="my-12 bg-[#1e293b] border border-[#334155] py-12 px-6">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-10 items-start">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight text-white mb-2">
+              AI that{" "}
+              <em className="not-italic text-[#f0b93c]">does the work,</em> not
+              just answers questions.
+            </h2>
+            <p className="text-[15px] text-[#94a3b8] leading-relaxed">
+              Works across every app. Surfaces what matters. Takes action so
+              your team can focus on what&rsquo;s next.
+            </p>
+          </div>
+          <div className="border-t border-l border-[#334155]">
+            {aiExamples.map((ex) => (
+              <div
+                key={ex.title}
+                className="border-b border-r border-[#334155] p-5 flex gap-4 items-start"
+              >
+                <div className="w-2 h-2 rounded-full bg-[#f0b93c] shrink-0 mt-2" />
+                <div className="text-sm text-[#94a3b8] leading-relaxed">
+                  <strong className="block font-mono text-[13px] font-bold text-white tracking-wide mb-0.5 uppercase">
+                    {ex.title}
+                  </strong>
+                  {ex.body}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

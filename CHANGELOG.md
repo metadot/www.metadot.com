@@ -2,6 +2,19 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.3] - 2026-04-20
+
+### Added
+- Beta page: "How many tools is your team running?" cost-band section with tool chips (Project mgmt, Scheduling, CRM, Automation, Change tracking)
+- Beta page: "Put your work on autopilot." workflows section with 3 automation cards (CRM→Stackr, BookMe→CRM, Stackr→Changelog)
+- Beta page: "AI that does the work, not just answers questions." section with 4 examples
+
+### Changed
+- Beta page hero: simplified subcopy to "Project management, CRM, scheduling, tickets, and more." with new "Connected apps. Powered by AI." tagline
+
+### Removed
+- Beta page: "Built by the team behind Mojo Helpdesk" line and the "Why it exists" pain-points section
+
 ## [2.1.1.2] - 2026-04-16
 
 ### Changed
