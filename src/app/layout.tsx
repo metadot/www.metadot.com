@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/layout/Header";
-import Footer from "@/layout/Footer";
+import { SiteHeader, SiteFooter } from "@/layout/Chrome";
 import JsonLd from "@/components/JsonLd";
 
 const spaceGrotesk = Space_Grotesk({
@@ -78,9 +77,9 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <Header />
+        <SiteHeader />
         <main id="main-content">{children}</main>
-        <Footer />
+        <SiteFooter />
       </body>
     </html>
   );
