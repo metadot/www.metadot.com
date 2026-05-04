@@ -1,7 +1,7 @@
-const glob = require("fast-glob");
+import glob from "fast-glob";
 
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+export default {
   siteUrl: "https://www.metadot.com",
   generateRobotsTxt: true,
   robotsTxtOptions: {
