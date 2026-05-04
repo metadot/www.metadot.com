@@ -2,6 +2,15 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.4] - 2026-05-04
+
+### Added
+- New noindex mockup route at `/apps-mockup` for the Metadot Apps Connected Workspace concept (link-only, kept under the regular site header/footer)
+- Orbiting app tiles around the central "m" logo: 9 apps trace an animated elliptical path drawn with `@property` + CSS `cos()`/`sin()`, with pause/resume control that freezes both the apps and the dashed ring
+- Click any app tile to open a modal with its description, feature bullets, and "Learn More" / "Next App" actions; closes via ✕, backdrop click, or Escape
+- Floating CTA header that emerges as you scroll, with a "Join the Private Beta" button on the right
+- Sitemap and robots.txt now exclude `/apps-mockup` and `/preview-mockup` so neither route gets indexed
+
 ## [2.1.1.3] - 2026-04-20
 
 ### Added
