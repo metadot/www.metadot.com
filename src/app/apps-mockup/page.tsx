@@ -161,6 +161,7 @@ function AppNode({
   paused,
   selected,
   onSelect,
+  onHover,
 }: {
   app: App;
   index: number;
@@ -168,6 +169,7 @@ function AppNode({
   paused: boolean;
   selected: App | null;
   onSelect: (app: App) => void;
+  onHover: (app: App | null) => void;
 }) {
   const startAngle = (index / total) * 360;
   const isSelected = selected?.name === app.name;
@@ -176,7 +178,11 @@ function AppNode({
     <button
       type="button"
       onClick={() => onSelect(app)}
-      className={`absolute left-1/2 top-1/2 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${app.color} text-2xl text-white shadow-lg transition-[box-shadow] duration-200 hover:z-30 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:h-14 sm:w-14 ${
+      onMouseEnter={() => onHover(app)}
+      onMouseLeave={() => onHover(null)}
+      onFocus={() => onHover(app)}
+      onBlur={() => onHover(null)}
+      className={`group absolute left-1/2 top-1/2 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${app.color} text-2xl text-white shadow-lg transition-[box-shadow] duration-200 hover:z-30 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:h-14 sm:w-14 ${
         isSelected ? "z-30 ring-4 ring-white" : "z-10"
       }`}
       style={
@@ -191,14 +197,22 @@ function AppNode({
       aria-label={`${app.name}: ${app.description}`}
     >
       <span aria-hidden>{app.emoji}</span>
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-full bg-slate-900 px-3 py-1 text-xs font-bold text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus:opacity-100"
+      >
+        {app.name}
+      </span>
     </button>
   );
 }
 
 export default function AppsMockupPage() {
   const [selected, setSelected] = useState<App | null>(null);
-  const [paused, setPaused] = useState(false);
+  const [hovered, setHovered] = useState<App | null>(null);
   const [scrollY, setScrollY] = useState(0);
+
+  const paused = selected !== null || hovered !== null;
 
   useEffect(() => {
     function onScroll() {
@@ -218,18 +232,20 @@ export default function AppsMockupPage() {
 
   function handleSelect(app: App) {
     setSelected(app);
-    setPaused(true);
   }
 
   function closeModal() {
     setSelected(null);
-    setPaused(false);
   }
 
   function nextApp() {
     const next = apps[(currentIndex + 1) % apps.length];
     setSelected(next);
-    setPaused(true);
+  }
+
+  function prevApp() {
+    const prev = apps[(currentIndex - 1 + apps.length) % apps.length];
+    setSelected(prev);
   }
 
   useEffect(() => {
@@ -271,7 +287,7 @@ export default function AppsMockupPage() {
               href="/beta"
               className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white shadow-md shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-500"
             >
-              Join the Private Beta
+              Join private beta
             </a>
           </div>
         </div>
@@ -406,17 +422,6 @@ export default function AppsMockupPage() {
               All systems connected
             </div>
 
-            {/* play/pause control — top right */}
-            <button
-              type="button"
-              onClick={() => setPaused((p) => !p)}
-              className="absolute right-5 top-5 z-20 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-xs font-bold text-slate-900 shadow ring-1 ring-slate-100 backdrop-blur transition hover:-translate-y-0.5 sm:right-6 sm:top-6"
-              aria-label={paused ? "Resume animation" : "Pause animation"}
-              title={paused ? "Resume" : "Pause"}
-            >
-              <span aria-hidden>{paused ? "▶" : "⏸"}</span>
-            </button>
-
             {apps.map((app, index) => (
               <AppNode
                 key={app.name}
@@ -426,6 +431,7 @@ export default function AppsMockupPage() {
                 paused={paused}
                 selected={selected}
                 onSelect={handleSelect}
+                onHover={setHovered}
               />
             ))}
 
@@ -462,12 +468,9 @@ export default function AppsMockupPage() {
               <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white/20 text-3xl shadow-lg backdrop-blur">
                 <span aria-hidden>{selected.emoji}</span>
               </div>
-              <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.24em] text-white/80">
-                Selected app
-              </p>
               <p
                 id="app-modal-title"
-                className="mt-1 text-2xl font-black tracking-tight"
+                className="mt-4 text-2xl font-black tracking-tight"
               >
                 {selected.name}
               </p>
@@ -491,25 +494,33 @@ export default function AppsMockupPage() {
                 ))}
               </ul>
 
-              <div className="mt-6 flex flex-col gap-2.5">
+              <a
+                href="/beta"
+                className="mt-6 block rounded-2xl bg-blue-600 px-5 py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-500"
+              >
+                Join private beta <span aria-hidden>→</span>
+              </a>
+              <div className="mt-4 flex items-center justify-between gap-3">
                 <button
                   type="button"
-                  onClick={nextApp}
-                  className="rounded-2xl bg-blue-600 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-500"
+                  onClick={prevApp}
+                  aria-label="Previous app"
+                  className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-900 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-50"
                 >
-                  Learn More <span aria-hidden>→</span>
+                  <span aria-hidden>←</span>
                 </button>
+                <p className="text-xs text-slate-500">
+                  {currentIndex + 1} of {apps.length} apps
+                </p>
                 <button
                   type="button"
                   onClick={nextApp}
-                  className="rounded-2xl bg-white px-5 py-3.5 text-sm font-bold text-slate-900 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-50"
+                  aria-label="Next app"
+                  className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-900 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-50"
                 >
-                  Next App <span aria-hidden>↻</span>
+                  <span aria-hidden>→</span>
                 </button>
               </div>
-              <p className="mt-3 text-center text-xs text-slate-500">
-                {currentIndex + 1} of {apps.length} apps
-              </p>
             </div>
           </div>
         </div>
@@ -566,13 +577,7 @@ export default function AppsMockupPage() {
                 href="/beta"
                 className="rounded-2xl bg-blue-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-blue-950/50 transition hover:-translate-y-0.5 hover:bg-blue-500"
               >
-                Join the Private Beta
-              </a>
-              <a
-                href="#"
-                className="rounded-2xl border border-white/20 bg-white/5 px-7 py-4 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/10"
-              >
-                See How It Works
+                Join private beta
               </a>
             </div>
           </div>
