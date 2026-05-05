@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 
 type App = {
   name: string;
@@ -183,6 +183,41 @@ const benefits = [
   },
 ];
 
+type DotConfig = {
+  direction: "out" | "in";
+  duration: number;
+  delay: number;
+  length: number;
+  opacity: number;
+  jitter: number;
+};
+
+function makeRng(seed: number) {
+  let s = seed >>> 0;
+  return () => {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    return s / 4294967296;
+  };
+}
+
+// Per-app streak configs. One streak per app, but each cycle does BOTH
+// directions (out then in, with idle gaps embedded in the keyframe). The
+// `direction` field flips animation-direction so half the apps start with
+// outbound, half with inbound — at any moment the visible streaks are a mix.
+const dotConfigs: DotConfig[][] = apps.map((_, i) => {
+  const rng = makeRng(i * 73 + 17);
+  return [
+    {
+      direction: rng() > 0.5 ? "out" : "in",
+      duration: 2.4 + rng() * 1.2, // 2.4 – 3.6s
+      delay: rng() * 3, // 0 – 3s (cycle scrambles the rest)
+      length: 10 + Math.floor(rng() * 8), // 10 – 17px
+      opacity: 0.55 + rng() * 0.35, // 0.55 – 0.90
+      jitter: (rng() - 0.5) * 8, // ±4°
+    },
+  ];
+});
+
 function AppNode({
   app,
   index,
@@ -211,12 +246,12 @@ function AppNode({
       onMouseLeave={() => onHover(null)}
       onFocus={() => onHover(app)}
       onBlur={() => onHover(null)}
-      className={`app-node group absolute left-1/2 top-1/2 grid h-12 w-12 cursor-pointer place-items-center rounded-2xl bg-gradient-to-br ${app.color} text-2xl text-white shadow-lg transition-[box-shadow,filter] duration-200 hover:z-30 hover:shadow-2xl hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:h-14 sm:w-14 ${
+      className={`app-node group absolute left-1/2 top-1/2 grid h-10 w-10 cursor-pointer place-items-center rounded-xl bg-gradient-to-br ${app.color} text-lg text-white shadow-lg transition-[box-shadow,filter] duration-200 hover:z-30 hover:shadow-2xl hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:h-14 sm:w-14 sm:rounded-2xl sm:text-2xl ${
         isSelected ? "z-30 ring-4 ring-white" : "z-10"
       }`}
       style={
         {
-          animation: "orbitLoop 60s linear infinite",
+          animation: "orbitLoop 90s linear infinite",
           animationPlayState: paused ? "paused" : "running",
           ["--start" as string]: `${startAngle}deg`,
           transform:
@@ -249,8 +284,18 @@ export default function AppsMockupPage() {
   const [selected, setSelected] = useState<App | null>(null);
   const [hovered, setHovered] = useState<App | null>(null);
   const [scrollY, setScrollY] = useState(0);
+  const [pillIdx, setPillIdx] = useState(0);
 
   const paused = selected !== null || hovered !== null;
+  const pillApp = apps[pillIdx];
+
+  useEffect(() => {
+    if (paused) return;
+    const id = window.setInterval(() => {
+      setPillIdx((i) => (i + 1) % apps.length);
+    }, 5000);
+    return () => window.clearInterval(id);
+  }, [paused]);
 
   useEffect(() => {
     function onScroll() {
@@ -337,6 +382,11 @@ export default function AppsMockupPage() {
           inherits: false;
           initial-value: 0deg;
         }
+        @property --dot-progress {
+          syntax: "<number>";
+          inherits: false;
+          initial-value: 0;
+        }
         @keyframes orbitLoop {
           from {
             --orbit-angle: 0deg;
@@ -345,14 +395,139 @@ export default function AppsMockupPage() {
             --orbit-angle: 360deg;
           }
         }
-        @keyframes dashMove {
-          to {
-            stroke-dashoffset: -120;
+        /* Single keyframe that fires outbound, idles at the app, fires
+           inbound, idles at the workspace. Reversing it (animation-direction:
+           reverse) flips the phase order so half the apps go in-then-out.
+           Active phases sum to ~22% of the cycle, so density stays sparse. */
+        @keyframes dotPing {
+          0% {
+            --dot-progress: 0.42;
+            opacity: 0;
+          }
+          20% {
+            --dot-progress: 0.42;
+            opacity: 0;
+          }
+          22% {
+            --dot-progress: 0.5;
+            opacity: var(--dot-peak-opacity, 0.85);
+          }
+          29% {
+            --dot-progress: 0.78;
+            opacity: var(--dot-peak-opacity, 0.85);
+          }
+          31% {
+            --dot-progress: 0.85;
+            opacity: 0;
+          }
+          65% {
+            --dot-progress: 0.85;
+            opacity: 0;
+          }
+          67% {
+            --dot-progress: 0.78;
+            opacity: var(--dot-peak-opacity, 0.85);
+          }
+          74% {
+            --dot-progress: 0.5;
+            opacity: var(--dot-peak-opacity, 0.85);
+          }
+          76% {
+            --dot-progress: 0.42;
+            opacity: 0;
+          }
+          100% {
+            --dot-progress: 0.42;
+            opacity: 0;
           }
         }
+        .connection-dot {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 12px;
+          height: 2px;
+          border-radius: 1px;
+          pointer-events: none;
+          opacity: 0;
+          z-index: 5;
+          -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 35%,
+            black 65%,
+            transparent 100%
+          );
+          mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 35%,
+            black 65%,
+            transparent 100%
+          );
+          transform: translate(-50%, -50%)
+            translate(
+              calc(
+                var(--dot-progress) * var(--orbit-rx) *
+                  cos(var(--start) + var(--orbit-angle))
+              ),
+              calc(
+                var(--dot-progress) * var(--orbit-ry) *
+                  sin(var(--start) + var(--orbit-angle))
+              )
+            )
+            rotate(
+              atan2(
+                calc(
+                  var(--orbit-ry) *
+                    sin(var(--start) + var(--orbit-angle))
+                ),
+                calc(
+                  var(--orbit-rx) *
+                    cos(var(--start) + var(--orbit-angle))
+                )
+              )
+            );
+        }
+        @keyframes workspacePulse {
+          0% {
+            transform: scale(0.92);
+            opacity: 0;
+          }
+          25% {
+            opacity: 0.55;
+          }
+          100% {
+            transform: scale(1.45);
+            opacity: 0;
+          }
+        }
+        .workspace-pulse {
+          position: absolute;
+          inset: -10px;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.22) 0%,
+            rgba(37, 99, 235, 0.08) 45%,
+            transparent 70%
+          );
+          opacity: 0;
+          pointer-events: none;
+          animation: workspacePulse 4s ease-out infinite;
+        }
+        .workspace-pulse--delayed {
+          animation-delay: 2s;
+        }
         .orbit-stage {
-          --orbit-rx: 328px;
-          --orbit-ry: 203px;
+          --orbit-rx: 120px;
+          --orbit-ry: 120px;
+        }
+        @media (min-width: 640px) {
+          .orbit-stage {
+            --orbit-rx: 280px;
+            --orbit-ry: 175px;
+          }
         }
         @media (min-width: 1024px) {
           .orbit-stage {
@@ -405,55 +580,19 @@ export default function AppsMockupPage() {
       {/* Orbit stage with overlaid popover */}
       <section className="px-4 pb-12 sm:px-6">
         <div className="orbit-stage relative mx-auto max-w-6xl">
-          <div className="relative h-[420px] overflow-hidden rounded-[2.5rem] border border-white bg-gradient-to-b from-white via-blue-50/40 to-blue-100/60 shadow-2xl shadow-blue-200/40 sm:h-[500px] lg:h-[600px]">
-            {/* orbit rings */}
-            <svg
-              className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[820px] -translate-x-1/2 -translate-y-1/2 lg:h-[640px] lg:w-[1000px]"
-              viewBox="0 0 800 500"
-              aria-hidden
-            >
-              <ellipse
-                cx="400"
-                cy="250"
-                rx="320"
-                ry="198"
-                fill="none"
-                stroke="#2563eb"
-                strokeWidth="2"
-                strokeDasharray="14 16"
-                style={{
-                  animation: "dashMove 4s linear infinite",
-                  animationPlayState: paused ? "paused" : "running",
-                }}
-              />
-              <ellipse
-                cx="400"
-                cy="250"
-                rx="220"
-                ry="136"
-                fill="none"
-                stroke="#bfdbfe"
-                strokeWidth="2"
-                strokeDasharray="6 10"
-              />
-              <ellipse
-                cx="400"
-                cy="250"
-                rx="120"
-                ry="74"
-                fill="none"
-                stroke="#dbeafe"
-                strokeWidth="1.5"
-              />
-            </svg>
-
+          <div className="relative h-[400px] overflow-hidden rounded-[2.5rem] border border-white bg-gradient-to-b from-white via-blue-50/40 to-blue-100/60 shadow-2xl shadow-blue-200/40 sm:h-[500px] lg:h-[600px]">
             {/* center logo */}
-            <div className="absolute left-1/2 top-1/2 z-20 flex h-28 w-48 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-[50%] bg-white px-4 text-center shadow-2xl ring-1 ring-slate-100 sm:h-32 sm:w-56 lg:h-36 lg:w-64">
-              <div className="flex items-baseline gap-1 text-4xl font-black italic text-blue-950 sm:text-5xl">
+            <div className="absolute left-1/2 top-1/2 z-20 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-white text-center shadow-2xl ring-1 ring-slate-100 sm:h-32 sm:w-56 sm:rounded-[50%] sm:px-4 lg:h-36 lg:w-64">
+              <span aria-hidden className="workspace-pulse" />
+              <span
+                aria-hidden
+                className="workspace-pulse workspace-pulse--delayed"
+              />
+              <div className="relative flex items-baseline gap-1 text-3xl font-black italic text-blue-950 sm:text-5xl">
                 m
-                <span className="inline-block h-2 w-2 rounded-full bg-yellow-400" />
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-yellow-400 sm:h-2 sm:w-2" />
               </div>
-              <p className="mt-1 text-[10px] font-semibold leading-tight text-slate-500 sm:text-[11px]">
+              <p className="relative mt-1 hidden text-[10px] font-semibold leading-tight text-slate-500 sm:block sm:text-[11px]">
                 One workspace. Any direction.
               </p>
             </div>
@@ -467,19 +606,57 @@ export default function AppsMockupPage() {
               All systems connected
             </div>
 
-            {apps.map((app, index) => (
-              <AppNode
-                key={app.name}
-                app={app}
-                index={index}
-                total={apps.length}
-                paused={paused}
-                selected={selected}
-                onSelect={handleSelect}
-                onHover={setHovered}
-              />
-            ))}
+            {apps.map((app, index) => {
+              const startAngle = (index / apps.length) * 360;
+              return (
+                <Fragment key={app.name}>
+                  <AppNode
+                    app={app}
+                    index={index}
+                    total={apps.length}
+                    paused={paused}
+                    selected={selected}
+                    onSelect={handleSelect}
+                    onHover={setHovered}
+                  />
+                  {dotConfigs[index].map((cfg, j) => (
+                    <span
+                      key={j}
+                      aria-hidden
+                      className={`connection-dot bg-gradient-to-r ${app.color}`}
+                      style={
+                        {
+                          width: `${cfg.length}px`,
+                          animation: `dotPing ${cfg.duration.toFixed(2)}s linear infinite ${cfg.direction === "in" ? "reverse" : "normal"}`,
+                          animationDelay: `${cfg.delay.toFixed(2)}s`,
+                          ["--start" as string]: `${startAngle + cfg.jitter}deg`,
+                          ["--dot-peak-opacity" as string]:
+                            cfg.opacity.toFixed(2),
+                        } as React.CSSProperties
+                      }
+                    />
+                  ))}
+                </Fragment>
+              );
+            })}
 
+            {/* now-showing pill — mobile only */}
+            <button
+              type="button"
+              onClick={() => handleSelect(pillApp)}
+              className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-xs font-bold text-slate-900 shadow-lg ring-1 ring-slate-200 backdrop-blur transition hover:bg-white sm:hidden"
+              aria-label={`Currently showing ${pillApp.name}. Tap to explore.`}
+            >
+              <span
+                aria-hidden
+                className={`inline-block h-3 w-3 rounded-md bg-gradient-to-br ${pillApp.color}`}
+              />
+              <span>{pillApp.name}</span>
+              <span aria-hidden className="text-slate-300">
+                ·
+              </span>
+              <span className="font-normal text-slate-500">tap to explore</span>
+            </button>
           </div>
         </div>
       </section>
