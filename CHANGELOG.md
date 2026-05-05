@@ -2,6 +2,18 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.7] - 2026-05-05
+
+### Changed
+- `/apps-mockup` orbit (mobile): tight 120px circle replaces the wide 656×406 ellipse so all 10 apps now fit on a phone instead of being clipped by `overflow-hidden`; center logo becomes a clean circle on mobile and stays an oval on desktop
+- `/apps-mockup` orbit: removed the three concentric dashed rings on every breakpoint for a cleaner stage
+- `/apps-mockup` orbit (mobile): added a "now showing" pill at the bottom that cycles through apps every 5s and opens that app's modal when tapped
+- `/apps-mockup` rotation slowed from 60s to 90s per revolution
+
+### Added
+- `/apps-mockup` connection streaks: small color-coded line segments flow between each app and the central workspace, communicating that the apps "talk to" the workspace; each app's streak does both directions per cycle (out then in, with idle gaps), randomized per app for an organic feel; about two streaks visible at any moment
+- `/apps-mockup` workspace pulse: two staggered radial-gradient rings breathe outward from the center "m" logo, anchoring it as the active hub
+
 ## [2.1.1.6] - 2026-05-05
 
 ### Added
