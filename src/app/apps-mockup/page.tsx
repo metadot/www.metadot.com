@@ -137,6 +137,20 @@ const apps: App[] = [
       "Low-stock alerts",
     ],
   },
+  {
+    name: "Projects",
+    color: "from-violet-400 to-violet-700",
+    emoji: "🗂️",
+    description: "Plan, track, deliver.",
+    bullets: [
+      "Tasks & milestones",
+      "Kanban & list views",
+      "Timelines & dependencies",
+      "Team assignments",
+      "Time tracking",
+      "Status reports",
+    ],
+  },
 ];
 
 const integrationSteps = [
@@ -149,9 +163,24 @@ const integrationSteps = [
 ];
 
 const benefits = [
-  { title: "All the apps.", body: "One workspace." },
-  { title: "Less stress.", body: "More fulfillment." },
-  { title: "More value.", body: "Less spend." },
+  {
+    title: "All the apps.",
+    body: "One workspace.",
+    bubble: "bg-blue-200/70",
+    dot: "bg-blue-500",
+  },
+  {
+    title: "Less stress.",
+    body: "More fulfillment.",
+    bubble: "bg-pink-200/70",
+    dot: "bg-pink-500",
+  },
+  {
+    title: "More value.",
+    body: "Less spend.",
+    bubble: "bg-amber-200/70",
+    dot: "bg-amber-500",
+  },
 ];
 
 function AppNode({
@@ -182,7 +211,7 @@ function AppNode({
       onMouseLeave={() => onHover(null)}
       onFocus={() => onHover(app)}
       onBlur={() => onHover(null)}
-      className={`group absolute left-1/2 top-1/2 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${app.color} text-2xl text-white shadow-lg transition-[box-shadow] duration-200 hover:z-30 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:h-14 sm:w-14 ${
+      className={`app-node group absolute left-1/2 top-1/2 grid h-12 w-12 cursor-pointer place-items-center rounded-2xl bg-gradient-to-br ${app.color} text-2xl text-white shadow-lg transition-[box-shadow,filter] duration-200 hover:z-30 hover:shadow-2xl hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:h-14 sm:w-14 ${
         isSelected ? "z-30 ring-4 ring-white" : "z-10"
       }`}
       style={
@@ -196,7 +225,16 @@ function AppNode({
       }
       aria-label={`${app.name}: ${app.description}`}
     >
-      <span aria-hidden>{app.emoji}</span>
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-white opacity-0 blur-xl transition-opacity duration-200 group-hover:opacity-60 group-focus:opacity-60"
+      />
+      <span
+        aria-hidden
+        className="inline-block transition-transform duration-200 ease-out group-hover:scale-125 group-focus:scale-125"
+      >
+        {app.emoji}
+      </span>
       <span
         aria-hidden
         className="pointer-events-none absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-full bg-slate-900 px-3 py-1 text-xs font-bold text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus:opacity-100"
@@ -285,9 +323,9 @@ export default function AppsMockupPage() {
             </div>
             <a
               href="/beta"
-              className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white shadow-md shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-500"
+              className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white! shadow-md shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-500"
             >
-              Join private beta
+              Join the private beta
             </a>
           </div>
         </div>
@@ -334,9 +372,8 @@ export default function AppsMockupPage() {
           <div className="mt-5 text-4xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
             The Search Is Over.
             <span className="mt-2 block text-blue-600">Metadot Apps</span>
-            <span className="block">Connected Workspace.</span>
           </div>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-none text-base leading-7 text-slate-600 sm:text-lg sm:whitespace-nowrap">
             Everything you need to run your business{" "}
             <span className="font-semibold text-slate-900">
               without breaking the bank.
@@ -347,8 +384,16 @@ export default function AppsMockupPage() {
             {benefits.map((b) => (
               <li
                 key={b.title}
-                className="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-slate-700 shadow-sm backdrop-blur"
+                className={`relative isolate flex items-center gap-2 overflow-hidden rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-slate-700 shadow-sm backdrop-blur`}
               >
+                <span
+                  aria-hidden
+                  className={`absolute -left-3 -top-3 -z-10 h-10 w-10 rounded-full ${b.bubble} blur-md`}
+                />
+                <span
+                  aria-hidden
+                  className={`inline-block h-2 w-2 flex-shrink-0 rounded-full ${b.dot}`}
+                />
                 <span className="font-bold text-slate-900">{b.title}</span>{" "}
                 <span className="text-slate-500">{b.body}</span>
               </li>
@@ -496,9 +541,9 @@ export default function AppsMockupPage() {
 
               <a
                 href="/beta"
-                className="mt-6 block rounded-2xl bg-blue-600 px-5 py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-500"
+                className="mt-6 block rounded-2xl bg-blue-600 px-5 py-3.5 text-center text-sm font-bold text-white! shadow-lg shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-500"
               >
-                Join private beta <span aria-hidden>→</span>
+                Discover it in private beta
               </a>
               <div className="mt-4 flex items-center justify-between gap-3">
                 <button
@@ -509,7 +554,7 @@ export default function AppsMockupPage() {
                 >
                   <span aria-hidden>←</span>
                 </button>
-                <p className="text-xs text-slate-500">
+                <p className="mb-0! flex h-10 items-center text-xs leading-none text-slate-500">
                   {currentIndex + 1} of {apps.length} apps
                 </p>
                 <button
@@ -575,9 +620,9 @@ export default function AppsMockupPage() {
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
                 href="/beta"
-                className="rounded-2xl bg-blue-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-blue-950/50 transition hover:-translate-y-0.5 hover:bg-blue-500"
+                className="rounded-2xl bg-blue-600 px-7 py-4 text-sm font-bold text-white! shadow-lg shadow-blue-950/50 transition hover:-translate-y-0.5 hover:bg-blue-500"
               >
-                Join private beta
+                Join the private beta
               </a>
             </div>
           </div>

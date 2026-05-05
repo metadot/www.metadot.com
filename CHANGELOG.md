@@ -2,6 +2,18 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.6] - 2026-05-05
+
+### Added
+- `/apps-mockup` orbit: new "Projects" app tile (violet, 🗂️) with planning, kanban, timeline, and reporting bullets — brings the orbit to 10 apps
+
+### Changed
+- `/apps-mockup` hero: removed the "Connected Workspace." subline so the headline ends on "Metadot Apps"; the "Everything you need to run your business…" tagline now stays on a single line on `sm:` and up
+- `/apps-mockup` benefit pills: each badge now has a soft colored bubble glow plus a colored dot (blue / pink / amber) for visual rhythm
+- `/apps-mockup` orbit hover: app tiles now show a pointer cursor, get a soft white halo, brighten 10%, and the emoji scales up 25% for clearer affordance
+- `/apps-mockup` modal: CTA changed from "Join private beta →" to "Discover it in private beta" (no arrow); fixed the "X of Y apps" counter so it vertically centers with the prev/next arrow buttons
+- `/apps-mockup` CTA copy: header and bottom buttons now read "Join the private beta"; all `/beta` link buttons force white text to override the inherited link color
+
 ## [2.1.1.5] - 2026-05-05
 
 ### Changed
