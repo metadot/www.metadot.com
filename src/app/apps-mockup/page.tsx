@@ -1,34 +1,48 @@
 "use client";
 
 import { Fragment, useEffect, useMemo, useState } from "react";
+import {
+  BarChart3,
+  BookOpen,
+  CalendarCheck,
+  FileText,
+  Handshake,
+  LayoutList,
+  type LucideIcon,
+  Monitor,
+  Package,
+  Ticket,
+  Truck,
+  Zap,
+} from "lucide-react";
 
 type App = {
   name: string;
   color: string;
-  emoji: string;
+  Icon: LucideIcon;
   description: string;
   bullets: string[];
 };
 
 const apps: App[] = [
   {
-    name: "CRM",
-    color: "from-indigo-400 to-indigo-700",
-    emoji: "🤝",
-    description: "Manage relationships. Close more deals.",
+    name: "Assets",
+    color: "from-blue-400 to-blue-700",
+    Icon: Monitor,
+    description: "Track every device. Stay in control.",
     bullets: [
-      "Track leads & opportunities",
-      "Manage contacts & accounts",
-      "Visual sales pipeline",
-      "Activity & follow-up reminders",
-      "Built-in email & notifications",
-      "Reports & performance insights",
+      "Hardware & software inventory",
+      "Assignments & ownership",
+      "Lifecycle & warranty tracking",
+      "Maintenance schedules",
+      "Audit-ready reports",
+      "Quick check-in / check-out",
     ],
   },
   {
-    name: "Scheduling",
-    color: "from-blue-400 to-blue-700",
-    emoji: "📅",
+    name: "BookMe",
+    color: "from-emerald-400 to-emerald-600",
+    Icon: CalendarCheck,
     description: "Book more. Stay organized.",
     bullets: [
       "Shared team calendars",
@@ -40,23 +54,9 @@ const apps: App[] = [
     ],
   },
   {
-    name: "Automation",
-    color: "from-orange-400 to-orange-600",
-    emoji: "⚙️",
-    description: "Workflows that run for you.",
-    bullets: [
-      "Trigger-based actions",
-      "Multi-step flows",
-      "Cross-app handoffs",
-      "Conditional logic",
-      "Error retries",
-      "Run history & logs",
-    ],
-  },
-  {
-    name: "Changelog",
-    color: "from-red-400 to-red-600",
-    emoji: "📝",
+    name: "Changelogs",
+    color: "from-teal-400 to-teal-600",
+    Icon: FileText,
     description: "Track updates. Stay aligned.",
     bullets: [
       "Publish release notes",
@@ -68,65 +68,23 @@ const apps: App[] = [
     ],
   },
   {
-    name: "Workflows",
-    color: "from-teal-400 to-teal-600",
-    emoji: "🔁",
-    description: "Streamline tasks. Save hours.",
+    name: "CRM",
+    color: "from-rose-400 to-rose-600",
+    Icon: Handshake,
+    description: "Manage relationships. Close more deals.",
     bullets: [
-      "Templates for every team",
-      "Drag-and-drop builder",
-      "Approvals & sign-offs",
-      "Status tracking",
-      "Notifications baked in",
-      "Audit trail",
-    ],
-  },
-  {
-    name: "AI Assistant",
-    color: "from-slate-500 to-slate-800",
-    emoji: "✨",
-    description: "Smart help. Right on time.",
-    bullets: [
-      "Cross-app answers",
-      "Drafting & summaries",
-      "Action suggestions",
-      "Context-aware search",
-      "Privacy-first by design",
-      "Always learning",
-    ],
-  },
-  {
-    name: "Suppliers",
-    color: "from-stone-400 to-stone-600",
-    emoji: "🚚",
-    description: "Manage suppliers. Avoid delays.",
-    bullets: [
-      "Vendor directory",
-      "Purchase orders",
-      "Lead-time tracking",
-      "Document vault",
-      "Performance scoring",
-      "Automated reminders",
-    ],
-  },
-  {
-    name: "Polls",
-    color: "from-pink-400 to-pink-600",
-    emoji: "📊",
-    description: "Ask, analyze, decide better.",
-    bullets: [
-      "Quick poll builder",
-      "Anonymous responses",
-      "Real-time results",
-      "Branching questions",
-      "Export reports",
-      "Schedule & expire",
+      "Track leads & opportunities",
+      "Manage contacts & accounts",
+      "Visual sales pipeline",
+      "Activity & follow-up reminders",
+      "Built-in email & notifications",
+      "Reports & performance insights",
     ],
   },
   {
     name: "Inventory",
-    color: "from-blue-300 to-blue-600",
-    emoji: "📦",
+    color: "from-orange-400 to-orange-600",
+    Icon: Package,
     description: "Track stock. Never run out.",
     bullets: [
       "Real-time levels",
@@ -138,17 +96,87 @@ const apps: App[] = [
     ],
   },
   {
-    name: "Projects",
-    color: "from-violet-400 to-violet-700",
-    emoji: "🗂️",
-    description: "Plan, track, deliver.",
+    name: "Knowledge base",
+    color: "from-purple-400 to-purple-600",
+    Icon: BookOpen,
+    description: "Capture know-how. Find it fast.",
     bullets: [
-      "Tasks & milestones",
-      "Kanban & list views",
-      "Timelines & dependencies",
+      "Rich-text articles",
+      "Powerful search",
+      "Categories & tags",
+      "Drafts & approvals",
+      "Public or internal access",
+      "Version history",
+    ],
+  },
+  {
+    name: "Polls",
+    color: "from-violet-400 to-violet-600",
+    Icon: BarChart3,
+    description: "Ask, analyze, decide better.",
+    bullets: [
+      "Quick poll builder",
+      "Anonymous responses",
+      "Real-time results",
+      "Branching questions",
+      "Export reports",
+      "Schedule & expire",
+    ],
+  },
+  {
+    name: "Stackr",
+    color: "from-indigo-400 to-indigo-600",
+    Icon: LayoutList,
+    description: "Stack tasks. Ship work.",
+    bullets: [
+      "Lightweight task lists",
+      "Kanban boards",
+      "Priorities & due dates",
       "Team assignments",
-      "Time tracking",
-      "Status reports",
+      "Comments & mentions",
+      "Status at a glance",
+    ],
+  },
+  {
+    name: "Suppliers",
+    color: "from-green-400 to-green-600",
+    Icon: Truck,
+    description: "Manage suppliers. Avoid delays.",
+    bullets: [
+      "Vendor directory",
+      "Purchase orders",
+      "Lead-time tracking",
+      "Document vault",
+      "Performance scoring",
+      "Automated reminders",
+    ],
+  },
+  {
+    name: "Tickets",
+    color: "from-amber-400 to-amber-600",
+    Icon: Ticket,
+    description: "Resolve issues. Keep customers happy.",
+    bullets: [
+      "Shared inbox",
+      "Priorities & SLAs",
+      "Assignments & queues",
+      "Macros & templates",
+      "Customer satisfaction",
+      "Reports & insights",
+    ],
+  },
+  {
+    name: "Workflows",
+    color: "from-yellow-400 to-amber-600",
+    Icon: Zap,
+    description: "Streamline tasks. Save hours.",
+    bullets: [
+      "Templates for every team",
+      "Drag-and-drop builder",
+      "Approvals & sign-offs",
+      "Status tracking",
+      "Notifications baked in",
+      "Audit trail",
     ],
   },
 ];
@@ -266,9 +294,9 @@ function AppNode({
       />
       <span
         aria-hidden
-        className="inline-block transition-transform duration-200 ease-out group-hover:scale-125 group-focus:scale-125"
+        className="inline-flex transition-transform duration-200 ease-out group-hover:scale-125 group-focus:scale-125"
       >
-        {app.emoji}
+        <app.Icon className="h-5 w-5 sm:h-7 sm:w-7" strokeWidth={2.25} />
       </span>
       <span
         aria-hidden
@@ -687,8 +715,12 @@ export default function AppsMockupPage() {
               >
                 ✕
               </button>
-              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white/20 text-3xl shadow-lg backdrop-blur">
-                <span aria-hidden>{selected.emoji}</span>
+              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white/20 shadow-lg backdrop-blur">
+                <selected.Icon
+                  aria-hidden
+                  className="h-7 w-7"
+                  strokeWidth={2.25}
+                />
               </div>
               <p
                 id="app-modal-title"
