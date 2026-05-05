@@ -2,6 +2,16 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.8] - 2026-05-05
+
+### Changed
+- `/apps-mockup` app set: orbit now shows the production app lineup — Assets, BookMe, Changelogs, CRM, Inventory, Knowledge base, Polls, Stackr, Suppliers, Tickets, Workflows (11 apps, was 10)
+- `/apps-mockup` icons: every app tile now uses a `lucide-react` icon (Monitor, CalendarCheck, FileText, Handshake, Package, BookOpen, BarChart3, LayoutList, Truck, Ticket, Zap) instead of an emoji; same icon also renders inside the modal header so the orbit and detail view stay visually consistent
+- `/apps-mockup` color palette refreshed to match the new icon set (rose CRM, emerald BookMe/Suppliers, amber Tickets, etc.)
+
+### Added
+- `lucide-react` dependency for icon components
+
 ## [2.1.1.7] - 2026-05-05
 
 ### Changed

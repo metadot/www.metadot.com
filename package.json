@@ -1,6 +1,6 @@
 {
   "name": "www.metadot.com",
-  "version": "2.1.1.7",
+  "version": "2.1.1.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,6 +17,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fast-glob": "^3.3.3",
+    "lucide-react": "^1.14.0",
     "next": "16.2.3",
     "next-mdx-remote": "^6.0.0",
     "next-sitemap": "^4.2.3",
