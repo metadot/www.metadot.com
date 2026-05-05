@@ -2,6 +2,13 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.5] - 2026-05-05
+
+### Changed
+- `/apps-mockup` orbit: hovering an app tile now reveals its name and pauses the animation automatically; the manual pause button has been removed
+- `/apps-mockup` modal: cleaned up copy ("Selected app" label removed, "Learn More" → "Join private beta" linked to `/beta`) and replaced the "Next App" button with compact previous/next arrows around the page indicator
+- `/apps-mockup` CTA banner: header and bottom CTA now read "Join private beta"; removed the secondary "See How It Works" button
+
 ## [2.1.1.4] - 2026-05-04
 
 ### Added
