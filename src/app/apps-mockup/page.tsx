@@ -124,7 +124,7 @@ const apps: App[] = [
     ],
   },
   {
-    name: "Stackr",
+    name: "Stackr project",
     color: "from-indigo-400 to-indigo-600",
     Icon: LayoutList,
     description: "Stack tasks. Ship work.",
@@ -292,12 +292,10 @@ function AppNode({
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-white opacity-0 blur-xl transition-opacity duration-200 group-hover:opacity-60 group-focus:opacity-60"
       />
-      <span
-        aria-hidden
-        className="inline-flex transition-transform duration-200 ease-out group-hover:scale-125 group-focus:scale-125"
-      >
-        <app.Icon className="h-5 w-5 sm:h-7 sm:w-7" strokeWidth={2.25} />
-      </span>
+      <app.Icon
+        className="h-5 w-5 origin-center transition-transform duration-200 ease-out group-hover:scale-125 group-focus:scale-125 sm:h-7 sm:w-7"
+        strokeWidth={2.25}
+      />
       <span
         aria-hidden
         className="pointer-events-none absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-full bg-slate-900 px-3 py-1 text-xs font-bold text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus:opacity-100"
@@ -707,14 +705,33 @@ export default function AppsMockupPage() {
             <div
               className={`relative bg-gradient-to-br ${selected.color} px-7 pt-7 pb-10 text-white`}
             >
-              <button
-                type="button"
-                onClick={closeModal}
-                aria-label="Close"
-                className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full bg-white/15 text-white transition hover:bg-white/25"
-              >
-                ✕
-              </button>
+              <div className="absolute right-4 top-4 flex items-center gap-1 rounded-full bg-white/15 p-1 backdrop-blur">
+                <button
+                  type="button"
+                  onClick={prevApp}
+                  aria-label="Previous app"
+                  className="grid h-7 w-7 place-items-center rounded-full text-white transition hover:bg-white/25"
+                >
+                  <span aria-hidden>←</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={nextApp}
+                  aria-label="Next app"
+                  className="grid h-7 w-7 place-items-center rounded-full text-white transition hover:bg-white/25"
+                >
+                  <span aria-hidden>→</span>
+                </button>
+                <span aria-hidden className="mx-0.5 h-4 w-px bg-white/30" />
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  aria-label="Close"
+                  className="grid h-7 w-7 place-items-center rounded-full text-white transition hover:bg-white/25"
+                >
+                  ✕
+                </button>
+              </div>
               <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white/20 shadow-lg backdrop-blur">
                 <selected.Icon
                   aria-hidden
@@ -754,27 +771,6 @@ export default function AppsMockupPage() {
               >
                 Discover it in private beta
               </a>
-              <div className="mt-4 flex items-center justify-between gap-3">
-                <button
-                  type="button"
-                  onClick={prevApp}
-                  aria-label="Previous app"
-                  className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-900 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-50"
-                >
-                  <span aria-hidden>←</span>
-                </button>
-                <p className="mb-0! flex h-10 items-center text-xs leading-none text-slate-500">
-                  {currentIndex + 1} of {apps.length} apps
-                </p>
-                <button
-                  type="button"
-                  onClick={nextApp}
-                  aria-label="Next app"
-                  className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-900 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-50"
-                >
-                  <span aria-hidden>→</span>
-                </button>
-              </div>
             </div>
           </div>
         </div>

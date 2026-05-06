@@ -2,6 +2,15 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.9] - 2026-05-06
+
+### Fixed
+- `/apps-mockup` Safari: app icons no longer shift to the start on hover — scale transform applied directly to the SVG instead of an `inline-flex` wrapper that Safari mis-centered inside the grid cell
+
+### Changed
+- `/apps-mockup` app modal: replaced the bottom prev/next/"x of x apps" footer and standalone close button with a single top-right button group (← / → / ✕)
+- `/apps-mockup` "Stackr" renamed to "Stackr project"
+
 ## [2.1.1.8] - 2026-05-05
 
 ### Changed
