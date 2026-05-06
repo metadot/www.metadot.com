@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   BarChart3,
   BookOpen,
@@ -19,6 +19,7 @@ import {
 type App = {
   name: string;
   color: string;
+  hex: string;
   Icon: LucideIcon;
   description: string;
   bullets: string[];
@@ -28,6 +29,7 @@ const apps: App[] = [
   {
     name: "Assets",
     color: "from-blue-400 to-blue-700",
+    hex: "#3b82f6",
     Icon: Monitor,
     description: "Track every device. Stay in control.",
     bullets: [
@@ -42,6 +44,7 @@ const apps: App[] = [
   {
     name: "BookMe",
     color: "from-emerald-400 to-emerald-600",
+    hex: "#10b981",
     Icon: CalendarCheck,
     description: "Book more. Stay organized.",
     bullets: [
@@ -56,6 +59,7 @@ const apps: App[] = [
   {
     name: "Changelogs",
     color: "from-teal-400 to-teal-600",
+    hex: "#14b8a6",
     Icon: FileText,
     description: "Track updates. Stay aligned.",
     bullets: [
@@ -70,6 +74,7 @@ const apps: App[] = [
   {
     name: "CRM",
     color: "from-rose-400 to-rose-600",
+    hex: "#f43f5e",
     Icon: Handshake,
     description: "Manage relationships. Close more deals.",
     bullets: [
@@ -84,6 +89,7 @@ const apps: App[] = [
   {
     name: "Inventory",
     color: "from-orange-400 to-orange-600",
+    hex: "#f97316",
     Icon: Package,
     description: "Track stock. Never run out.",
     bullets: [
@@ -98,6 +104,7 @@ const apps: App[] = [
   {
     name: "Knowledge base",
     color: "from-purple-400 to-purple-600",
+    hex: "#a855f7",
     Icon: BookOpen,
     description: "Capture know-how. Find it fast.",
     bullets: [
@@ -112,6 +119,7 @@ const apps: App[] = [
   {
     name: "Polls",
     color: "from-violet-400 to-violet-600",
+    hex: "#8b5cf6",
     Icon: BarChart3,
     description: "Ask, analyze, decide better.",
     bullets: [
@@ -126,6 +134,7 @@ const apps: App[] = [
   {
     name: "Stackr project",
     color: "from-indigo-400 to-indigo-600",
+    hex: "#6366f1",
     Icon: LayoutList,
     description: "Stack tasks. Ship work.",
     bullets: [
@@ -140,6 +149,7 @@ const apps: App[] = [
   {
     name: "Suppliers",
     color: "from-green-400 to-green-600",
+    hex: "#22c55e",
     Icon: Truck,
     description: "Manage suppliers. Avoid delays.",
     bullets: [
@@ -154,6 +164,7 @@ const apps: App[] = [
   {
     name: "Tickets",
     color: "from-amber-400 to-amber-600",
+    hex: "#f59e0b",
     Icon: Ticket,
     description: "Resolve issues. Keep customers happy.",
     bullets: [
@@ -168,6 +179,7 @@ const apps: App[] = [
   {
     name: "Workflows",
     color: "from-yellow-400 to-amber-600",
+    hex: "#eab308",
     Icon: Zap,
     description: "Streamline tasks. Save hours.",
     bullets: [
@@ -211,13 +223,16 @@ const benefits = [
   },
 ];
 
-type DotConfig = {
+type Dot = {
   direction: "out" | "in";
   duration: number;
   delay: number;
-  length: number;
-  opacity: number;
-  jitter: number;
+  size: number;
+};
+
+type Connection = {
+  pathType: 1 | 2 | 3; // 1=L vert-first, 2=L horiz-first, 3=Z (two turns)
+  dots: Dot[];
 };
 
 function makeRng(seed: number) {
@@ -228,29 +243,30 @@ function makeRng(seed: number) {
   };
 }
 
-// Per-app streak configs. One streak per app, but each cycle does BOTH
-// directions (out then in, with idle gaps embedded in the keyframe). The
-// `direction` field flips animation-direction so half the apps start with
-// outbound, half with inbound — at any moment the visible streaks are a mix.
-const dotConfigs: DotConfig[][] = apps.map((_, i) => {
+// Constellation: every app is permanently wired to the workspace via a slate
+// L- or Z-shape. Each wire carries 2–3 colored dots staggered across its
+// cycle, mixed in/out, so the network feels alive in both directions.
+const connections: Connection[] = apps.map((_, i) => {
   const rng = makeRng(i * 73 + 17);
-  return [
-    {
+  const r = rng();
+  const pathType: 1 | 2 | 3 = r < 0.4 ? 1 : r < 0.8 ? 2 : 3;
+  const dotCount = 2 + Math.floor(rng() * 2); // 2 or 3
+  const dots: Dot[] = [];
+  for (let j = 0; j < dotCount; j++) {
+    dots.push({
       direction: rng() > 0.5 ? "out" : "in",
-      duration: 2.4 + rng() * 1.2, // 2.4 – 3.6s
-      delay: rng() * 3, // 0 – 3s (cycle scrambles the rest)
-      length: 10 + Math.floor(rng() * 8), // 10 – 17px
-      opacity: 0.55 + rng() * 0.35, // 0.55 – 0.90
-      jitter: (rng() - 0.5) * 8, // ±4°
-    },
-  ];
+      duration: 5 + rng() * 3, // 5 – 8s
+      delay: rng() * 8, // 0 – 8s — scatters across cycles
+      size: 4 + Math.floor(rng() * 2), // 4 – 5px radius
+    });
+  }
+  return { pathType, dots };
 });
 
 function AppNode({
   app,
   index,
   total,
-  paused,
   selected,
   onSelect,
   onHover,
@@ -258,7 +274,6 @@ function AppNode({
   app: App;
   index: number;
   total: number;
-  paused: boolean;
   selected: App | null;
   onSelect: (app: App) => void;
   onHover: (app: App | null) => void;
@@ -279,11 +294,9 @@ function AppNode({
       }`}
       style={
         {
-          animation: "orbitLoop 90s linear infinite",
-          animationPlayState: paused ? "paused" : "running",
           ["--start" as string]: `${startAngle}deg`,
           transform:
-            "translate(-50%, -50%) translate(calc(var(--orbit-rx) * cos(var(--start) + var(--orbit-angle))), calc(var(--orbit-ry) * sin(var(--start) + var(--orbit-angle))))",
+            "translate(-50%, -50%) translate(calc(var(--orbit-rx) * cos(var(--start))), calc(var(--orbit-ry) * sin(var(--start))))",
         } as React.CSSProperties
       }
       aria-label={`${app.name}: ${app.description}`}
@@ -303,6 +316,137 @@ function AppNode({
         {app.name}
       </span>
     </button>
+  );
+}
+
+function ConnectionLayer() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState({ w: 0, h: 0 });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => {
+      const r = el.getBoundingClientRect();
+      setSize({ w: r.width, h: r.height });
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const cx = size.w / 2;
+  const cy = size.h / 2;
+  let rx = 120;
+  let ry = 120;
+  if (size.w >= 1024) {
+    rx = 400;
+    ry = 247;
+  } else if (size.w >= 640) {
+    rx = 280;
+    ry = 175;
+  }
+
+  // Inset where lines/dots stop, so they don't overlap the icon and the
+  // central workspace circle.
+  const appInset = size.w >= 640 ? 32 : 22;
+  const centerInsetX = size.w >= 640 ? 110 : 50;
+  const centerInsetY = size.w >= 640 ? 64 : 50;
+
+  return (
+    <div
+      ref={ref}
+      className="pointer-events-none absolute inset-0 z-[1]"
+      aria-hidden
+    >
+      {size.w > 0 && (
+        <svg
+          width={size.w}
+          height={size.h}
+          className="absolute inset-0 overflow-visible"
+        >
+          {apps.map((app, i) => {
+            const angle = (i / apps.length) * 2 * Math.PI;
+            const ux = Math.cos(angle);
+            const uy = Math.sin(angle);
+            // Endpoint near the app (just inside its icon).
+            const ax = cx + (rx - appInset) * ux;
+            const ay = cy + (ry - appInset) * uy;
+            // Endpoint near the center workspace (on its rounded edge).
+            const tx = cx + centerInsetX * ux * 0.6;
+            const ty = cy + centerInsetY * uy * 0.6;
+
+            const cfg = connections[i];
+            const dx = tx - ax;
+            const dy = ty - ay;
+            const adx = Math.abs(dx);
+            const ady = Math.abs(dy);
+
+            // If either leg of an L would be near-zero (axis-aligned app),
+            // promote to Z so both turns stay visible.
+            const minLeg = 50;
+            const pathType =
+              adx < minLeg || ady < minLeg ? 3 : cfg.pathType;
+
+            let path: string;
+            if (pathType === 1) {
+              // vertical first, then horizontal — one 90° turn
+              path = `M ${ax.toFixed(2)} ${ay.toFixed(2)} L ${ax.toFixed(2)} ${ty.toFixed(2)} L ${tx.toFixed(2)} ${ty.toFixed(2)}`;
+            } else if (pathType === 2) {
+              // horizontal first, then vertical — one 90° turn
+              path = `M ${ax.toFixed(2)} ${ay.toFixed(2)} L ${tx.toFixed(2)} ${ay.toFixed(2)} L ${tx.toFixed(2)} ${ty.toFixed(2)}`;
+            } else {
+              // Z-shape — two 90° turns at the midpoint of the longer axis
+              if (adx >= ady) {
+                const midX = ax + dx * 0.5;
+                path = `M ${ax.toFixed(2)} ${ay.toFixed(2)} L ${midX.toFixed(2)} ${ay.toFixed(2)} L ${midX.toFixed(2)} ${ty.toFixed(2)} L ${tx.toFixed(2)} ${ty.toFixed(2)}`;
+              } else {
+                const midY = ay + dy * 0.5;
+                path = `M ${ax.toFixed(2)} ${ay.toFixed(2)} L ${ax.toFixed(2)} ${midY.toFixed(2)} L ${tx.toFixed(2)} ${midY.toFixed(2)} L ${tx.toFixed(2)} ${ty.toFixed(2)}`;
+              }
+            }
+
+            return (
+              <g key={app.name}>
+                {/* Neutral slate wire — always visible, no animation. */}
+                <path
+                  d={path}
+                  fill="none"
+                  stroke="#94a3b8"
+                  strokeOpacity="0.35"
+                  strokeWidth="1.25"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                {cfg.dots.map((dot, j) => {
+                  const dotKeyframe =
+                    dot.direction === "out" ? "pulseDotOut" : "pulseDotIn";
+                  return (
+                    <circle
+                      key={j}
+                      r={dot.size}
+                      cx="0"
+                      cy="0"
+                      fill={app.hex}
+                      style={
+                        {
+                          offsetPath: `path("${path}")`,
+                          offsetRotate: "0deg",
+                          filter: `drop-shadow(0 0 8px ${app.hex})`,
+                          animation: `${dotKeyframe} ${dot.duration.toFixed(2)}s linear infinite`,
+                          animationDelay: `${dot.delay.toFixed(2)}s`,
+                        } as React.CSSProperties
+                      }
+                    />
+                  );
+                })}
+              </g>
+            );
+          })}
+        </svg>
+      )}
+    </div>
   );
 }
 
@@ -402,118 +546,49 @@ export default function AppsMockupPage() {
         </div>
       </div>
 
+      /* Constellation network: neutral slate wires are always visible, and
+         a colored dot zips through each one on its own cycle. */
       <style jsx global>{`
-        @property --orbit-angle {
-          syntax: "<angle>";
-          inherits: false;
-          initial-value: 0deg;
-        }
-        @property --dot-progress {
-          syntax: "<number>";
-          inherits: false;
-          initial-value: 0;
-        }
-        @keyframes orbitLoop {
-          from {
-            --orbit-angle: 0deg;
-          }
-          to {
-            --orbit-angle: 360deg;
-          }
-        }
-        /* Single keyframe that fires outbound, idles at the app, fires
-           inbound, idles at the workspace. Reversing it (animation-direction:
-           reverse) flips the phase order so half the apps go in-then-out.
-           Active phases sum to ~22% of the cycle, so density stays sparse. */
-        @keyframes dotPing {
-          0% {
-            --dot-progress: 0.42;
+        /* Glowing dot travels through in a 15% window per cycle. */
+        @keyframes pulseDotOut {
+          0%,
+          40% {
+            offset-distance: 0%;
             opacity: 0;
           }
-          20% {
-            --dot-progress: 0.42;
-            opacity: 0;
+          42% {
+            offset-distance: 0%;
+            opacity: 1;
           }
-          22% {
-            --dot-progress: 0.5;
-            opacity: var(--dot-peak-opacity, 0.85);
+          55% {
+            offset-distance: 100%;
+            opacity: 1;
           }
-          29% {
-            --dot-progress: 0.78;
-            opacity: var(--dot-peak-opacity, 0.85);
-          }
-          31% {
-            --dot-progress: 0.85;
-            opacity: 0;
-          }
-          65% {
-            --dot-progress: 0.85;
-            opacity: 0;
-          }
-          67% {
-            --dot-progress: 0.78;
-            opacity: var(--dot-peak-opacity, 0.85);
-          }
-          74% {
-            --dot-progress: 0.5;
-            opacity: var(--dot-peak-opacity, 0.85);
-          }
-          76% {
-            --dot-progress: 0.42;
-            opacity: 0;
-          }
+          57%,
           100% {
-            --dot-progress: 0.42;
+            offset-distance: 100%;
             opacity: 0;
           }
         }
-        .connection-dot {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          width: 12px;
-          height: 2px;
-          border-radius: 1px;
-          pointer-events: none;
-          opacity: 0;
-          z-index: 5;
-          -webkit-mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 35%,
-            black 65%,
-            transparent 100%
-          );
-          mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 35%,
-            black 65%,
-            transparent 100%
-          );
-          transform: translate(-50%, -50%)
-            translate(
-              calc(
-                var(--dot-progress) * var(--orbit-rx) *
-                  cos(var(--start) + var(--orbit-angle))
-              ),
-              calc(
-                var(--dot-progress) * var(--orbit-ry) *
-                  sin(var(--start) + var(--orbit-angle))
-              )
-            )
-            rotate(
-              atan2(
-                calc(
-                  var(--orbit-ry) *
-                    sin(var(--start) + var(--orbit-angle))
-                ),
-                calc(
-                  var(--orbit-rx) *
-                    cos(var(--start) + var(--orbit-angle))
-                )
-              )
-            );
+        @keyframes pulseDotIn {
+          0%,
+          40% {
+            offset-distance: 100%;
+            opacity: 0;
+          }
+          42% {
+            offset-distance: 100%;
+            opacity: 1;
+          }
+          55% {
+            offset-distance: 0%;
+            opacity: 1;
+          }
+          57%,
+          100% {
+            offset-distance: 0%;
+            opacity: 0;
+          }
         }
         @keyframes workspacePulse {
           0% {
@@ -632,39 +707,19 @@ export default function AppsMockupPage() {
               All systems connected
             </div>
 
-            {apps.map((app, index) => {
-              const startAngle = (index / apps.length) * 360;
-              return (
-                <Fragment key={app.name}>
-                  <AppNode
-                    app={app}
-                    index={index}
-                    total={apps.length}
-                    paused={paused}
-                    selected={selected}
-                    onSelect={handleSelect}
-                    onHover={setHovered}
-                  />
-                  {dotConfigs[index].map((cfg, j) => (
-                    <span
-                      key={j}
-                      aria-hidden
-                      className={`connection-dot bg-gradient-to-r ${app.color}`}
-                      style={
-                        {
-                          width: `${cfg.length}px`,
-                          animation: `dotPing ${cfg.duration.toFixed(2)}s linear infinite ${cfg.direction === "in" ? "reverse" : "normal"}`,
-                          animationDelay: `${cfg.delay.toFixed(2)}s`,
-                          ["--start" as string]: `${startAngle + cfg.jitter}deg`,
-                          ["--dot-peak-opacity" as string]:
-                            cfg.opacity.toFixed(2),
-                        } as React.CSSProperties
-                      }
-                    />
-                  ))}
-                </Fragment>
-              );
-            })}
+            <ConnectionLayer />
+
+            {apps.map((app, index) => (
+              <AppNode
+                key={app.name}
+                app={app}
+                index={index}
+                total={apps.length}
+                selected={selected}
+                onSelect={handleSelect}
+                onHover={setHovered}
+              />
+            ))}
 
             {/* now-showing pill — mobile only */}
             <button

@@ -2,6 +2,15 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.10] - 2026-05-06
+
+### Changed
+- `/apps-mockup` connection animation rebuilt as a constellation network: every app sits statically on the ellipse and is permanently wired to the central workspace via slate L- or Z-shaped paths (every line has at least one 90° turn — no straight spokes); 2–3 colored dots per wire travel through with linear easing, mixed inbound/outbound, glowing drop-shadow
+- `/apps-mockup` connection animation no longer pauses on hover or modal — the network keeps animating regardless of interaction state
+
+### Removed
+- `/apps-mockup` orbiting `orbitLoop` rotation and the previous comet-tail trail rendering
+
 ## [2.1.1.9] - 2026-05-06
 
 ### Fixed
