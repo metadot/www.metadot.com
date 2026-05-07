@@ -7,7 +7,7 @@ import {
   CalendarCheck,
   FileText,
   Handshake,
-  LayoutList,
+  Kanban,
   type LucideIcon,
   Monitor,
   Package,
@@ -135,7 +135,7 @@ const apps: App[] = [
     name: "Stackr project",
     color: "from-indigo-400 to-indigo-600",
     hex: "#6366f1",
-    Icon: LayoutList,
+    Icon: Kanban,
     description: "Stack tasks. Ship work.",
     bullets: [
       "Lightweight task lists",
@@ -546,8 +546,6 @@ export default function AppsMockupPage() {
         </div>
       </div>
 
-      /* Constellation network: neutral slate wires are always visible, and
-         a colored dot zips through each one on its own cycle. */
       <style jsx global>{`
         /* Glowing dot travels through in a 15% window per cycle. */
         @keyframes pulseDotOut {
@@ -660,7 +658,7 @@ export default function AppsMockupPage() {
             {benefits.map((b) => (
               <li
                 key={b.title}
-                className={`relative isolate flex items-center gap-2 overflow-hidden rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-slate-700 shadow-sm backdrop-blur`}
+                className={`relative isolate flex items-center gap-2 overflow-hidden rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-slate-700 shadow-sm backdrop-blur [clip-path:inset(0_round_9999px)]`}
               >
                 <span
                   aria-hidden
