@@ -2,6 +2,15 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.1.11] - 2026-05-07
+
+### Fixed
+- `/apps-mockup` stray `/* Constellation network… */` comment no longer leaks as visible text above the orbit (was unwrapped JSX-adjacent text instead of a `{/* */}` block)
+- `/apps-mockup` Safari: hero benefit pills no longer leak the colored bubble outside the rounded edge — added `clip-path: inset(0 round 9999px)` to force clipping that Safari skips for `overflow:hidden` + `rounded-full` + `backdrop-blur`
+
+### Changed
+- `/apps-mockup` Stackr project icon swapped from `LayoutList` to `Kanban` (lucide-react)
+
 ## [2.1.1.10] - 2026-05-06
 
 ### Changed
