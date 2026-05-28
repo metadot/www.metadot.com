@@ -17,13 +17,21 @@ const companyLinks = [
   { name: "Beta Program", href: "/beta" },
 ];
 
+const complianceLinks = [
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms of Service", href: "/terms-of-service" },
+  { name: "HIPAA", href: "/hipaa" },
+  { name: "SOC 2", href: "/soc2" },
+  { name: "Accessibility", href: "/accessibility" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="bg-[#0f172a] border-t border-[#334155]">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block mb-3">
@@ -68,6 +76,25 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#94a3b8] hover:text-[#f0b93c] transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Compliance */}
+          <div>
+            <h4 className="font-mono text-xs font-semibold tracking-[0.15em] uppercase text-[#94a3b8] mb-4">
+              Compliance
+            </h4>
+            <ul className="space-y-2">
+              {complianceLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

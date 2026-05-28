@@ -2,6 +2,23 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.2.0] - 2026-05-28
+
+### Added
+- `/privacy-policy` — Metadot Corporation privacy policy and GDPR statement
+- `/terms-of-service` — Terms governing use of Metadot products
+- `/hipaa` — HIPAA posture, BAA availability, and FAQ
+- `/soc2` — SOC 2 Type II program overview with six-pillar security grid
+- `/accessibility` — WCAG 2.1 Level AA conformance statement, VPAT request path
+- Footer "Compliance" column linking the five new pages
+- `src/components/legal/LegalPage.tsx` — shared layout for compliance pages
+- `.legal-content` typography rules in `globals.css`
+
+### Changed
+- Footer grid widened to 5 columns at `lg`, 2 at `md`, 1 at mobile
+- `conductor.json` run script now passes `--port $CONDUCTOR_PORT` so multiple workspaces can run dev servers in parallel; added `runScriptMode: "concurrent"`
+- `pnpm-workspace.yaml` approves build scripts for `sharp` and `unrs-resolver` (resolves pnpm 11 `ERR_PNPM_IGNORED_BUILDS` that blocked the Conductor Run button)
+
 ## [2.1.1.11] - 2026-05-07
 
 ### Fixed

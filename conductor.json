@@ -1,7 +1,8 @@
 {
+  "$schema": "https://conductor.build/schemas/conductor.json",
   "scripts": {
     "setup": "test -f $CONDUCTOR_ROOT_PATH/.env.local && cp $CONDUCTOR_ROOT_PATH/.env.local .env.local; test -d $CONDUCTOR_ROOT_PATH/.vercel && cp -r $CONDUCTOR_ROOT_PATH/.vercel .; pnpm install",
-    "run": "pnpm run dev",
-    "archive": ""
-  }
+    "run": "pnpm dev --port $CONDUCTOR_PORT"
+  },
+  "runScriptMode": "concurrent"
 }
