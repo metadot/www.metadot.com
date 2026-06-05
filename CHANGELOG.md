@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.2.1] - 2026-06-05
+
+### Added
+- `/privacy-policy` — "Google User Data" section covering Google API Services data: scopes accessed (account email, calendar list, free/busy, app-created events, Meet info), usage limited to scheduling/calendar features, no-sale/sharing terms, TLS + encrypted-token storage, and retention/deletion on disconnect or `support@metadot.com` request. Satisfies Google OAuth verification disclosure requirements.
+
 ## [2.1.2.0] - 2026-05-28
 
 ### Added

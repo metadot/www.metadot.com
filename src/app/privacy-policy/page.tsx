@@ -106,6 +106,66 @@ export default function PrivacyPolicy() {
         commit to a GDPR-compliant data processing arrangement.
       </p>
 
+      <h2>Google User Data</h2>
+
+      <h3>Data Accessed</h3>
+      <p>
+        When a user connects their Google account, Metadot products may access:
+      </p>
+      <ul>
+        <li>Google account email address</li>
+        <li>Google Calendar list</li>
+        <li>Calendar free/busy availability</li>
+        <li>Calendar events created by the application</li>
+        <li>Google Meet conference information (when enabled)</li>
+      </ul>
+
+      <h3>Data Usage</h3>
+      <p>
+        This data is used solely to provide scheduling and calendar integration
+        features, including:
+      </p>
+      <ul>
+        <li>Identifying the connected Google account</li>
+        <li>Allowing users to select a calendar for bookings</li>
+        <li>Determining available meeting times through free/busy queries</li>
+        <li>Creating, updating, and deleting booking events</li>
+        <li>Inviting attendees to scheduled meetings</li>
+        <li>Generating Google Meet links when requested</li>
+      </ul>
+      <p>
+        Metadot does not use Google user data for advertising, profiling, or
+        marketing purposes.
+      </p>
+
+      <h3>Data Sharing</h3>
+      <p>Metadot does not sell Google user data.</p>
+      <p>Google user data is shared only:</p>
+      <ul>
+        <li>With Google services as required to perform requested calendar operations</li>
+        <li>With meeting attendees through calendar invitations created by the user</li>
+        <li>With subprocessors required to host and operate the service</li>
+      </ul>
+
+      <h3>Data Storage &amp; Protection</h3>
+      <ul>
+        <li>Data is transmitted using TLS encryption.</li>
+        <li>OAuth tokens are encrypted at rest.</li>
+        <li>Access is restricted to authorized systems and personnel.</li>
+        <li>Security controls are used to protect against unauthorized access.</li>
+      </ul>
+
+      <h3>Data Retention &amp; Deletion</h3>
+      <ul>
+        <li>Google OAuth credentials are retained only while the integration remains connected.</li>
+        <li>Users may disconnect their Google account at any time.</li>
+        <li>Upon disconnection, stored OAuth credentials are deleted.</li>
+        <li>
+          Users may request deletion of related data by contacting{" "}
+          <a href="mailto:support@metadot.com">support@metadot.com</a>.
+        </li>
+      </ul>
+
       <h2>Payment Processing</h2>
       <p>
         Payments are handled by a PCI-compliant payment processor. We receive a
