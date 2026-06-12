@@ -2,6 +2,15 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.0] - 2026-06-12
+
+### Added
+- `/apps-overview` — Metadot Apps overview landing page for the apps win-back email campaign. Frames the Wistia tour video (`qk060qfgke`) in a rounded, dark-themed player and drives a single CTA that opens an embedded onboarding-booking calendar in a modal (Escape/backdrop-dismiss, scroll-lock, `role="dialog"`).
+- `src/app/apps-overview/BookingCta.tsx` — client component for the CTA button + booking modal.
+
+### Changed
+- `next-sitemap.config.js` — exclude `/apps-overview` from the sitemap and add a `robots.txt` disallow. The page also carries a `noindex, nofollow` robots meta tag, so it is reachable by emailed recipients but kept out of search results.
+
 ## [2.1.2.1] - 2026-06-05
 
 ### Added

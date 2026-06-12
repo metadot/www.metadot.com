@@ -4,13 +4,13 @@ import glob from "fast-glob";
 export default {
   siteUrl: "https://www.metadot.com",
   generateRobotsTxt: true,
-  exclude: ["/apps-mockup", "/preview-mockup"],
+  exclude: ["/apps-mockup", "/preview-mockup", "/apps-overview"],
   robotsTxtOptions: {
     policies: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/_next/", "/apps-mockup", "/preview-mockup"],
+        disallow: ["/_next/", "/apps-mockup", "/preview-mockup", "/apps-overview"],
       },
     ],
   },
