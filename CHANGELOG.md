@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.1] - 2026-06-12
+
+### Changed
+- `/apps-overview` — tightened the CTA-box copy: dropped "current" and "Helpdesk" so it reads "your Mojo subscription", and split "Book a quick session..." onto its own line.
+
 ## [2.1.3.0] - 2026-06-12
 
 ### Added

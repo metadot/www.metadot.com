@@ -80,10 +80,11 @@ export default function AppsOverviewPage() {
           <em className="not-italic text-[#f0b93c]">just got better</em>
         </h2>
         <p className="text-[15px] text-[#94a3b8] max-w-[680px] mx-auto mb-8 leading-relaxed">
-          Now included with your current Mojo Helpdesk subscription: 3 new apps
-          your team can start using today. Book a quick session and we&rsquo;ll
-          walk you through everything, answer your questions, and help you launch
-          one, two, or all three.
+          Now included with your Mojo subscription: 3 new apps your team can
+          start using today.
+          <br />
+          Book a quick session and we&rsquo;ll walk you through everything,
+          answer your questions, and help you launch one, two, or all three.
         </p>
         <div className="flex items-center justify-center">
           <BookingCta bookUrl={BOOK_URL} />
