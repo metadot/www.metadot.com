@@ -2,6 +2,12 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.3] - 2026-06-12
+
+### Changed
+- `/apps-overview` — swapped the tour video to the new "Metadot Apps Overview" cut (Wistia `dlc5eorlvu`, replacing the old `qk060qfgke`).
+- `/apps-overview` — capitalized the "The Search Is Over" tagline and bumped it to `text-xl md:text-2xl` so it stands out above the supporting copy.
+
 ## [2.1.3.2] - 2026-06-12
 
 ### Added

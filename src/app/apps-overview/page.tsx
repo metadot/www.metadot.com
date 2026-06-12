@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import BookingCta from "./BookingCta";
 
-const WISTIA_IFRAME = "https://fast.wistia.net/embed/iframe/qk060qfgke";
+const WISTIA_IFRAME = "https://fast.wistia.net/embed/iframe/dlc5eorlvu";
 const BOOK_URL = "https://metadot.net/book/metadot/bkm/metadot-apps-onboarding";
 
 export const metadata: Metadata = {
@@ -36,8 +36,8 @@ export default function AppsOverviewPage() {
           Workspace
         </h1>
         <p className="text-base md:text-lg text-[#94a3b8] max-w-[560px] mx-auto">
-          <span className="block font-semibold text-white mb-2">
-            The search is over
+          <span className="block text-xl md:text-2xl font-semibold text-white mb-2">
+            The Search Is Over
           </span>
           Project management, CRM, scheduling, changelog, and more. Everything
           your team needs, in one place. Take a quick look.
