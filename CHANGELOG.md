@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.2] - 2026-06-12
+
+### Added
+- Google Analytics 4 (`G-KPMNGE3HVZ`) site-wide via the official `@next/third-parties` `<GoogleAnalytics>` component in `src/app/layout.tsx`. Loads gtag with Next.js-optimized strategy and fires `page_view` on App Router navigations. The privacy policy already disclosed Google Analytics usage, so this brings the implementation in line with the stated policy.
+
 ## [2.1.3.1] - 2026-06-12
 
 ### Changed

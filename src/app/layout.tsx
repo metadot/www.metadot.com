@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/layout/Chrome";
 import JsonLd from "@/components/JsonLd";
@@ -81,6 +82,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <SiteFooter />
       </body>
+      <GoogleAnalytics gaId="G-KPMNGE3HVZ" />
     </html>
   );
 }
