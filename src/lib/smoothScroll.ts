@@ -1,5 +1,6 @@
 export function smoothScroll( //quick, smooth scrolling for the hero section of the homepage
   targetSelector: string,
+  durationInMs = 200,
 ): void {
   const target = document.querySelector<HTMLElement>(targetSelector);
   if (!target) return;
@@ -8,7 +9,6 @@ export function smoothScroll( //quick, smooth scrolling for the hero section of 
   const end = target.getBoundingClientRect().top + start;
   const distance = end - start;
 
-  const durationInMs = 200;
   const startTime = performance.now();
 
   const ease = (t: number): number =>

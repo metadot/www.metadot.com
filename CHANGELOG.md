@@ -2,6 +2,17 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.4] - 2026-06-12
+
+### Changed
+- `/apps-overview` — reworked the hero copy: headline is now two lines ("Metadot Apps" / "The All-in-One Workspace"); the tagline became "Onboarding Mojo customers now", a smooth-scroll link (`ScrollLink`, 600ms eased) down to the onboarding CTA box; supporting copy reads "appointment scheduling", drops "Take a quick look", and is bumped to `text-lg md:text-xl` on a wider `max-w-[720px]` container.
+- `/apps-overview` — removed the "Like what you saw?" eyebrow from the CTA box and gave the section an `id="onboarding"` (with `scroll-mt-20`) as the scroll target.
+- `.onboarding-link` (globals.css) — dedicated unlayered link style so white-default → orange (`#f0b93c`) + underline-on-hover wins the Tailwind v4 cascade over the global `a` reset (layered utilities were being overridden).
+- `smoothScroll()` — added an optional `durationInMs` argument (defaults to 200ms, so the homepage Hero is unchanged).
+
+### Added
+- `/apps-overview#book` — URL-hash trigger that auto-opens the BookMe booking popup on load and on `hashchange`, giving the Wistia end-of-video CTA a linkable URL. Closing (✕/backdrop/Escape) clears the `#book` hash so the popup can be reopened.
+
 ## [2.1.3.3] - 2026-06-12
 
 ### Changed
