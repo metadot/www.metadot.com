@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BookingCta from "./BookingCta";
+import ScrollLink from "./ScrollLink";
 
 const WISTIA_IFRAME = "https://fast.wistia.net/embed/iframe/dlc5eorlvu";
 const BOOK_URL = "https://metadot.net/book/metadot/bkm/metadot-apps-onboarding";
@@ -31,16 +32,19 @@ export default function AppsOverviewPage() {
           Productivity apps for teams
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-4">
-          Metadot Apps Connected
+          Metadot Apps
           <br />
-          Workspace
+          The All-in-One Workspace
         </h1>
-        <p className="text-base md:text-lg text-[#94a3b8] max-w-[560px] mx-auto">
-          <span className="block text-xl md:text-2xl font-semibold text-white mb-2">
-            The Search Is Over
-          </span>
-          Project management, CRM, scheduling, changelog, and more. Everything
-          your team needs, in one place. Take a quick look.
+        <p className="text-lg md:text-xl text-[#94a3b8] max-w-[720px] mx-auto">
+          <ScrollLink
+            href="#onboarding"
+            className="onboarding-link block text-xl md:text-2xl font-semibold mb-2"
+          >
+            Onboarding Mojo customers now
+          </ScrollLink>
+          Project management, CRM, appointment scheduling, changelog, and more.
+          Everything your team needs, in one place.
         </p>
       </section>
 
@@ -70,10 +74,10 @@ export default function AppsOverviewPage() {
       </section>
 
       {/* CTA band */}
-      <section className="bg-[#1e293b] border border-[#334155] py-12 px-6 text-center">
-        <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#f0b93c] mb-4">
-          Like what you saw?
-        </p>
+      <section
+        id="onboarding"
+        className="scroll-mt-20 bg-[#1e293b] border border-[#334155] py-12 px-6 text-center"
+      >
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-white mb-4">
           Your Mojo subscription
           <br />
