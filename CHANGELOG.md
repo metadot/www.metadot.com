@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.5] - 2026-06-13
+
+### Changed
+- `/apps-overview` — refreshed the meta `description` to "See how Metadot Apps brings project management, CRM, appointment scheduling, tickets, and AI into one connected workspace." ("scheduling" → "appointment scheduling", dropped the trailing "Watch the overview.").
+
 ## [2.1.3.4] - 2026-06-12
 
 ### Changed

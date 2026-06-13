@@ -8,7 +8,7 @@ const BOOK_URL = "https://metadot.net/book/metadot/bkm/metadot-apps-onboarding";
 export const metadata: Metadata = {
   title: { absolute: "Metadot Apps Overview — Watch the Tour" },
   description:
-    "See how Metadot Apps brings project management, CRM, scheduling, tickets, and AI into one connected workspace. Watch the overview.",
+    "See how Metadot Apps brings project management, CRM, appointment scheduling, tickets, and AI into one connected workspace.",
   alternates: { canonical: "/apps-overview" },
   robots: {
     index: false,
