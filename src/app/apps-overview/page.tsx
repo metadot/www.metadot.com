@@ -129,7 +129,7 @@ export default function AppsOverviewPage() {
       {/* Three apps */}
       <section className="mb-12 rounded-[16px] border border-[#1e3a5f] bg-[#0b1623] px-6 py-12 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">
-          Start using these 3 apps today.
+          Start using these 3 apps today
         </h2>
         <p className="text-base font-semibold text-[#f0a500] mb-8">
           Integrated with Mojo Helpdesk. Zero extra cost.
