@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.6] - 2026-06-15
+
+### Added
+- `/apps-overview` — new "Start using these 3 apps today." section under the tour video. Three cards (Stackr / BookMe / Changelog) on a `sm:grid-cols-3` grid, each with a colored Lucide icon (`Kanban` / `CalendarClock` / `Megaphone`), app name, tagline, and three feature bullets. Subhead reads "Integrated with Mojo Helpdesk. Zero extra cost." Card name/tagline use an inline `marginBottom: 0` to override the unlayered global `p { margin-bottom: 1rem }` rule.
+
 ## [2.1.3.5] - 2026-06-13
 
 ### Changed
