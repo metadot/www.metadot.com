@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.7] - 2026-06-15
+
+### Changed
+- `/apps-overview` — trimmed the onboarding CTA copy: the lead line is now "Now included with your Mojo subscription." (dropped "3 new apps your team can start using today").
+
 ## [2.1.3.6] - 2026-06-15
 
 ### Added
