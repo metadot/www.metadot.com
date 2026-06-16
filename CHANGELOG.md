@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.8] - 2026-06-16
+
+### Added
+- `/.well-known/microsoft-identity-association.json` — static file for Microsoft identity / Azure AD app domain verification, served at the site root. Returns the `associatedApplications` payload for application ID `53ce0dc5-a652-4a02-9e4f-a4d1c9c9bc94`.
+
 ## [2.1.3.7] - 2026-06-15
 
 ### Changed
