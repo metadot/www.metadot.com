@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.9] - 2026-06-16
+
+### Changed
+- Apex (`metadot.com`) now serves `/.well-known/microsoft-identity-association.json` directly with a `200` instead of redirecting to www. Microsoft's publisher-domain verification fetches the apex literally and rejects redirects. Added a host-scoped `next.config.ts` redirect that canonicalizes every other apex path to www (308) while passing the verification file through. Paired with removing the platform-level apex→www redirect in the Vercel project domain config.
+
 ## [2.1.3.8] - 2026-06-16
 
 ### Added
