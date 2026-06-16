@@ -2,6 +2,18 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.10] - 2026-06-16
+
+### Added
+- `/beta` now permanently redirects (308) to `/apps-overview` via `next.config.ts`. The standalone `/beta` page was removed; its internal links (Footer "Beta Program", Hero "Join the Beta") now point straight at `/apps-overview`.
+
+### Changed
+- `/apps-overview` is now indexable. Removed its `robots: { index: false, follow: false }` metadata and dropped it from the `next-sitemap` `exclude` / `robots.txt` disallow lists, so it appears in the sitemap and is crawlable. It had been noindexed during testing.
+- `/apps-overview` — onboarding CTA subhead reworded from "Integrated with Mojo Helpdesk. Zero extra cost." to "Now included with your Mojo Helpdesk subscription at no extra cost", and both the "Start using these 3 apps today" heading and that subhead are now center-aligned.
+
+### Removed
+- Deleted the testing-only mockup pages `/apps-mockup` and `/preview-mockup` (and their `next-sitemap` exclude / `robots.txt` disallow entries). Deleted the `/beta` page in favor of the redirect above.
+
 ## [2.1.3.9] - 2026-06-16
 
 ### Changed
