@@ -63,11 +63,6 @@ export const metadata: Metadata = {
   description:
     "See how Metadot Apps brings project management, CRM, appointment scheduling, tickets, and AI into one connected workspace.",
   alternates: { canonical: "/apps-overview" },
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
-  },
   openGraph: {
     title: "Metadot Apps Overview — Watch the Tour",
     description:
@@ -128,11 +123,11 @@ export default function AppsOverviewPage() {
 
       {/* Three apps */}
       <section className="mb-12 rounded-[16px] border border-[#1e3a5f] bg-[#0b1623] px-6 py-12 md:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-1 text-center">
           Start using these 3 apps today
         </h2>
-        <p className="text-base font-semibold text-[#f0a500] mb-8">
-          Integrated with Mojo Helpdesk. Zero extra cost.
+        <p className="text-base font-semibold text-[#f0a500] mb-8 text-center">
+          Now included with your Mojo Helpdesk subscription at no extra cost
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

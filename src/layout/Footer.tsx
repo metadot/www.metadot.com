@@ -14,7 +14,7 @@ const companyLinks = [
   { name: "About Us", href: "/about-us" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
-  { name: "Beta Program", href: "/beta" },
+  { name: "Beta Program", href: "/apps-overview" },
 ];
 
 const complianceLinks = [

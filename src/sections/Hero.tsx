@@ -46,7 +46,7 @@ export default function Hero() {
               Explore Products
             </a>
             <a
-              href="/beta"
+              href="/apps-overview"
               className="btn"
             >
               Join the Beta

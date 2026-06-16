@@ -2,9 +2,6 @@
 User-agent: *
 Allow: /
 Disallow: /_next/
-Disallow: /apps-mockup
-Disallow: /preview-mockup
-Disallow: /apps-overview
 
 # Host
 Host: https://www.metadot.com
