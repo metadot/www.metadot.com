@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
         destination: "https://www.metadot.com/:path",
         permanent: true,
       },
+      { source: "/beta", destination: "/apps-overview", permanent: true },
       { source: "/blog/globalteam/", destination: "/blog/2021/05/global", permanent: true },
       { source: "/blog/thesittingdisease/", destination: "/blog/2021/04/sittingdisease", permanent: true },
       { source: "/blog/zoomfatigue/", destination: "/blog/2021/04/zoomfatigue", permanent: true },
