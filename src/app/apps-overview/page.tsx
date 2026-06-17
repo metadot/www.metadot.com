@@ -126,8 +126,8 @@ export default function AppsOverviewPage() {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-1 text-center">
           Start using these 3 apps today
         </h2>
-        <p className="text-base font-semibold text-[#f0a500] mb-8 text-center">
-          Now included with your Mojo Helpdesk subscription at no extra cost
+        <p className="text-base font-semibold text-[#f0a500] mb-12 text-center">
+          Integrated with Mojo Helpdesk, ready to use at no extra cost
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
