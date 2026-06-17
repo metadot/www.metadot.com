@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.11] - 2026-06-17
+
+### Changed
+- `/apps-overview` — "Start using these 3 apps today" subhead reworded from "Now included with your Mojo Helpdesk subscription at no extra cost" to "Integrated with Mojo Helpdesk, ready to use at no extra cost", and its bottom margin increased (`mb-8` → `mb-12`) for more space above the app cards.
+
 ## [2.1.3.10] - 2026-06-16
 
 ### Added
