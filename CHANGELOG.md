@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.13] - 2026-06-18
+
+### Added
+- `/apps-overview` now honors a `?hideCta` query param for chrome-free embedding: it removes the "Your Mojo subscription just got better" onboarding CTA band (`#onboarding`) and the hero "Onboarding Mojo customers now" link that scrolls to it. Implemented client-side in new `OnboardingCta.tsx` / `OnboardingLink.tsx` so the page still renders both server-side by default. Shares the `useQueryFlag` hook (`src/lib/useQueryFlag.ts`) with the site `?hideHeader` / `?hideFooter` flags.
+
 ## [2.1.3.12] - 2026-06-18
 
 ### Added
