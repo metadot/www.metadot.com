@@ -2,6 +2,14 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.14] - 2026-06-18
+
+### Added
+- `/apps-overview` onboarding CTA band now has a "Continue in Mojo Helpdesk" button (solid orange, links to `https://www.mojohelpdesk.com/login`) alongside the existing "Schedule your onboarding" button. The two sit side by side on desktop and stack on mobile.
+
+### Changed
+- `/apps-overview` "Schedule your onboarding" button restyled from solid accent to an orange outline (`#f0a500` border + text), making the new "Continue in Mojo Helpdesk" the primary action.
+
 ## [2.1.3.13] - 2026-06-18
 
 ### Added

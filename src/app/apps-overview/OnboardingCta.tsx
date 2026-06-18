@@ -3,6 +3,8 @@
 import BookingCta from "./BookingCta";
 import { useQueryFlag } from "@/lib/useQueryFlag";
 
+const MOJO_LOGIN_URL = "https://www.mojohelpdesk.com/login";
+
 // The "Your Mojo subscription just got better" onboarding CTA band.
 // Removed when the page is embedded with `?hideCta`, e.g. inside another app.
 export default function OnboardingCta({ bookUrl }: { bookUrl: string }) {
@@ -25,8 +27,20 @@ export default function OnboardingCta({ bookUrl }: { bookUrl: string }) {
         Book a quick session and we&rsquo;ll walk you through everything,
         answer your questions, and help you launch one, two, or all three.
       </p>
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <BookingCta bookUrl={bookUrl} />
+        <a
+          href={MOJO_LOGIN_URL}
+          className="btn"
+          style={{
+            background: "#f0a500",
+            borderColor: "#f0a500",
+            color: "#0f172a",
+            fontWeight: 600,
+          }}
+        >
+          Continue in Mojo Helpdesk
+        </a>
       </div>
     </section>
   );
