@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CalendarClock, Kanban, Megaphone, type LucideIcon } from "lucide-react";
-import BookingCta from "./BookingCta";
-import ScrollLink from "./ScrollLink";
+import OnboardingCta from "./OnboardingCta";
+import OnboardingLink from "./OnboardingLink";
 
 const WISTIA_IFRAME = "https://fast.wistia.net/embed/iframe/dlc5eorlvu";
 const BOOK_URL = "https://metadot.net/book/metadot/bkm/metadot-apps-onboarding";
@@ -85,12 +85,7 @@ export default function AppsOverviewPage() {
           The All-in-One Workspace
         </h1>
         <p className="text-lg md:text-xl text-[#94a3b8] max-w-[720px] mx-auto">
-          <ScrollLink
-            href="#onboarding"
-            className="onboarding-link block text-xl md:text-2xl font-semibold mb-2"
-          >
-            Onboarding Mojo customers now
-          </ScrollLink>
+          <OnboardingLink />
           Project management, CRM, appointment scheduling, changelog, and more.
           Everything your team needs, in one place.
         </p>
@@ -176,25 +171,7 @@ export default function AppsOverviewPage() {
       </section>
 
       {/* CTA band */}
-      <section
-        id="onboarding"
-        className="scroll-mt-20 bg-[#1e293b] border border-[#334155] py-12 px-6 text-center"
-      >
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-white mb-4">
-          Your Mojo subscription
-          <br />
-          <em className="not-italic text-[#f0b93c]">just got better</em>
-        </h2>
-        <p className="text-[15px] text-[#94a3b8] max-w-[680px] mx-auto mb-8 leading-relaxed">
-          Now included with your Mojo subscription.
-          <br />
-          Book a quick session and we&rsquo;ll walk you through everything,
-          answer your questions, and help you launch one, two, or all three.
-        </p>
-        <div className="flex items-center justify-center">
-          <BookingCta bookUrl={BOOK_URL} />
-        </div>
-      </section>
+      <OnboardingCta bookUrl={BOOK_URL} />
     </div>
   );
 }

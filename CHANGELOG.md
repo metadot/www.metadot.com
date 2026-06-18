@@ -2,6 +2,16 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.13] - 2026-06-18
+
+### Added
+- `/apps-overview` now honors a `?hideCta` query param for chrome-free embedding: it removes the "Your Mojo subscription just got better" onboarding CTA band (`#onboarding`) and the hero "Onboarding Mojo customers now" link that scrolls to it. Implemented client-side in new `OnboardingCta.tsx` / `OnboardingLink.tsx` so the page still renders both server-side by default. Shares the `useQueryFlag` hook (`src/lib/useQueryFlag.ts`) with the site `?hideHeader` / `?hideFooter` flags.
+
+## [2.1.3.12] - 2026-06-18
+
+### Added
+- Any page can now be embedded chrome-free via query params: `?hideHeader` removes the site header and `?hideFooter` removes the footer (combine them, e.g. `?hideHeader&hideFooter`). Intended for embedding pages inside another app via iframe. Implemented in `src/layout/Chrome.tsx` by reading the flags client-side, so normal pages still render header and footer server-side with no behavior change. Note: because pages are statically rendered, an embedded page briefly shows the chrome before it's removed on hydration.
+
 ## [2.1.3.11] - 2026-06-17
 
 ### Changed
