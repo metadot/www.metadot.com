@@ -43,7 +43,8 @@ export default function BookingCta({ bookUrl }: { bookUrl: string }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="btn btn-primary"
+        className="btn"
+        style={{ borderColor: "#f0a500", color: "#f0a500" }}
       >
         Schedule your onboarding
       </button>
