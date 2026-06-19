@@ -49,7 +49,7 @@ export default function Hero() {
               href="/apps-overview"
               className="btn"
             >
-              Join the Beta
+              Just launched: Metadot Apps
             </a>
           </div>
         </div>
