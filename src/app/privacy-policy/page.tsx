@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
     <LegalPage
       eyebrow="Compliance"
       title="Privacy Policy & GDPR"
-      lastUpdated="May 2026"
+      lastUpdated="June 2026"
     >
       <p>
         Metadot Corporation (&ldquo;Metadot,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) builds hardware and
@@ -136,6 +136,23 @@ export default function PrivacyPolicy() {
       <p>
         Metadot does not use Google user data for advertising, profiling, or
         marketing purposes.
+      </p>
+
+      <h3>Limited Use Disclosure</h3>
+      <p>
+        Metadot&apos;s use and transfer of information received from Google APIs
+        to any other app will adhere to the{" "}
+        <a
+          href="https://developers.google.com/terms/api-services-user-data-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google API Services User Data Policy
+        </a>
+        , including the Limited Use requirements. The use and transfer of raw or
+        derived user data received from Google Workspace APIs will adhere to the
+        Google API Services User Data Policy, including the Limited Use
+        requirements.
       </p>
 
       <h3>Data Sharing</h3>

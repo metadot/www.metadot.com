@@ -2,6 +2,14 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.17] - 2026-06-23
+
+### Added
+- Privacy policy now hosts an explicit "Limited Use Disclosure" subsection under "Google User Data" (`src/app/privacy-policy/page.tsx`), affirming that Metadot's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements, and that the use and transfer of raw or derived user data received from Google Workspace APIs adheres to the same policy. Required by Google OAuth verification (Project ID: metadot-net). Public-facing at `https://www.metadot.com/privacy-policy`.
+
+### Changed
+- Privacy policy "Last updated" date bumped from May 2026 to June 2026 to reflect the Limited Use disclosure.
+
 ## [2.1.3.16] - 2026-06-23
 
 ### Changed
