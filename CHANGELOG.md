@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.15] - 2026-06-19
+
+### Changed
+- Home hero secondary button relabeled from "Join the Beta" to "Just launched: Metadot Apps" (`src/sections/Hero.tsx`). Still links to `/apps-overview`.
+
 ## [2.1.3.14] - 2026-06-18
 
 ### Added
