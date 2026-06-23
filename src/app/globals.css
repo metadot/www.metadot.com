@@ -84,17 +84,6 @@ a:hover {
   color: var(--color-accent-hover);
 }
 
-/* apps-overview hero subhead link: white by default, orange + underline on hover */
-.onboarding-link {
-  color: var(--color-white);
-}
-
-.onboarding-link:hover {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,

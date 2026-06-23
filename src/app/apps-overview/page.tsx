@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CalendarClock, Kanban, Megaphone, type LucideIcon } from "lucide-react";
 import OnboardingCta from "./OnboardingCta";
-import OnboardingLink from "./OnboardingLink";
 
 const WISTIA_IFRAME = "https://fast.wistia.net/embed/iframe/dlc5eorlvu";
 const BOOK_URL = "https://metadot.net/book/metadot/bkm/metadot-apps-onboarding";
@@ -26,7 +25,7 @@ const APP_CARDS: AppCard[] = [
     dotClass: "bg-[#60a5fa]",
     bullets: [
       "Kanban boards for managing team work",
-      "Pulse shows what's overdue, due date changes, and throughput",
+      "Pulse shows what's overdue, due-date changes, and throughput",
       "Status updates automatically when a card moves",
     ],
   },
@@ -77,7 +76,7 @@ export default function AppsOverviewPage() {
       {/* Hero */}
       <section className="text-center mb-10">
         <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#f0b93c] mb-4">
-          Productivity apps for teams
+          Productivity apps for Mojo Helpdesk
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-4">
           Metadot Apps
@@ -85,7 +84,6 @@ export default function AppsOverviewPage() {
           The All-in-One Workspace
         </h1>
         <p className="text-lg md:text-xl text-[#94a3b8] max-w-[720px] mx-auto">
-          <OnboardingLink />
           Project management, CRM, appointment scheduling, changelog, and more.
           Everything your team needs, in one place.
         </p>
@@ -116,10 +114,15 @@ export default function AppsOverviewPage() {
         </div>
       </section>
 
+      {/* CTA band */}
+      <div className="mb-12">
+        <OnboardingCta bookUrl={BOOK_URL} />
+      </div>
+
       {/* Three apps */}
       <section className="mb-12 rounded-[16px] border border-[#1e3a5f] bg-[#0b1623] px-6 py-12 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-1 text-center">
-          Start using these 3 apps today
+          3 productivity apps to boost your help desk
         </h2>
         <p className="text-base font-semibold text-[#f0a500] mb-12 text-center">
           Integrated with Mojo Helpdesk, ready to use at no extra cost
@@ -169,9 +172,6 @@ export default function AppsOverviewPage() {
           ))}
         </div>
       </section>
-
-      {/* CTA band */}
-      <OnboardingCta bookUrl={BOOK_URL} />
     </div>
   );
 }
