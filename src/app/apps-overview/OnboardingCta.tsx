@@ -22,10 +22,10 @@ export default function OnboardingCta({ bookUrl }: { bookUrl: string }) {
         <em className="not-italic text-[#f0b93c]">just got better</em>
       </h2>
       <p className="text-[15px] text-[#94a3b8] max-w-[680px] mx-auto mb-8 leading-relaxed">
-        Now included with your Mojo subscription.
+        Metadot Apps is on for your help desk.
         <br />
-        Book a quick session and we&rsquo;ll walk you through everything,
-        answer your questions, and help you launch one, two, or all three.
+        Jump in, or book a quick session and we&rsquo;ll walk you through
+        everything.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <BookingCta bookUrl={bookUrl} />
@@ -39,7 +39,7 @@ export default function OnboardingCta({ bookUrl }: { bookUrl: string }) {
             fontWeight: 600,
           }}
         >
-          Continue in Mojo Helpdesk
+          Log in to Mojo
         </a>
       </div>
     </section>

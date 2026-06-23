@@ -2,6 +2,14 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.3.16] - 2026-06-23
+
+### Changed
+- `/apps-overview` synced to match the live Mojo apps page (`riverdaleschool.mojohelpdesk.com/sso/metadot/apps`). The "Your Mojo subscription just got better" onboarding CTA band now sits above the three-apps section instead of at the bottom of the page (`src/app/apps-overview/page.tsx`). Hero eyebrow changed from "Productivity apps for teams" to "Productivity apps for Mojo Helpdesk"; apps-section heading from "Start using these 3 apps today" to "3 productivity apps to boost your help desk"; CTA band body to "Metadot Apps is on for your help desk. Jump in, or book a quick session and we'll walk you through everything."; second CTA button from "Continue in Mojo Helpdesk" to "Log in to Mojo"; and the Stackr "due date changes" bullet to "due-date changes".
+
+### Removed
+- The hero "Onboarding Mojo customers now" scroll link on `/apps-overview`, along with its now-unused `OnboardingLink.tsx` and `ScrollLink.tsx` components and the orphaned `.onboarding-link` CSS in `src/app/globals.css`.
+
 ## [2.1.3.15] - 2026-06-19
 
 ### Changed
