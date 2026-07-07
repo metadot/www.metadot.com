@@ -46,7 +46,7 @@ export default function BookingCta({ bookUrl }: { bookUrl: string }) {
         className="btn"
         style={{ borderColor: "#f0a500", color: "#f0a500" }}
       >
-        Schedule your onboarding
+        Schedule a demo
       </button>
 
       {open && (
@@ -65,7 +65,7 @@ export default function BookingCta({ bookUrl }: { bookUrl: string }) {
           <div className="relative w-full max-w-2xl overflow-hidden rounded-sm border border-[#334155] bg-[#0f172a] shadow-2xl shadow-black/50">
             <div className="flex items-center justify-between border-b border-[#334155] px-5 py-3">
               <span className="font-mono text-[11px] font-semibold tracking-[0.16em] uppercase text-[#94a3b8]">
-                Schedule your onboarding
+                Schedule a demo
               </span>
               <button
                 type="button"
