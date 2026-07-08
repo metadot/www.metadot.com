@@ -2,6 +2,17 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.4.0] - 2026-07-08
+
+### Added
+- New `/pricing` page (`src/app/pricing/page.tsx`) presenting three Metadot Apps plans — Free ($0, up to 2 apps / 5 users), Pro ($15/user/mo, 30-day trial), and Pro Unlimited ($200/mo flat, 60-day trial) — as a three-column comparison with a "Book a demo" footer. Each plan's CTA links to the matching signup flow: Free → `https://metadot.net/signup`, Pro → `?plan=pro`, Pro Unlimited → `?plan=pro-unlimited`.
+- "Pricing" link added to the primary header nav (`src/layout/Header.tsx`) and the footer's Company column (`src/layout/Footer.tsx`), so visitors can reach the new page from anywhere on the site.
+
+### Changed
+- `/apps-overview` reframed from Mojo Helpdesk toward teams broadly: hero eyebrow "Productivity apps for Mojo Helpdesk" → "Productivity apps for teams"; three-apps heading "3 productivity apps to boost your help desk" → "3 productivity apps to boost team efficiency" with the subhead now "Unlimited users, unlimited projects, unlimited possibilities." (`src/app/apps-overview/page.tsx`).
+- The onboarding CTA band (`src/app/apps-overview/OnboardingCta.tsx`) now reads "Used by hundreds of teams — large and small, high-tech, K12 schools and small businesses" and offers "View pricing" and "Sign me up" (to `https://metadot.net/signup`) buttons in place of the "Log in to Mojo" button.
+- The booking CTA button label changed from "Schedule your onboarding" to "Schedule a demo" (`src/app/apps-overview/BookingCta.tsx`).
+
 ## [2.1.3.17] - 2026-06-23
 
 ### Added

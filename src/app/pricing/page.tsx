@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
 
-const SIGNUP_URL = "https://metadot.net/";
+const SIGNUP_URL = "https://metadot.net/signup";
+const SIGNUP_PRO_URL = `${SIGNUP_URL}?plan=pro`;
+const SIGNUP_PRO_UNLIMITED_URL = `${SIGNUP_URL}?plan=pro-unlimited`;
 const BOOK_URL = "https://metadot.net/book/metadot/bkm/metadot-apps-onboarding";
 
 const plans = [
@@ -27,7 +29,7 @@ const plans = [
     cadence: "/ user / mo",
     description: "A great choice for freelancers, startups, and smaller teams.",
     cta: "Try Pro free for 30 days",
-    href: SIGNUP_URL,
+    href: SIGNUP_PRO_URL,
     highlighted: false,
     features: [
       "Unlimited users",
@@ -46,7 +48,7 @@ const plans = [
     description:
       "Top-of-the-line, all-inclusive pricing for your organization.",
     cta: "Try Pro Unlimited free for 60 days",
-    href: SIGNUP_URL,
+    href: SIGNUP_PRO_UNLIMITED_URL,
     highlighted: true,
     features: [
       "Unlimited users",

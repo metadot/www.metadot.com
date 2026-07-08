@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import BookingCta from "./BookingCta";
 import { useQueryFlag } from "@/lib/useQueryFlag";
 
-const METADOT_SIGNUP_URL = "https://metadot.net/";
+const METADOT_SIGNUP_URL = "https://metadot.net/signup";
 
 // The "Your Mojo subscription just got better" onboarding CTA band.
 // Removed when the page is embedded with `?hideCta`, e.g. inside another app.
@@ -20,14 +21,14 @@ export default function OnboardingCta({ bookUrl }: { bookUrl: string }) {
         Used by hundreds of teams
         <br />
         <em className="not-italic text-base md:text-lg lg:text-xl leading-snug text-[#f0b93c]">
-          large and small, high-tech, K12 schools and small businesses{" "}
+          large and small, high-tech, K12 schools and small businesses
         </em>
       </h2>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <BookingCta bookUrl={bookUrl} />
-        <a href="/pricing" className="btn">
+        <Link href="/pricing" className="btn">
           View pricing
-        </a>
+        </Link>
         <a href={METADOT_SIGNUP_URL} className="btn btn-primary">
           Sign me up
         </a>
