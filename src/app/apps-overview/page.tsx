@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { CalendarClock, Kanban, Megaphone, type LucideIcon } from "lucide-react";
+import {
+  CalendarClock,
+  Kanban,
+  Megaphone,
+  type LucideIcon,
+} from "lucide-react";
 import OnboardingCta from "./OnboardingCta";
 
 const WISTIA_IFRAME = "https://fast.wistia.net/embed/iframe/dlc5eorlvu";
@@ -76,7 +81,7 @@ export default function AppsOverviewPage() {
       {/* Hero */}
       <section className="text-center mb-10">
         <p className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[#f0b93c] mb-4">
-          Productivity apps for Mojo Helpdesk
+          Productivity apps for teams
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-4">
           Metadot Apps
@@ -122,10 +127,10 @@ export default function AppsOverviewPage() {
       {/* Three apps */}
       <section className="mb-12 rounded-[16px] border border-[#1e3a5f] bg-[#0b1623] px-6 py-12 md:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-1 text-center">
-          3 productivity apps to boost your help desk
+          3 productivity apps to boost team efficiency
         </h2>
         <p className="text-base font-semibold text-[#f0a500] mb-12 text-center">
-          Integrated with Mojo Helpdesk, ready to use at no extra cost
+          Unlimited users, unlimited projects, unlimited possibilities.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
