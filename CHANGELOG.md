@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.4.1] - 2026-07-15
+
+### Changed
+- Unified all legal/compliance contact emails to `support@metadot.com`. Replaced `legal@metadot.com` on `/terms-of-service`; `privacy@metadot.com` on `/privacy-policy` (Your Rights, Data Processing Agreement, and Changes to This Policy sections); `compliance@metadot.com` on `/hipaa` (BAA request and FAQ) and `/soc2` (report request); and `accessibility@metadot.com` on `/accessibility`. Both the `mailto:` link and the visible address were updated in each spot.
+
 ## [2.1.4.0] - 2026-07-08
 
 ### Added

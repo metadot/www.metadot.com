@@ -79,7 +79,7 @@ export default function Soc2() {
       <p>
         We share our SOC 2 Type II report with current and prospective
         customers under a mutual NDA. To request a copy, contact{" "}
-        <a href="mailto:compliance@metadot.com">compliance@metadot.com</a> with
+        <a href="mailto:support@metadot.com">support@metadot.com</a> with
         the name of your organization and the product you are evaluating.
       </p>
 

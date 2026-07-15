@@ -59,7 +59,7 @@ export default function Accessibility() {
         If you run into an accessibility barrier in one of our products, or you
         would like to request the Voluntary Product Accessibility Template
         (VPAT) for a specific product, please reach out to{" "}
-        <a href="mailto:accessibility@metadot.com">accessibility@metadot.com</a>.
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
         Include the product, the page or feature involved, the assistive
         technology you are using, and a description of what happened. We will
         respond promptly and work with you to find a solution.
