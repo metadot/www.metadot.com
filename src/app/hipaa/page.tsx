@@ -52,7 +52,7 @@ export default function Hipaa() {
         Web Services, our infrastructure provider. We will execute a BAA with
         eligible customers on the appropriate Metadot products. To request a
         BAA, contact{" "}
-        <a href="mailto:compliance@metadot.com">compliance@metadot.com</a>.
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
       </p>
 
       <h2>What Customers Are Responsible For</h2>
@@ -118,7 +118,7 @@ export default function Hipaa() {
       <h3>How do I sign a BAA with Metadot?</h3>
       <p>
         Reach out to{" "}
-        <a href="mailto:compliance@metadot.com">compliance@metadot.com</a> with
+        <a href="mailto:support@metadot.com">support@metadot.com</a> with
         your account details and the product you intend to use.
       </p>
     </LegalPage>

@@ -205,21 +205,21 @@ export default function PrivacyPolicy() {
         Subject to applicable law (including the GDPR and CCPA), you may
         request access to, correction of, export of, or deletion of personal
         information we hold about you. Send requests to{" "}
-        <a href="mailto:privacy@metadot.com">privacy@metadot.com</a>.
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
       </p>
 
       <h2>Data Processing Agreement</h2>
       <p>
         Customers subject to the GDPR can request a signed Data Processing
         Agreement at{" "}
-        <a href="mailto:privacy@metadot.com">privacy@metadot.com</a>.
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
       </p>
 
       <h2>Changes to This Policy</h2>
       <p>
         We will post material changes to this page and update the &ldquo;Last
         updated&rdquo; date above. For questions, contact{" "}
-        <a href="mailto:privacy@metadot.com">privacy@metadot.com</a>.
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
       </p>
     </LegalPage>
   );

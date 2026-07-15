@@ -137,7 +137,7 @@ export default function TermsOfService() {
       <h2>Contact</h2>
       <p>
         Questions about these terms? Email{" "}
-        <a href="mailto:legal@metadot.com">legal@metadot.com</a>.
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
       </p>
     </LegalPage>
   );
