@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  other: {
+    "zoom-domain-verification": "ZOOM_verify_d6bc4bf36b5f4c8492b6fa6db31330de",
+  },
 };
 
 const organizationJsonLd = {
