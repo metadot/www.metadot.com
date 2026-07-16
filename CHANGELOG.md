@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.4.3] - 2026-07-16
+
+### Added
+- Added a site-wide `zoom-domain-verification` meta tag to the root layout (`src/app/layout.tsx`), so it renders in the `<head>` of every page. This lets the Zoom App Marketplace verify ownership of the metadot.com domain.
+
 ## [2.1.4.2] - 2026-07-16
 
 ### Changed
