@@ -200,12 +200,51 @@ export default function PrivacyPolicy() {
         <li>We are legally required to, or to investigate fraud, abuse, or threats to the safety of our users.</li>
       </ul>
 
-      <h2>Your Rights</h2>
+      <h2>Your Data Subject Rights</h2>
       <p>
-        Subject to applicable law (including the GDPR and CCPA), you may
-        request access to, correction of, export of, or deletion of personal
-        information we hold about you. Send requests to{" "}
-        <a href="mailto:support@metadot.com">support@metadot.com</a>.
+        Subject to applicable law (including the GDPR and CCPA/CPRA), you have
+        the following rights over the personal information we hold about you:
+      </p>
+      <ul>
+        <li>
+          <strong>Access</strong> &mdash; request a copy of the personal
+          information we hold about you.
+        </li>
+        <li>
+          <strong>Rectification</strong> &mdash; ask us to correct information
+          that is inaccurate or incomplete.
+        </li>
+        <li>
+          <strong>Erasure</strong> &mdash; request deletion of your personal
+          information (the &ldquo;right to be forgotten&rdquo;).
+        </li>
+        <li>
+          <strong>Portability</strong> &mdash; receive your information in a
+          portable, machine-readable format.
+        </li>
+        <li>
+          <strong>Restriction and objection</strong> &mdash; ask us to restrict
+          or stop processing your information in certain circumstances.
+        </li>
+        <li>
+          <strong>Withdraw consent</strong> &mdash; where processing is based on
+          consent, withdraw that consent at any time.
+        </li>
+        <li>
+          <strong>Non-discrimination</strong> &mdash; exercise these rights
+          without receiving discriminatory treatment.
+        </li>
+      </ul>
+      <p>
+        <strong>How to exercise your rights:</strong> Send your request to{" "}
+        <a href="mailto:support@metadot.com">support@metadot.com</a> and tell us
+        which right you wish to exercise. We will verify your identity, respond
+        within the timeframe required by applicable law (generally within 30
+        days), and will not charge a fee for reasonable requests. If you connect
+        a Google or other third-party account, you can also revoke access and
+        request deletion of the related data as described in the sections above.
+        You have the right to lodge a complaint with your local data protection
+        authority if you are unhappy with how we handle your request.
       </p>
 
       <h2>Data Processing Agreement</h2>

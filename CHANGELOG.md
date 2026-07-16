@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.4.2] - 2026-07-16
+
+### Changed
+- Expanded the "Your Rights" section of `/privacy-policy` into "Your Data Subject Rights" to meet Zoom App Marketplace privacy-policy requirements. It now enumerates each GDPR/CCPA-CPRA data subject right (access, rectification, erasure, portability, restriction/objection, withdraw consent, non-discrimination) as a list and adds a "How to exercise your rights" paragraph covering the `support@metadot.com` request path, identity verification, the ~30-day response window, no fee for reasonable requests, third-party (Google) account revocation, and the right to lodge a complaint with a supervisory authority.
+
 ## [2.1.4.1] - 2026-07-15
 
 ### Changed
