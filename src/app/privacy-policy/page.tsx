@@ -11,137 +11,140 @@ export default function PrivacyPolicy() {
   return (
     <LegalPage
       eyebrow="Compliance"
-      title="Privacy Policy & GDPR"
-      lastUpdated="June 2026"
+      title="Privacy Policy"
+      lastUpdated="July 2026"
     >
       <p>
-        Metadot Corporation (&ldquo;Metadot,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) builds hardware and
-        software products including Das Keyboard, Mojo Helpdesk, Bamzooka,
-        Montastic, and TyprX. This policy explains what information we collect,
-        how we use it, and the safeguards we put in place to protect it.
+        Metadot Corporation develops and operates hardware and software
+        products, including Das Keyboard, Mojo Helpdesk, Metadot Apps Workspace,
+        Bamzooka, Montastic, and TyprX. This Privacy Policy describes how Metadot
+        collects, uses, discloses, and protects Personal Data when you use our
+        websites, products, and services.
+      </p>
+      <p>
+        This Privacy Policy explains what information we collect, how we use it,
+        how we share it, and the safeguards we put in place to protect it.
       </p>
 
       <h2>SOC 2 Type II</h2>
       <p>
-        Our SaaS products are operated under a SOC 2 Type II program. An
-        independent auditor evaluates our security controls on an ongoing basis
-        to confirm they are not only well designed but consistently operated.
+        Our SaaS products operate under a SOC 2 Type II program. An independent
+        third-party audit verifies that our security controls are appropriately
+        designed and consistently operating to help protect customer data.
+      </p>
+      <p>
+        A current SOC 2 Type II attestation letter is available upon reasonable
+        request, subject to appropriate confidentiality obligations.
       </p>
 
       <h2>AI Features and Customer Data</h2>
       <p>
-        When our products use AI to assist users, customer data stays scoped to
-        the account it originated in. We do not use customer content to train
-        third-party foundation models, and we contractually require the model
-        providers we work with to behave the same way.
+        When our products use AI to assist users, customer data remains within
+        the account from which it originated. We do not use customer content to
+        train third-party foundation models, and we contractually require the
+        model providers we work with to do the same.
       </p>
 
       <h2>Information We Collect</h2>
       <p>
-        We only collect information you knowingly provide &mdash; for example,
-        when you create an account, contact support, subscribe to a newsletter,
-        place an order, or upload content into one of our products. We use that
-        information for the purpose it was provided, and we do not repurpose it
-        without your consent.
+        We collect Personal Data that you choose to provide when using our
+        websites, products, and services, including account and contact
+        information, billing information needed to process a purchase, support
+        requests, ticket content, attachments, and other information you submit.
+        We use this information only as necessary to provide, support, secure,
+        and improve our products and services, or as otherwise described in this
+        Privacy Policy. Additional information about our data processing
+        practices is available upon request.
       </p>
-      <ul>
-        <li>Account identifiers (name, email, organization)</li>
-        <li>Billing information needed to process a purchase</li>
-        <li>Content you create inside a product (tickets, lists, configurations)</li>
-        <li>Operational logs needed to run and secure the service</li>
-      </ul>
 
       <h2>How We Protect Your Data</h2>
       <p>
-        Access to customer data is restricted to a small group of engineers and
-        product staff who require it to operate the service. All staff sign
-        confidentiality agreements and complete security training. Internal
-        actions on production systems are logged and reviewed.
+        We implement administrative, technical, and organizational safeguards
+        designed to protect Personal Data from unauthorized access, disclosure,
+        alteration, and destruction. Access to Personal Data is limited to
+        authorized personnel with a legitimate business need, and those
+        individuals are subject to confidentiality obligations and appropriate
+        security training.
       </p>
       <ul>
         <li>Passwords are stored using one-way cryptographic hashing.</li>
-        <li>Payment details are tokenized by our payment processor; full card numbers never reach our servers.</li>
-        <li>Customer data is encrypted in transit (TLS) and at rest.</li>
-        <li>Production data is backed up daily and the backups are encrypted.</li>
-        <li>Infrastructure is monitored continuously; on-call engineers respond to alerts around the clock.</li>
+        <li>Payment information is tokenized by our payment processor; full payment card numbers are never stored on our servers.</li>
+        <li>Personal Data is encrypted in transit and, where appropriate, at rest.</li>
+        <li>Customer data is backed up regularly using encrypted backups.</li>
+        <li>Our systems are continuously monitored, and we regularly evaluate the effectiveness of our security controls.</li>
       </ul>
 
       <h2>Hosting</h2>
       <p>
-        Our SaaS products are hosted on Amazon Web Services in ISO&nbsp;27001
-        certified facilities. We rely on AWS&apos;s physical security,
-        environmental controls, and network defenses, on top of which we operate
-        our own application-level controls.
+        Our SaaS products are hosted on Amazon Web Services (AWS) in
+        ISO&nbsp;27001-certified data centers. We implement administrative,
+        technical, and organizational safeguards designed to protect the
+        security, availability, and integrity of our services.
       </p>
 
       <h2>HIPAA and Business Associate Agreements</h2>
       <p>
-        Metadot has executed a Business Associate Agreement (BAA) with Amazon
-        Web Services. For products designed to handle protected health
-        information (PHI), we will execute a BAA with eligible customers on
-        request. See our <a href="/hipaa">HIPAA page</a> for details.
+        For customers who require a Business Associate Agreement (BAA), Metadot
+        will provide one upon request for eligible products and services. See our{" "}
+        <a href="/hipaa">HIPAA page</a> for additional information.
       </p>
 
       <h2>Cookies and Tracking</h2>
       <p>
-        We use session cookies to keep you signed in and to make the site work,
-        and a small number of analytics cookies to understand how the site is
-        used in aggregate. You can disable non-essential cookies in your
-        browser; some features will not work without session cookies.
+        We use cookies and similar technologies to operate our websites and
+        services, maintain user sessions, enhance security, remember your
+        preferences, and understand how our websites and products are used. You
+        can manage or disable cookies through your browser settings; however,
+        some features may not function properly without essential cookies.
       </p>
 
       <h2>Analytics</h2>
       <p>
-        We use Google Analytics with pseudonymous identifiers to understand
-        traffic patterns and to improve the site. You can opt out using
-        Google&apos;s browser add-on or by disabling cookies.
+        We use analytics tools, including Google Analytics, to better understand
+        how visitors use our websites and to improve their performance and user
+        experience. Analytics information is collected in aggregate or using
+        pseudonymous identifiers and is not used to identify individual users.
+        You can manage your analytics preferences by adjusting your browser
+        settings or by using Google&apos;s available opt-out tools.
       </p>
 
       <h2>Third-Party Services</h2>
       <p>
-        We integrate with a limited set of third-party services to operate the
-        business &mdash; for example, an email delivery provider, a payments
-        processor, and productivity tools used by our staff. We choose vendors
-        that meet our security and privacy standards and that are willing to
-        commit to a GDPR-compliant data processing arrangement.
+        We engage a limited number of trusted third-party service providers to
+        support the delivery, operation, maintenance, and security of our
+        websites, products, and services, such as payment processing, email
+        delivery, hosting, and business operations. We require these providers
+        to implement appropriate safeguards to protect Personal Data and to
+        process it only in accordance with our instructions and applicable
+        contractual and legal obligations.
       </p>
 
       <h2>Google User Data</h2>
 
       <h3>Data Accessed</h3>
       <p>
-        When a user connects their Google account, Metadot products may access:
+        When you connect your Google account, our products may access your
+        Google account email address, calendars, calendar availability, events
+        created by our application, and Google Meet conference information (when
+        enabled).
       </p>
-      <ul>
-        <li>Google account email address</li>
-        <li>Google Calendar list</li>
-        <li>Calendar free/busy availability</li>
-        <li>Calendar events created by the application</li>
-        <li>Google Meet conference information (when enabled)</li>
-      </ul>
 
       <h3>Data Usage</h3>
       <p>
-        This data is used solely to provide scheduling and calendar integration
-        features, including:
+        This information is used solely to provide calendar and scheduling
+        features, including connecting your account, displaying calendar
+        availability, creating and managing booking events, inviting attendees,
+        and generating Google Meet links when requested.
       </p>
-      <ul>
-        <li>Identifying the connected Google account</li>
-        <li>Allowing users to select a calendar for bookings</li>
-        <li>Determining available meeting times through free/busy queries</li>
-        <li>Creating, updating, and deleting booking events</li>
-        <li>Inviting attendees to scheduled meetings</li>
-        <li>Generating Google Meet links when requested</li>
-      </ul>
       <p>
-        Metadot does not use Google user data for advertising, profiling, or
-        marketing purposes.
+        Metadot does not use Google user data for advertising, marketing,
+        profiling, or training AI models.
       </p>
 
       <h3>Limited Use Disclosure</h3>
       <p>
         Metadot&apos;s use and transfer of information received from Google APIs
-        to any other app will adhere to the{" "}
+        complies with the{" "}
         <a
           href="https://developers.google.com/terms/api-services-user-data-policy"
           target="_blank"
@@ -149,115 +152,72 @@ export default function PrivacyPolicy() {
         >
           Google API Services User Data Policy
         </a>
-        , including the Limited Use requirements. The use and transfer of raw or
-        derived user data received from Google Workspace APIs will adhere to the
-        Google API Services User Data Policy, including the Limited Use
-        requirements.
+        , including its Limited Use requirements.
       </p>
 
       <h3>Data Sharing</h3>
-      <p>Metadot does not sell Google user data.</p>
-      <p>Google user data is shared only:</p>
-      <ul>
-        <li>With Google services as required to perform requested calendar operations</li>
-        <li>With meeting attendees through calendar invitations created by the user</li>
-        <li>With subprocessors required to host and operate the service</li>
-      </ul>
+      <p>
+        Metadot does not sell Google user data. Google user data is shared only
+        as necessary to provide the requested functionality, including with
+        Google services to perform calendar operations, meeting attendees
+        through calendar invitations initiated by the user, and trusted service
+        providers that support the operation of our products and services.
+      </p>
 
       <h3>Data Storage &amp; Protection</h3>
-      <ul>
-        <li>Data is transmitted using TLS encryption.</li>
-        <li>OAuth tokens are encrypted at rest.</li>
-        <li>Access is restricted to authorized systems and personnel.</li>
-        <li>Security controls are used to protect against unauthorized access.</li>
-      </ul>
+      <p>
+        Google user data is protected using administrative, technical, and
+        organizational safeguards. Data is encrypted in transit and, where
+        appropriate, at rest, and access is limited to authorized personnel and
+        systems.
+      </p>
 
       <h3>Data Retention &amp; Deletion</h3>
-      <ul>
-        <li>Google OAuth credentials are retained only while the integration remains connected.</li>
-        <li>Users may disconnect their Google account at any time.</li>
-        <li>Upon disconnection, stored OAuth credentials are deleted.</li>
-        <li>
-          Users may request deletion of related data by contacting{" "}
-          <a href="mailto:support@metadot.com">support@metadot.com</a>.
-        </li>
-      </ul>
+      <p>
+        Google account credentials are retained only while the integration
+        remains active. You may disconnect your Google account at any time,
+        after which the associated credentials will be securely deleted. You may
+        also request deletion of related data by contacting{" "}
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
+      </p>
 
       <h2>Payment Processing</h2>
       <p>
-        Payments are handled by a PCI-compliant payment processor. We receive a
-        token and the last four digits of the card; we do not store the full
-        card number, expiration, or CVV.
+        Payments are securely processed by Stripe, a PCI DSS-compliant payment
+        processor. Payment information is handled by Stripe in accordance with
+        its security and privacy standards.
       </p>
 
       <h2>When We Share Information</h2>
       <p>
-        We do not sell personal information. We share information only when:
+        We do not sell or share your information for advertising or marketing
+        purposes. We share information only to:
       </p>
       <ul>
-        <li>You direct us to (for example, by enabling an integration).</li>
-        <li>A vendor needs it to provide a service on our behalf under a contract that restricts how they use it.</li>
-        <li>We are legally required to, or to investigate fraud, abuse, or threats to the safety of our users.</li>
+        <li>provide the services you request</li>
+        <li>support the operation of our products and services</li>
+        <li>comply with legal obligations or protect the security of our products, services, customers, or others</li>
       </ul>
 
-      <h2>Your Data Subject Rights</h2>
+      <h2>Your Privacy Rights</h2>
       <p>
-        Subject to applicable law (including the GDPR and CCPA/CPRA), you have
-        the following rights over the personal information we hold about you:
+        Depending on your location and Applicable Data Protection Laws, you may
+        have rights regarding the information we process about you, including the
+        right to access, correct, delete, restrict, or receive a copy of your
+        information.
       </p>
-      <ul>
-        <li>
-          <strong>Access</strong> &mdash; request a copy of the personal
-          information we hold about you.
-        </li>
-        <li>
-          <strong>Rectification</strong> &mdash; ask us to correct information
-          that is inaccurate or incomplete.
-        </li>
-        <li>
-          <strong>Erasure</strong> &mdash; request deletion of your personal
-          information (the &ldquo;right to be forgotten&rdquo;).
-        </li>
-        <li>
-          <strong>Portability</strong> &mdash; receive your information in a
-          portable, machine-readable format.
-        </li>
-        <li>
-          <strong>Restriction and objection</strong> &mdash; ask us to restrict
-          or stop processing your information in certain circumstances.
-        </li>
-        <li>
-          <strong>Withdraw consent</strong> &mdash; where processing is based on
-          consent, withdraw that consent at any time.
-        </li>
-        <li>
-          <strong>Non-discrimination</strong> &mdash; exercise these rights
-          without receiving discriminatory treatment.
-        </li>
-      </ul>
       <p>
-        <strong>How to exercise your rights:</strong> Send your request to{" "}
-        <a href="mailto:support@metadot.com">support@metadot.com</a> and tell us
-        which right you wish to exercise. We will verify your identity, respond
-        within the timeframe required by applicable law (generally within 30
-        days), and will not charge a fee for reasonable requests. If you connect
-        a Google or other third-party account, you can also revoke access and
-        request deletion of the related data as described in the sections above.
-        You have the right to lodge a complaint with your local data protection
-        authority if you are unhappy with how we handle your request.
+        If you use our products through an organization, such as your employer or
+        school, you may need to submit your request through that organization. We
+        will respond to requests in accordance with Applicable Data Protection
+        Laws. Please contact us with any questions at{" "}
+        <a href="mailto:support@metadot.com">support@metadot.com</a>.
       </p>
 
       <h2>Data Processing Agreement</h2>
       <p>
-        Customers subject to the GDPR can request a signed Data Processing
-        Agreement at{" "}
-        <a href="mailto:support@metadot.com">support@metadot.com</a>.
-      </p>
-
-      <h2>Changes to This Policy</h2>
-      <p>
-        We will post material changes to this page and update the &ldquo;Last
-        updated&rdquo; date above. For questions, contact{" "}
+        Our Data Processing Agreement (DPA) is available on request. To obtain a
+        signed copy, please contact{" "}
         <a href="mailto:support@metadot.com">support@metadot.com</a>.
       </p>
     </LegalPage>

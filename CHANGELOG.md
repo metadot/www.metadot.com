@@ -2,6 +2,13 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.5.0] - 2026-07-22
+
+### Changed
+- Replaced the entire `/privacy-policy` page content with the legal-approved language from support ticket #56959887. The page now opens with a two-paragraph overview, adds Metadot Apps Workspace to the product list, and adds a SOC 2 Type II attestation-letter note. Reworded the SOC 2, AI Features, Information We Collect, How We Protect Your Data, Hosting, Cookies, Analytics, Third-Party Services, Google User Data, and When We Share Information sections to match the supplied text. Softened the HIPAA/BAA wording ("provide one upon request for eligible products" rather than asserting an executed AWS BAA) and named Stripe as the PCI DSS-compliant payment processor.
+- Replaced the expanded "Your Data Subject Rights" section (added in 2.1.4.2) with the shorter, more general "Your Privacy Rights" language from the ticket document, per requester instruction to use the document verbatim.
+- Retitled the page from "Privacy Policy & GDPR" to "Privacy Policy" and updated the "Last updated" date to July 2026 to match the source document.
+
 ## [2.1.4.3] - 2026-07-16
 
 ### Added
