@@ -2,6 +2,11 @@
 
 All notable changes to www.metadot.com will be documented in this file.
 
+## [2.1.5.1] - 2026-08-03
+
+### Changed
+- Upgraded dependencies to their latest compatible versions via `pnpm upgrade` (patch/minor only, within existing semver ranges): `@next/mdx` and `@next/third-parties` 16.2.10 → 16.2.12, `@radix-ui/react-accordion` 1.2.16 → 1.2.20, `lucide-react` 1.24.0 → 1.28.0, `@tailwindcss/postcss` and `tailwindcss` 4.3.2 → 4.3.3, `@types/react` 19.2.17 → 19.2.18, `@types/react-dom` 19.2.3 → 19.2.4. `next`, `react`, and `react-dom` are pinned to exact versions and were left untouched. Production build and lint pass.
+
 ## [2.1.5.0] - 2026-07-22
 
 ### Changed
